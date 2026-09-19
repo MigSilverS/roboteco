@@ -1,4 +1,9 @@
 .btn {
     border-radius: 9999px !important;
     padding: 5px 20px !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.363) !important; 
+}
+
+.btn:hover {
+    transition: all 0.2s ease-in-out;
 }
