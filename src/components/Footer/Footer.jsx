@@ -34,7 +34,7 @@ export default function Footer() {
     return (
         <>
             <footer className={`${styles.container} fixed-bottom px-5`}>
-                <div className="d-flex justify-content-between py-4">
+                <div className="d-flex justify-content-md-between justify-content-center flex-wrap py-4">
                     <ul className="d-flex flex-row justify-content-center align-items-center list-unstyled">
                         <li className="p-2">Suporte</li>
                         <li className="p-2">Privacidade</li>
@@ -78,7 +78,7 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                <div className="d-flex justify-content-between py-3">
+                <div className="d-flex justify-content-md-between justify-content-center flex-wrap py-3">
                     <span className="p-2">© 2026 Roboteco. Construindo o futuro, um bloco por vez.</span>
                     <ul className="d-flex gap-4 p-2">
                         <li>Robótica</li>
