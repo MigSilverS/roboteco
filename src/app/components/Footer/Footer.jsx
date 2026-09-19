@@ -34,15 +34,8 @@ export default function Footer() {
     return (
         <>
             <footer className={`${styles.container} fixed-bottom px-5`}>
-                <div className="d-flex justify-content-md-between justify-content-center flex-wrap py-4">
+                <div className="d-flex justify-content-end flex-wrap py-2">
                     <ul className="d-flex flex-row justify-content-center align-items-center list-unstyled">
-                        <li className="p-2">Suporte</li>
-                        <li className="p-2">Privacidade</li>
-                        <li className="p-2">Termos</li>
-                        <li className="p-2">Comunidade</li>
-                    </ul>
-                    <ul className="d-flex flex-row justify-content-center align-items-center list-unstyled">
-                        <li className="p-2">NOSSAS REDES</li>
                         <li className="p-2">
                             <Botao
                                 icon={icons.share}
@@ -80,10 +73,11 @@ export default function Footer() {
 
                 <div className="d-flex justify-content-md-between justify-content-center flex-wrap py-3">
                     <span className="p-2">© 2026 Roboteco. Construindo o futuro, um bloco por vez.</span>
-                    <ul className="d-flex gap-4 p-2">
-                        <li>Robótica</li>
-                        <li>Programação</li>
-                        <li>Inovação Maker</li>
+                    <ul className="d-flex flex-row justify-content-center align-items-center list-unstyled">
+                        <a href="#" className="p-2 text-black text-decoration-none">Suporte</a>
+                        <a href="#" className="p-2 text-black text-decoration-none">Privacidade</a>
+                        <a href="#" className="p-2 text-black text-decoration-none">Termos</a>
+                        <a href="#" className="p-2 text-black text-decoration-none">Comunidade</a>
                     </ul>
                 </div>
             </footer>
