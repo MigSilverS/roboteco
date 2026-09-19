@@ -1,7 +1,10 @@
 import styles from "./Botao.module.css";
 
-export default function Botao({ texto, classe }) {
+export default function Botao({ texto, classe, icon, style }) {
     return (
-        <button className={`btn ${styles.btn} ${classe}`}>{texto}</button>
+        <button className={`btn ${styles.btn} ${classe}`} style={style}>
+            {icon}
+            {texto}
+        </button>
     );
 }
