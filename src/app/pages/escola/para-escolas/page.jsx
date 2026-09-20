@@ -44,7 +44,7 @@ export default function ParaEscolas() {
                 <hr />
 
                 <div className="d-flex flex-wrap gap-3 mt-3">
-                    <Botao texto="Solicitar aula experimental" classe="text-white btn-danger" style={{ backgroundColor: "red" }} />
+                    <Botao texto="Solicitar aula experimental" classe="text-white btn-danger" estilo={{ backgroundColor: "var(--red)" }} />
                     <Botao texto="Solicitar aula experimental" classe="btn-light" />
                 </div>
 

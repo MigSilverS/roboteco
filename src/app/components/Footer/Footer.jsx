@@ -40,7 +40,7 @@ export default function Footer() {
                             <Botao
                                 icon={icons.share}
                                 classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
-                                style={{
+                                estilo={{
                                     backgroundColor: "var(--btn-footer) "
                                 }} />
                         </li>
@@ -48,7 +48,7 @@ export default function Footer() {
                             <Botao
                                 icon={icons.hashtag}
                                 classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
-                                style={{
+                                estilo={{
                                     backgroundColor: "var(--btn-footer) "
                                 }} />
                         </li>
@@ -56,7 +56,7 @@ export default function Footer() {
                             <Botao
                                 icon={icons.camera}
                                 classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
-                                style={{
+                                estilo={{
                                     backgroundColor: "var(--btn-footer) "
                                 }} />
                         </li>
@@ -64,7 +64,7 @@ export default function Footer() {
                             <Botao
                                 icon={icons.play}
                                 classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
-                                style={{
+                                estilo={{
                                     backgroundColor: "var(--btn-footer) "
                                 }} />
                         </li>

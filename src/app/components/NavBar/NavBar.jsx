@@ -28,7 +28,7 @@ export default function NavBar() {
                     </a>
                     <ul className="navbar-nav mx-auto justify-content-center">
                         <li className="nav-item">
-                            <a href="#" className="nav-link">Início</a>
+                            <a href="/" className="nav-link">Início</a>
                         </li>
                         <li className="nav-item">
                             <a href="#" className="nav-link">Conteúdos</a>
@@ -39,14 +39,14 @@ export default function NavBar() {
                         <li className="nav-item">
                             <a href="#" className="nav-link">Sobre</a>
                         </li>
-                    </ul>
+                        </ul>
                     <div className="d-flex align-items-center gap-3">
-                        <Botao texto="Login" classe="btn-light" style={{ border: "1px solid #a8a8a8ff" }} />
+                        <Botao texto="Login" classe="btn-light" estilo={{ border: "1px solid #a8a8a8ff" }} />
                         <Botao texto="Criar Conta" classe="btn-danger" />
                         {/* <Botao
                             icon={IconUser}
                             classe="rounded-circle p-1"
-                            style={{ backgroundColor: "var(--blue) ", color: "var(--color-primary)" }}
+                            estilo={{ backgroundColor: "var(--blue) ", color: "var(--color-primary)" }}
                             aria-label="Perfil"
                         /> */}
                     </div>
