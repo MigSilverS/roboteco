@@ -1,4 +1,6 @@
+import Link from "next/link";
 import Botao from "../Botao/Botao";
+
 
 
 // const IconUser = (
@@ -7,7 +9,6 @@ import Botao from "../Botao/Botao";
 //     </svg>
 
 // );
-
 
 export default function NavBar() {
     return (
@@ -33,7 +34,7 @@ export default function NavBar() {
                             <a href="#" className="nav-link">Conteúdos</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link">Para Escolas</a>
+                            <Link href="/pages/escola/para-escolas" className="nav-link">Para Escolas</Link>
                         </li>
                         <li className="nav-item">
                             <a href="#" className="nav-link">Sobre</a>

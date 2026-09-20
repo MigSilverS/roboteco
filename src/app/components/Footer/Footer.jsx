@@ -33,13 +33,13 @@ export default function Footer() {
 
     return (
         <>
-            <footer className={`${styles.container} fixed-bottom px-5`}>
+            <footer className={`${styles.container} px-5`}>
                 <div className="d-flex justify-content-end flex-wrap py-2">
                     <ul className="d-flex flex-row justify-content-center align-items-center list-unstyled">
                         <li className="p-2">
                             <Botao
                                 icon={icons.share}
-                                classe="rounded-circle d-flex justify-content-center align-items-center text-black p-2"
+                                classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
                                 style={{
                                     backgroundColor: "var(--btn-footer) "
                                 }} />
@@ -47,7 +47,7 @@ export default function Footer() {
                         <li className="p-2">
                             <Botao
                                 icon={icons.hashtag}
-                                classe="rounded-circle d-flex justify-content-center align-items-center text-black p-2"
+                                classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
                                 style={{
                                     backgroundColor: "var(--btn-footer) "
                                 }} />
@@ -55,7 +55,7 @@ export default function Footer() {
                         <li className="p-2">
                             <Botao
                                 icon={icons.camera}
-                                classe="rounded-circle d-flex justify-content-center align-items-center text-black p-2"
+                                classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
                                 style={{
                                     backgroundColor: "var(--btn-footer) "
                                 }} />
@@ -63,7 +63,7 @@ export default function Footer() {
                         <li className="p-2">
                             <Botao
                                 icon={icons.play}
-                                classe="rounded-circle d-flex justify-content-center align-items-center text-black p-2"
+                                classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
                                 style={{
                                     backgroundColor: "var(--btn-footer) "
                                 }} />
