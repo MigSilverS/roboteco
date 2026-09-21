@@ -44,8 +44,8 @@ export default function ParaEscolas() {
                 <hr />
 
                 <div className="d-flex flex-wrap gap-3 mt-3">
-                    <Botao texto="Solicitar aula experimental" classe="text-white btn-danger" estilo={{ backgroundColor: "var(--red)" }} />
-                    <Botao texto="Solicitar aula experimental" classe="btn-light" />
+                    <Botao texto="Solicitar aula experimental" classe="text-white btn-danger p-2" />
+                    <Botao texto="Solicitar aula experimental" classe="btn-light border p-2" />
                 </div>
 
                 <div className="mt-3">
@@ -54,7 +54,7 @@ export default function ParaEscolas() {
 
                 <hr />
 
-                <div className="mt-5">
+                <div className="mt-5 mb-5">
                     <div>
                         <Titulo titulo="Escolas participantes" nivel={2} />
                         <p>Alguns dos nossos clientes</p>
@@ -80,7 +80,7 @@ export default function ParaEscolas() {
                                     <p>— Profª. Mariana Silveira, Coordenação Pedagógica (Depoimento ilustrativo)</p>
                                 </div>
 
-                                <div className="d-flex justify-content-end mt-3 me-4">
+                                <div className="d-flex justify-content-end m-4">
                                     <Botao texto="Conheça essa experiência" classe="d-flex align-items-center gap-2 fw-bold text-danger bg-light" icon={icon} />
                                 </div>
                             </div>
@@ -89,6 +89,25 @@ export default function ParaEscolas() {
                     </div>
 
                 </div>
+
+                <hr />
+
+                <div className="d-flex flex-column justify-content-center align-items-center bg-light border rounded-2 mt-5 p-5">
+                    <div className="">
+                        <Titulo titulo="Sua escola pode viver essa experiência" nivel={2} />
+                    </div>
+                    <div className="mt-2">
+                        <p>Envie o interesse e converse com nossa equipe sobre as possibilidades para a sua instituição.</p>
+                    </div>
+                    <div className="d-flex flex-wrap gap-3 mt-4">
+                        <Botao texto="Solicitar aula experimental" classe="text-white btn-danger p-3" />
+                        <Botao texto="Falar com consultor pedagógico" classe="btn-light border p-3" />
+                    </div>
+                    <div className="mt-3">
+                        <p>Atendimento prioritário para escolas da região metropolitana do Vale do Paraíba.</p>
+                    </div>
+                </div>
+
 
             </div>
 
