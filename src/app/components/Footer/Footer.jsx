@@ -33,52 +33,61 @@ export default function Footer() {
 
     return (
         <>
-            <footer className={`${styles.container} px-5`}>
-                <div className="d-flex justify-content-end flex-wrap py-2">
-                    <ul className="d-flex flex-row justify-content-center align-items-center list-unstyled">
-                        <li className="p-2">
-                            <Botao
-                                icon={icons.share}
-                                classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
-                                estilo={{
-                                    backgroundColor: "var(--btn-footer) "
-                                }} />
-                        </li>
-                        <li className="p-2">
-                            <Botao
-                                icon={icons.hashtag}
-                                classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
-                                estilo={{
-                                    backgroundColor: "var(--btn-footer) "
-                                }} />
-                        </li>
-                        <li className="p-2">
-                            <Botao
-                                icon={icons.camera}
-                                classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
-                                estilo={{
-                                    backgroundColor: "var(--btn-footer) "
-                                }} />
-                        </li>
-                        <li className="p-2">
-                            <Botao
-                                icon={icons.play}
-                                classe="rounded-5 d-flex justify-content-center align-items-center text-black p-2"
-                                estilo={{
-                                    backgroundColor: "var(--btn-footer) "
-                                }} />
-                        </li>
-                    </ul>
-                </div>
+            <footer className={`${styles.container} py-4`}>
+                <div className="d-flex justify-content-md-around justify-content-center align-items-center flex-wrap">
 
-                <div className="d-flex justify-content-md-between justify-content-center flex-wrap py-3">
-                    <span className="p-2">© 2026 Roboteco. Construindo o futuro, um bloco por vez.</span>
-                    <ul className="d-flex flex-row justify-content-center align-items-center list-unstyled">
-                        <a href="#" className="p-2 text-black text-decoration-none">Suporte</a>
-                        <a href="#" className="p-2 text-black text-decoration-none">Privacidade</a>
-                        <a href="#" className="p-2 text-black text-decoration-none">Termos</a>
-                        <a href="#" className="p-2 text-black text-decoration-none">Comunidade</a>
-                    </ul>
+                    <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 p-2">
+                        <span className="fs-5">
+                            Robot<span style={{ color: "var(--red)" }}>eco.</span>
+                        </span>
+                        <span className="border-3 px-3 border-start">© 2026 Roboteco. Construindo o futuro, um bloco por vez.</span>
+                    </div>
+
+                    <div className="d-flex justify-content-center p-2">
+                        <ul className="d-flex flex-row align-items-center gap-4 mb-0 list-unstyled">
+                            <a href="#" className="text-black text-decoration-none">Suporte</a>
+                            <a href="#" className="text-black text-decoration-none">Privacidade</a>
+                            <a href="#" className="text-black text-decoration-none">Termos</a>
+                            <a href="#" className="text-black text-decoration-none">Comunidade</a>
+                        </ul>
+                    </div>
+
+                    <div className="d-flex justify-content-center p-2">
+                        <ul className="d-flex flex-row gap-2 mb-0 list-unstyled">
+                            <li className="">
+                                <Botao
+                                    icon={icons.share}
+                                    classe="rounded-2 d-flex justify-content-center align-items-center text-black p-2"
+                                    estilo={{
+                                        backgroundColor: "var(--btn-footer) "
+                                    }} />
+                            </li>
+                            <li className="">
+                                <Botao
+                                    icon={icons.hashtag}
+                                    classe="rounded-2 d-flex justify-content-center align-items-center text-black p-2"
+                                    estilo={{
+                                        backgroundColor: "var(--btn-footer) "
+                                    }} />
+                            </li>
+                            <li className="">
+                                <Botao
+                                    icon={icons.camera}
+                                    classe="rounded-2 d-flex justify-content-center align-items-center text-black p-2"
+                                    estilo={{
+                                        backgroundColor: "var(--btn-footer) "
+                                    }} />
+                            </li>
+                            <li className="">
+                                <Botao
+                                    icon={icons.play}
+                                    classe="rounded-2 d-flex justify-content-center align-items-center text-black p-2"
+                                    estilo={{
+                                        backgroundColor: "var(--btn-footer) "
+                                    }} />
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </footer>
         </>
