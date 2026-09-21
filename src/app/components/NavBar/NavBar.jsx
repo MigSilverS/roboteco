@@ -28,7 +28,7 @@ export default function NavBar() {
                     </a>
                     <ul className="navbar-nav mx-auto justify-content-center">
                         <li className="nav-item">
-                            <a href="/" className="nav-link">Início</a>
+                            <Link href="/" className="nav-link">Início</Link>
                         </li>
                         <li className="nav-item">
                             <a href="#" className="nav-link">Conteúdos</a>
@@ -41,8 +41,8 @@ export default function NavBar() {
                         </li>
                         </ul>
                     <div className="d-flex align-items-center gap-3">
-                        <Botao texto="Login" classe="btn-light" estilo={{ border: "1px solid #a8a8a8ff" }} />
-                        <Botao texto="Criar Conta" classe="btn-danger" />
+                        <Link href="/pages/login" className="btn btn-light" style={{border: "1px solid #a8a8a8ff"}}>Login</Link>
+                        <Link href="/pages/cadastro" className="btn btn-danger" style={{border: "1px solid #a8a8a8ff"}}>Criar Conta</Link>
                         {/* <Botao
                             icon={IconUser}
                             classe="rounded-circle p-1"
