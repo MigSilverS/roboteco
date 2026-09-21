@@ -31,7 +31,7 @@ export default function NavBar() {
                             <Link href="/" className="nav-link">Início</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link">Conteúdos</a>
+                            <a href="/pages/conteudos" className="nav-link">Conteúdos</a>
                         </li>
                         <li className="nav-item">
                             <Link href="/pages/escola/para-escolas" className="nav-link">Para Escolas</Link>
