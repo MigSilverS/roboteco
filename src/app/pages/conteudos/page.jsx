@@ -7,7 +7,7 @@ import BarraPesquisa from "@/app/components/BarraPesquisa/BarraPesquisa";
 import Botao from "@/app/components/Botao/Botao";
 import Dropdown from "@/app/components/Dropdown/Dropdown";
 import CardConteudo from "@/app/components/CardConteudo/CardConteudo";
-import { RiRobot2Line } from "react-icons/ri";
+// import { RiRobot2Line } from "react-icons/ri";
 
 const icons = {
     all: (
@@ -27,9 +27,9 @@ const icons = {
         </svg>
 
     ),
-    robot: (
-        <RiRobot2Line size={20} />
-    ),
+    // robot: (
+    //     <RiRobot2Line size={20} />
+    // ),
 
 }
 
