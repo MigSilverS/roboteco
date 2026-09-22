@@ -4,7 +4,7 @@ import Botao from "../Botao/Botao";
 export default function Card({miniTitulo, titulo, subtitulo, texto, href }) {
     return (
         <div
-            className={`${styles.container} mb-3`}
+            className={`${styles.container} mt-1 mb-5 row ${styles.container}`}
             style={{
                 backgroundColor: "var(--color-primary)",
                 borderTop: "4px solid var(--red)",
