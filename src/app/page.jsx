@@ -7,6 +7,8 @@ import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
 import Card from "@/app/components/Card/Card";
 
+
+
 const icons = {
   book: (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="var(--red)" width={30} height={30} className="size-6">
@@ -19,6 +21,11 @@ const icons = {
     </svg>
 
   ),
+  calendar: (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width={20} height={20} className="size-6">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+    </svg>
+  )
 
 }
 
@@ -26,32 +33,37 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className={`${styles.container} mt-5 mb-5 row`}>
-        <div className="col-md-8">
-          <Titulo titulo="Robótica na escola pública" nivel={2} estilo={{ color: 'var(--red)' }} />
-          <Titulo titulo="Robótica para
-        aprender e criar." nivel={1} estilo={{ fontSize: '5.2rem' }} />
-          <Texto texto="Explore robótica, programação e eletrônica. Aprenda online e conheça as atividades presenciais para escolas da região." classe="lead" estilo={{ fontSize: '1.4rem' }} />
-        </div>
-        <div className="col-md-4 p-5" style={{ backgroundColor: 'var(--blue)', borderRadius: '10px' }}>
-          <div className="session">
-            <div className="header d-flex gap-2">
-              {icons.book}
-              <Titulo titulo="Para aprender" nivel={2} estilo={{ color: 'var(--color-primary)' }} />
-            </div>
-            <div className="main mt-3 mb-3">
-              <Texto texto="Aprenda robótica, programação e eletrônica através de conteúdos interativos, vídeos, materiais educativos e atividades práticas.
-               Acompanhe sua evolução, conquiste pontos e desenvolva habilidades como lógica, criatividade e resolução de problemas." estilo={{ fontSize: '1.1rem', color: 'var(--color-primary)' }} />
+      <div className={`${styles.container} row`}>
+        <div className="col-12 row mt-5">
+          <div className="col-md-8 d-flex align-items-center">
+            <div className="">
+              <Titulo titulo="Robótica na escola pública" nivel={2} estilo={{ color: 'var(--red)' }} />
+              <Titulo titulo="Destrave o lado tecnológico e criativo!" nivel={1} estilo={{ fontSize: '4.4rem' }} />
+              <Texto texto="Explore robótica, programação e eletrônica. 
+              Aprenda online e conheça as atividades presenciais para escolas da região." classe="lead" estilo={{ fontSize: '1.4rem' }} />
+              <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px"}} />
             </div>
           </div>
-          <div className="session">
-            <div className="header d-flex gap-2">
-              {icons.schoolhat}
-              <Titulo titulo="Para participar" nivel={2} estilo={{ color: 'var(--color-primary)' }} />
+          <div className="col-md-4 p-5" style={{ backgroundColor: 'var(--blue)', borderRadius: '10px' }}>
+            <div className="session">
+              <div className="header d-flex gap-2">
+                {icons.book}
+                <Titulo titulo="Para aprender" nivel={2} estilo={{ color: 'var(--color-primary)' }} />
+              </div>
+              <div className="main mt-3 mb-3">
+                <Texto texto="Aprenda robótica, programação e eletrônica através de conteúdos interativos, vídeos, materiais educativos e atividades práticas.
+               Acompanhe sua evolução, conquiste pontos e desenvolva habilidades como lógica, criatividade e resolução de problemas." estilo={{ fontSize: '1.1rem', color: 'var(--color-primary)' }} />
+              </div>
             </div>
-            <div className="main mt-3 mb-3">
-              <Texto texto="Professores e responsáveis podem solicitar aulas experimentais ou atividades de robótica para a instituição. 
+            <div className="session">
+              <div className="header d-flex gap-2">
+                {icons.schoolhat}
+                <Titulo titulo="Para participar" nivel={2} estilo={{ color: 'var(--color-primary)' }} />
+              </div>
+              <div className="main mt-3 mb-3">
+                <Texto texto="Professores e responsáveis podem solicitar aulas experimentais ou atividades de robótica para a instituição. 
               A equipe ROBOTECO analisa a solicitação, organiza a programação e conecta os alunos à experiência prática." estilo={{ fontSize: '1.1rem', color: 'var(--color-primary)' }} />
+              </div>
             </div>
           </div>
         </div>
@@ -70,16 +82,14 @@ export default function Home() {
 
 
         </div>
-        <div className="col-md-12">
+        <div className="col-md-12 mb-5">
           <div className="p-5 rounded" style={{ backgroundColor: "var(--blue)" }}>
             <h3 className="fw-bold mb-2" style={{ color: "var(--color-primary)" }}>
               Leve o Roboteco à sua escola
             </h3>
-
             <p className="fw-normal mb-4" style={{ color: "var(--color-primary)" }}>
               Atendimento inicial em Guaratinguetá, Lorena, Aparecida e Potim. A equipe analisa a viabilidade de cada solicitação.
             </p>
-
             <Botao texto="Solicitar Aula Experimental" classe="btn-danger" />
           </div>
         </div>

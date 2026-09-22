@@ -1,10 +1,28 @@
+import Link from "next/link";
 import styles from "./Botao.module.css";
 
-export default function Botao({ texto, classe, icon, estilo }) {
+export default function Botao({
+    texto,
+    children,
+    classe = "",
+    className = "",
+    icon,
+    estilo,
+    style,
+    href = "#",
+    ...props
+}) {
+    const classes = `btn ${styles.botao} ${classe} ${className}`.trim();
+    const estilos = { ...estilo, ...style };
+
     return (
-        <button className={`btn ${styles.btn} ${classe}`} style={estilo}>
-            {texto}
-            {icon}
-        </button>
+        <Link href={href} className={classes} style={estilos} {...props}>
+            {children ?? (
+                <>
+                    {icon}
+                    {texto} 
+                </>
+            )}
+        </Link>
     );
 }

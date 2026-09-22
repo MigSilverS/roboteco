@@ -28,21 +28,31 @@ export default function NavBar() {
                     </a>
                     <ul className="navbar-nav mx-auto justify-content-center">
                         <li className="nav-item">
-                            <Link href="/" className="nav-link">Início</Link>
+                            <Link href="/" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Início</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/pages/conteudos" className="nav-link">Conteúdos</a>
+                            <a href="/pages/conteudos" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Conteúdos</a>
                         </li>
                         <li className="nav-item">
-                            <Link href="/pages/escola/para-escolas" className="nav-link">Para Escolas</Link>
+                            <Link href="/pages/escola/para-escolas" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Para Escolas</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link">Sobre</a>
+                            <a href="#" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Sobre</a>
                         </li>
                         </ul>
                     <div className="d-flex align-items-center gap-3">
-                        <Link href="/pages/login" className="btn btn-light" style={{border: "1px solid #a8a8a8ff"}}>Login</Link>
-                        <Link href="/pages/cadastro" className="btn btn-danger" style={{border: "1px solid #a8a8a8ff"}}>Criar Conta</Link>
+                        <Botao
+                            href="/pages/login"
+                            texto="Login"
+                            classe="btn-light"
+                            estilo={{ border: "1px solid #a8a8a8ff" }}
+                        />
+                        <Botao
+                            href="/pages/cadastro"
+                            texto="Criar Conta"
+                            classe="btn-danger"
+                            estilo={{ border: "1px solid #a8a8a8ff" }}
+                        />
                         {/* <Botao
                             icon={IconUser}
                             classe="rounded-circle p-1"

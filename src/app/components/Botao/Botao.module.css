@@ -1,8 +1,18 @@
-/* .btn {
+.botao {
     padding: 5px 20px !important;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.363) !important;  
-} */
-
-.btn:hover {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none !important;
     transition: all 0.2s ease-in-out;
+    border-radius: 9999px;
+    font-family: 'Quicksand', sans-serif;
+} 
+
+.botao:hover,
+.botao:focus,
+.botao:visited {
+    text-decoration: none !important;
 }
