@@ -8,7 +8,7 @@ const icon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24
 export default function BarraPesquisa() {
     return (
         <>
-            <div className={`${styles.barraPesquisaContainer} d-flex mx-3`}>
+            <div className={`${styles.barraPesquisaContainer} d-flex`}>
                 <div className={styles.icone}>
                     {icon}
                 </div>

@@ -7,8 +7,6 @@ import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
 import Card from "@/app/components/Card/Card";
 
-
-
 const icons = {
   book: (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="var(--red)" width={30} height={30} className="size-6">
@@ -74,9 +72,9 @@ export default function Home() {
             <a href="" className="text-decoration-none d-flex align-items-center" style={{ color: "black" }}>Ver Conteúdo</a>
           </div>
           <div className="cards gap-5 d-flex mt-5">
-            <Card className="col-md-6 p-5" titulo="O que é robótica?" miniTitulo="Robótica · Primeiros passos" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
-            <Card className="col-md-6 p-5" titulo="Sequências e comandos" miniTitulo="Programação · Primeiros passos" texto="Organize instruções para resolver um problema, uma etapa por vez." />
-            <Card className="col-md-6 p-5" titulo="Conhecendo os circuitos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
+            <Card titulo="O que é robótica?" miniTitulo="Robótica · Primeiros passos" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
+            <Card titulo="Sequências e comandos" miniTitulo="Programação · Primeiros passos" texto="Organize instruções para resolver um problema, uma etapa por vez." />
+            <Card titulo="Conhecendo os circuitos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
           </div>
 
 
