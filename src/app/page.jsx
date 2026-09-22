@@ -34,14 +34,14 @@ export default function Home() {
     <>
       <NavBar />
       <div className={`${styles.container} row`}>
-        <div className="col-12 row mt-5">
+        <div className="col-12 row mt-5 mb-5">
           <div className="col-md-8 d-flex align-items-center">
             <div className="">
               <Titulo titulo="Robótica na escola pública" nivel={2} estilo={{ color: 'var(--red)' }} />
               <Titulo titulo="Destrave o lado tecnológico e criativo!" nivel={1} estilo={{ fontSize: '4.4rem' }} />
               <Texto texto="Explore robótica, programação e eletrônica. 
               Aprenda online e conheça as atividades presenciais para escolas da região." classe="lead" estilo={{ fontSize: '1.4rem' }} />
-              <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px"}} />
+              <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
             </div>
           </div>
           <div className="col-md-4 p-5" style={{ backgroundColor: 'var(--blue)', borderRadius: '10px' }}>
@@ -82,16 +82,18 @@ export default function Home() {
 
 
         </div>
-        <div className="col-md-12 mb-5">
-          <div className="p-5 rounded" style={{ backgroundColor: "var(--blue)" }}>
-            <h3 className="fw-bold mb-2" style={{ color: "var(--color-primary)" }}>
-              Leve o Roboteco à sua escola
+      </div>
+      <div className="col-md-12 ">
+        <div className="px-5 align-items-center d-flex justify-content-between" style={{ background: "linear-gradient(55deg, var(--blue) 40%, #011827, #5c1010)", height: "20rem" }}>
+          <div className="">
+            <h3 className="fw-bold mb-2" style={{ color: "var(--color-primary)", fontSize: '3rem' }}>
+              Conheça a Roboteco de perto!
             </h3>
             <p className="fw-normal mb-4" style={{ color: "var(--color-primary)" }}>
               Atendimento inicial em Guaratinguetá, Lorena, Aparecida e Potim. A equipe analisa a viabilidade de cada solicitação.
             </p>
-            <Botao texto="Solicitar Aula Experimental" classe="btn-danger" />
           </div>
+          <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
         </div>
       </div>
       <Footer />
