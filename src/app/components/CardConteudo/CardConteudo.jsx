@@ -50,11 +50,10 @@ function renderTipo(tipo, key) {
     );
 }
 
-
 export default function CardConteudo({ miniTitulo, titulo, subtitulo, texto, tempo, tipo1, tipo2, disp }) {
     return (
         <div
-            className={`${styles.container} mt-1 mb-5 row ${styles.container}`}
+            className={`${styles.container} mt-1 mb-5`}
             style={{
                 backgroundColor: "var(--color-primary)",
                 borderTop: "4px solid var(--red)",
