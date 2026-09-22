@@ -7,7 +7,7 @@ import BarraPesquisa from "@/app/components/BarraPesquisa/BarraPesquisa";
 import Botao from "@/app/components/Botao/Botao";
 import Dropdown from "@/app/components/Dropdown/Dropdown";
 import CardConteudo from "@/app/components/CardConteudo/CardConteudo";
-// import { RiRobot2Line } from "react-icons/ri";
+import { RiRobot2Line } from "react-icons/ri";
 
 const icons = {
     all: (
@@ -27,9 +27,9 @@ const icons = {
         </svg>
 
     ),
-    // robot: (
-    //     <RiRobot2Line size={20} />
-    // ),
+    robot: (
+        <RiRobot2Line size={20} />
+    ),
 
 }
 
@@ -37,16 +37,14 @@ export default function Conteudos() {
     return (
         <>
             <NavBar />
-            <div className={`${styles.container} mt-5 mb-5 row`}>
+            <div className={`${styles.container} mt-5 row`}>
                 <div className="">
                     <Titulo titulo="Conteúdos para aprender e criar." nivel={1} />
                     <Texto texto="Explore ideias, entenda como as coisas funcionam e coloque seu aprendizado em prática, no seu ritmo." estilo={{ fontSize: '1.1rem' }} classe="mb-5" />
-                    <hr />
-                    <Texto texto="Explore as demonstrações públicas. Entre com uma conta de aluno para acessar todos os materiais e enviar atividades." estilo={{ fontSize: '1.1rem' }} />
-                    <hr />
                 </div>
+                <hr />
                 <BarraPesquisa />
-                <div className={`${styles.filter} mt-3 mb-5`}>
+                <div className={`${styles.filter} mt-3 mb-3`}>
                     <Botao icon={icons.all} texto="Todos os Temas" classe={`btn btn-light ${styles.botao}`} estilo={{ height: "40px", borderRadius: "4px" }} />
                     <Botao icon={icons.robot} texto="Robótica" classe={`btn btn-light ${styles.botao}`} estilo={{ height: "40px", borderRadius: "4px" }} />
                     <Botao icon={icons.code} texto="Programação" classe={`btn btn-light ${styles.botao}`} estilo={{ height: "40px", borderRadius: "4px" }} />
