@@ -35,7 +35,7 @@ export default function NavBar() {
                             <Link href="/pages/escola/para-escolas" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Para Escolas</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Sobre</a>
+                            <Link href="/pages/sobre-nos" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Sobre nós</Link>
                         </li>
                         </ul>
                     <div className="d-flex align-items-center gap-3">
