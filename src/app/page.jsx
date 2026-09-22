@@ -69,12 +69,12 @@ export default function Home() {
           <hr />
           <div className="d-flex justify-content-between">
             <Titulo titulo="Comece pelos conteúdos" nivel={2} />
-            <a href="" className="text-decoration-none d-flex align-items-center" style={{ color: "black" }}>Ver Conteúdo</a>
+            <a href="/pages/conteudos" className="text-decoration-none d-flex align-items-center" style={{ color: "black" }}>Ver Conteúdo</a>
           </div>
           <div className="cards gap-5 d-flex mt-5">
-            <Card titulo="O que é robótica?" miniTitulo="Robótica · Primeiros passos" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
-            <Card titulo="Sequências e comandos" miniTitulo="Programação · Primeiros passos" texto="Organize instruções para resolver um problema, uma etapa por vez." />
-            <Card titulo="Conhecendo os circuitos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
+            <Card titulo="O que é robótica?" href="/pages/conteudos" miniTitulo="Robótica · Primeiros passos" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
+            <Card titulo="Sequências e comandos" href="/pages/conteudos" miniTitulo="Programação · Primeiros passos" texto="Organize instruções para resolver um problema, uma etapa por vez." />
+            <Card titulo="Conhecendo os circuitos" href="/pages/conteudos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
           </div>
 
 

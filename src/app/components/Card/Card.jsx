@@ -1,7 +1,7 @@
 import styles from "./Card.module.css";
 import Botao from "../Botao/Botao";
 
-export default function Card({miniTitulo, titulo, subtitulo, texto,  }) {
+export default function Card({miniTitulo, titulo, subtitulo, texto, href }) {
     return (
         <div
             className={`${styles.container} mt-1 mb-5 row ${styles.container}`}
@@ -28,7 +28,7 @@ export default function Card({miniTitulo, titulo, subtitulo, texto,  }) {
                 {texto}
             </p>
 
-            <Botao texto="Saiba mais" classe="btn-light" estilo={{ border: "1px solid #a8a8a8ff" }} />
+            <Botao href={href}  texto="Saiba mais" classe="btn-light" estilo={{ border: "1px solid #a8a8a8ff" }} />
         </div>
     );
 }
