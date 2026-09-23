@@ -12,6 +12,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { LuGamepad2 } from "react-icons/lu";
 import { FaPersonDigging } from "react-icons/fa6";
 
+import logo from '@/app/images/wolfy-logo.png';
 import img from '@/app/images/equipe/integrante1.jpg';
 
 export default function SobreNos() {
@@ -94,7 +95,7 @@ export default function SobreNos() {
                         <div className="col-12 col-md-6">
                             <div className="row justify-content-md-end justify-content-center g-3">
                                 <div className="col-5">
-                                    <div className="h-100 bg-white shadow-sm p-4"  style={{ borderRadius: '25px' }}>
+                                    <div className="h-100 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
                                         <div className="mb-3">
                                             {icons.robo}
                                         </div>
@@ -103,14 +104,14 @@ export default function SobreNos() {
                                     </div>
                                 </div>
                                 <div className="col-5">
-                                    <div className="h-100 bg-white shadow-sm p-4"  style={{ borderRadius: '25px' }}>
+                                    <div className="h-100 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
                                         <div className="mb-3">{icons.chapeu}</div>
                                         <Titulo titulo="+3" nivel={2} />
                                         <p>Escolas parceiras</p>
                                     </div>
                                 </div>
                                 <div className="col-5">
-                                    <div className="h-100 bg-white shadow-sm p-4"  style={{ borderRadius: '25px' }}>
+                                    <div className="h-100 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
                                         <div className="mb-3">
                                             {icons.head}
                                         </div>
@@ -119,7 +120,7 @@ export default function SobreNos() {
                                     </div>
                                 </div>
                                 <div className="col-5">
-                                    <div className="h-100 bg-white shadow-sm p-4"  style={{ borderRadius: '25px' }}>
+                                    <div className="h-100 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
                                         <div className="mb-3">{icons.smile}</div>
                                         <Titulo titulo="+3" nivel={2} />
                                         <p>Escolas parceiras</p>
@@ -163,6 +164,22 @@ export default function SobreNos() {
                         <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
                     </div>
                 </div>
+
+
+                <div className={styles.container} style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+                    <div className="row justify-content-center align-items-center g-sm-3 p-5" style={{ background: "linear-gradient(216deg,rgba(2, 0, 36, 1) 3%, rgba(0, 43, 73, 1) 17%)", borderRadius: '25px'  }}>
+                        <div className="col-7 col-md-2">
+                            <img src={logo.src} className="w-100" alt=""/>
+                        </div>
+                        <div className="col-12 col-md-10">
+                            <Titulo titulo="Nosso parceiro" nivel={2} estilo={{ color: "white" }} />
+                            <Titulo titulo="Nosso parceiro" nivel={4} estilo={{ color: "var(--red)" }} />
+                            <p className="text-white">A Wolf Army Robotics é uma equipe de robótica de Lorena que atua como parceira da Roboteco, contribuindo com materiais, relatórios e apoio no desenvolvimento de atividades e conteúdos.</p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
             <Footer />
