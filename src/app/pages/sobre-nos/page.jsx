@@ -2,6 +2,7 @@ import Footer from "@/app/components/Footer/Footer";
 import NavBar from "@/app/components/NavBar/NavBar";
 import Titulo from "@/app/components/Titulo/Titulo";
 import CardPilares from "@/app/pages/sobre-nos/CardPilares/CardPilares";
+import CardEquipe from "./CardEquipe/CardEquipe";
 import styles from "./sobrenos.module.css";
 
 import { GiMechanicalArm } from "react-icons/gi";
@@ -10,6 +11,8 @@ import { PiBookOpenText } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa6";
 import { LuGamepad2 } from "react-icons/lu";
 import { FaPersonDigging } from "react-icons/fa6";
+
+import img from '@/app/images/equipe/integrante1.jpg';
 
 export default function SobreNos() {
 
@@ -82,7 +85,7 @@ export default function SobreNos() {
 
             <div className="container-fluid p-0">
 
-                <div className={`${styles.container}`} style={{ backgroundColor: 'var(--div1-color)', paddingTop: '6rem', paddingBottom: '6rem' }}>
+                <div className={`${styles.container}`} style={{ backgroundColor: '#F1F3FF', paddingTop: '6rem', paddingBottom: '6rem' }}>
                     <div className="row align-items-center">
                         <div className="col-12 col-md-6">
                             <Titulo titulo="Conheça quem faz o Roboteco acontecer" nivel={1} estilo={{ fontSize: '3.5rem' }} />
@@ -141,21 +144,23 @@ export default function SobreNos() {
                 </div>
 
 
-                <div className={styles.container} style={{ backgroundColor: 'var(--div1-color)', paddingTop: '6rem', paddingBottom: '6rem' }}>
+                <div className={styles.container} style={{ backgroundColor: '#CFE5FFE5', paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
                     <div>
                         <Titulo titulo="Equipe Roboteco" nivel={2} />
                         <Titulo
                             titulo="Conheça os criadores do projeto"
-                            nivel={3}
+                            nivel={4}
                             estilo={{ color: "var(--red)" }}
                         />
                     </div>
 
-                    <div className="row">
-                        {cardCont.map((item) => (
-                            <CardPilares key={item.id} icon={item.icon} titulo={item.titulo} texto={item.texto} rodape={item.rodape} classe={item.classe} estilo={item.estilo}
-                            />
-                        ))}
+                    <div className="row mt-3">
+                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
+                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
+                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
+                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
+                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
+                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
                     </div>
                 </div>
             </div>
