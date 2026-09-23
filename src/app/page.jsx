@@ -31,8 +31,8 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className={`${styles.container} row`}>
-        <div className="col-12 row mt-5 mb-5">
+      <div className={`${styles.container}`}>
+        <div className="col-12 row mb-5">
           <div className="col-md-8 d-flex align-items-center">
             <div className="">
               <Titulo titulo="Robótica na escola pública" nivel={2} estilo={{ color: 'var(--red)' }} />
@@ -42,7 +42,7 @@ export default function Home() {
               <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
             </div>
           </div>
-          <div className="col-md-4 p-5" style={{ backgroundColor: 'var(--blue)', borderRadius: '10px' }}>
+          <div className="col-md-4 p-5 mt-5" style={{ backgroundColor: 'var(--blue)', borderRadius: '10px' }}>
             <div className="session">
               <div className="header d-flex gap-2">
                 {icons.book}
@@ -71,18 +71,22 @@ export default function Home() {
             <Titulo titulo="Comece pelos conteúdos" nivel={2} />
             <a href="/pages/conteudos" className="text-decoration-none d-flex align-items-center" style={{ color: "black" }}>Ver Conteúdo</a>
           </div>
-          <div className="cards gap-5 d-flex mt-5">
-            <Card titulo="O que é robótica?" href="/pages/conteudos" miniTitulo="Robótica · Primeiros passos" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
-            <Card titulo="Sequências e comandos" href="/pages/conteudos" miniTitulo="Programação · Primeiros passos" texto="Organize instruções para resolver um problema, uma etapa por vez." />
-            <Card titulo="Conhecendo os circuitos" href="/pages/conteudos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
+          <div className="cards row py-5 ">
+            <div className="col-12 col-sm-12 col-md-4">
+              <Card titulo="O que é robótica?" href="/pages/conteudos" miniTitulo="Robótica · Primeiros passos" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
+            </div>
+            <div className="col-12 col-sm-12 col-md-4">
+              <Card titulo="Sequências e comandos" href="/pages/conteudos" miniTitulo="Programação · Primeiros passos" texto="Organize instruções para resolver um problema, uma etapa por vez." />
+
+            </div>
+            <div className="col-12 col-sm-12 col-md-4">
+              <Card titulo="Conhecendo os circuitos" href="/pages/conteudos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
+            </div>
           </div>
-
-
-
         </div>
       </div>
-      <div className="col-md-12 ">
-        <div className="px-5 align-items-center d-flex justify-content-between" style={{ background: "linear-gradient(55deg, var(--blue) 40%, #011827, #5c1010)", height: "20rem" }}>
+      <div className="col-md-12">
+        <div className="px-5 align-items-center d-flex flex-wrap justify-content-between" style={{ background: "linear-gradient(55deg, var(--blue) 40%, #011827, #5c1010)", height: "20rem" }}>
           <div className="">
             <h3 className="fw-bold mb-2" style={{ color: "var(--color-primary)", fontSize: '3rem' }}>
               Conheça a Roboteco de perto!
