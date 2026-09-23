@@ -79,6 +79,57 @@ export default function SobreNos() {
         },
     ]
 
+    const cardEquipe = [
+        {
+            id: 1,
+            img: img,
+            nome: "Anna Laura Modesto",
+            funcao: "UI/UX e Documentação, Organização e Prototipagem",
+            descricao:
+                "Criação das páginas e layouts do sistema e registro de processo de desenvolvimento no diário do projeto.",
+        },
+        {
+            id: 2,
+            img: "",
+            nome: "Danilo das Neves",
+            funcao: "Desenvolvedor Back-end",
+            descricao:
+                "Participação no desenvolvimento do sistema, atuando na programação Back-end.",
+        },
+        {
+            id: 3,
+            img: "",
+            nome: "Diego Nogueira",
+            funcao: "Desenvolvedor Front-end",
+            descricao:
+                "Participação no desenvolvimento do sistema, atuando na programação Front-end.",
+        },
+        {
+            id: 4,
+            img: "",
+            nome: "Livia Toledo",
+            funcao: "Design Gráfico, de Conteúdo e Prototipagem",
+            descricao:
+                "Documentação do projeto e desenvolvimento dos desenhos e layouts das páginas.",
+        },
+        {
+            id: 5,
+            img: "",
+            nome: "Miguel Prata",
+            funcao: "Desenvolvedor Back-end",
+            descricao:
+                "Participação no desenvolvimento do sistema, atuando na programação Back-end.",
+        },
+        {
+            id: 6,
+            img: "",
+            nome: "Thainá Gonçalves",
+            funcao: "Design de Conteúdo, Prototipagem, Documentação e UX",
+            descricao:
+                "Criação protótipos, layout das páginas e materiais de apresentação do projeto.",
+        },
+    ]
+
     return (
         <>
 
@@ -156,20 +207,19 @@ export default function SobreNos() {
                     </div>
 
                     <div className="row mt-3">
-                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
-                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
-                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
-                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
-                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
-                        <CardEquipe img={img} nome="Anna Laura Modesto" funcao="UI/UX e Documentação, Organização e Prototipagem" descricao="Criação das páginas e layouts do sistema e registro do processo de desenvolvimento no diário do projeto." />
+                        {
+                            cardEquipe.map((item) => (
+                                <CardEquipe key={item.id} img={item.img} nome={item.nome} funcao={item.funcao} descricao={item.descricao} />
+                            ))
+                        }
                     </div>
                 </div>
 
 
                 <div className={styles.container} style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-                    <div className="row justify-content-center align-items-center g-md-0 g-sm-3 p-5" style={{ background: "linear-gradient(216deg,rgba(2, 0, 36, 1) 3%, rgba(0, 43, 73, 1) 17%)", borderRadius: '25px'  }}>
+                    <div className="row justify-content-center align-items-center g-md-0 g-sm-3 p-5" style={{ background: "linear-gradient(216deg,rgba(2, 0, 36, 1) 3%, rgba(0, 43, 73, 1) 17%)", borderRadius: '25px' }}>
                         <div className="col-7 col-md-2">
-                            <img src={logo.src} className="w-100" alt=""/>
+                            <img src={logo.src} className="w-100" alt="" />
                         </div>
                         <div className="col-12 col-md-10">
                             <Titulo titulo="Nosso parceiro" nivel={2} estilo={{ color: "white" }} />
