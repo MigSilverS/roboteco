@@ -223,7 +223,7 @@ export default function SobreNos() {
                         </div>
                         <div className="col-12 col-md-10">
                             <Titulo titulo="Nosso parceiro" nivel={2} estilo={{ color: "white" }} />
-                            <Titulo titulo="Nosso parceiro" nivel={4} estilo={{ color: "var(--red)" }} />
+                            <Titulo titulo="Wolfy Army Robotics" nivel={3} estilo={{ color: "var(--red)" }} />
                             <p className="text-white">A Wolf Army Robotics é uma equipe de robótica de Lorena que atua como parceira da Roboteco, contribuindo com materiais, relatórios e apoio no desenvolvimento de atividades e conteúdos.</p>
                         </div>
                     </div>
