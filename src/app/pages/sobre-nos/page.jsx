@@ -167,7 +167,7 @@ export default function SobreNos() {
 
 
                 <div className={styles.container} style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-                    <div className="row justify-content-center align-items-center g-sm-3 p-5" style={{ background: "linear-gradient(216deg,rgba(2, 0, 36, 1) 3%, rgba(0, 43, 73, 1) 17%)", borderRadius: '25px'  }}>
+                    <div className="row justify-content-center align-items-center g-md-0 g-sm-3 p-5" style={{ background: "linear-gradient(216deg,rgba(2, 0, 36, 1) 3%, rgba(0, 43, 73, 1) 17%)", borderRadius: '25px'  }}>
                         <div className="col-7 col-md-2">
                             <img src={logo.src} className="w-100" alt=""/>
                         </div>
