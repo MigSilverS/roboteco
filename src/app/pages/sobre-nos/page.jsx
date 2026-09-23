@@ -99,7 +99,7 @@ export default function SobreNos() {
         {
             id: 3,
             img: "",
-            nome: "Diego Nogueira",
+            nome: "Diego Nogueiraa",
             funcao: "Desenvolvedor Front-end",
             descricao:
                 "Participação no desenvolvimento do sistema, atuando na programação Front-end.",
