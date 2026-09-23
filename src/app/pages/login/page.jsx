@@ -26,7 +26,7 @@ export default function Login() {
                             <input type="password" className={`form-control ${styles.input}`} id="senha" />
                         </div>
 
-                        <Botao texto="Entrar" classe={`btn-danger w-100 ${styles.botao}`} />
+                        <Botao href="../pages/conteudos" texto="Entrar" classe={`btn-danger w-100 ${styles.botao}`} />
                     </form>
 
                     <p className={styles.linkConta}>

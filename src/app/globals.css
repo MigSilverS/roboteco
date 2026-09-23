@@ -7,7 +7,7 @@
     --blue:#02243a !important;
     --red:#b30000 !important;
     --green:#003110 !important;
-    --gray:#e9e8e8 !important;
+    --gray:rgb(212, 211, 211) !important;
 }
 
 .btn-danger {

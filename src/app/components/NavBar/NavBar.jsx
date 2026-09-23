@@ -29,9 +29,6 @@ export default function NavBar() {
                             <Link href="/" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Início</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/pages/conteudos" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Conteúdos</a>
-                        </li>
-                        <li className="nav-item">
                             <Link href="/pages/escola/para-escolas" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Para Escolas</Link>
                         </li>
                         <li className="nav-item">
