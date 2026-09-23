@@ -3,6 +3,9 @@ import Footer from "@/app/components/Footer/Footer";
 import NavBar from "@/app/components/NavBar/NavBar";
 import Titulo from "@/app/components/Titulo/Titulo";
 import styles from "./paraescolas.module.css";
+
+import { FiTool } from "react-icons/fi";
+
 import img from '@/app/images/case-escola.png';
 
 export default function ParaEscolas() {
@@ -20,77 +23,36 @@ export default function ParaEscolas() {
 
             <div className={`${styles.container} mt-5 mb-5`}>
 
-                <Titulo titulo="Sua escola no Roboteco" nivel={1} />
+                <div className="row align-items-center p-5 text-white" style={{backgroundColor: "#001629"}}>
 
-                <p>Aulas presenciais de robótica começam com uma solicitação do representante da instituição</p>
+                    <div className="col-6">
 
-                <div className="row mt-3">
+                        <Titulo titulo="Solicite uma aula experimental" nivel={1} estilo={{ fontSize: '3.5rem' }} />
 
-                    <div className="col-12 col-md-6">
-                        <Titulo titulo="1. Envie o interesse" nivel={5} />
-                        <p>Informe a escola, o responsável, a quantidade de alunos e as datas preferenciais.</p>
-                    </div>
+                        <div className="mt-4">
+                            <p>Escolas públicas podem solicitar uma aula experimental pela plataforma e receber nossa equipe para proporcionar aos alunos uma experiência prática com robótica, programação e eletrônica.</p>
+                        </div>
 
-                    <div className="col-12 col-md-6">
-                        <Titulo titulo="2. Acompanhe a análise" nivel={5} />
-                        <p>A equipe verifica os dados e a logística. Uma preferência de data ainda não é um agendamento.</p>
-                    </div>
-                </div>
-
-                <hr />
-
-                <p>Municípios elegíveis nesta etapa: Guaratinguetá, Lorena, Aparecida e Potim.</p>
-
-                <hr />
-
-                <div className="d-flex flex-wrap gap-3 mt-3">
-                    <Botao texto="Solicitar aula experimental" classe="text-white btn-danger p-2" />
-                    <Botao texto="Solicitar aula experimental" classe="btn-light border p-2" />
-                </div>
-
-                <div className="mt-3">
-                    <p>A solicitação deve ser feita por um representante legal ou pedagógico. Cada escola pode solicitar uma experimental por período de contrato.</p>
-                </div>
-
-                <hr />
-
-                <div className="mt-5 mb-5">
-                    <div>
-                        <Titulo titulo="Escolas participantes" nivel={2} />
-                        <p>Alguns dos nossos clientes</p>
-                    </div>
-
-                    <div className="bg-white shadow-sm rounded-2">
-
-                        <div className="row align-items-center">
-                            <div className="col-12 col-md-6">
-                                <img src={img.src} alt="" className="w-100 rounded-start-2" />
-                            </div>
-                            <div className="col-12 col-md-6 rounded-end-2">
-                                <span className="fw-semibold">Escola Parceira [Exemplo Ilustrativo] • Guaratinguetá, SP</span>
-                                <div className="mt-3">
-                                    <Titulo titulo="Projeto Carro Robô com Sensores Autônomos" nivel={3} />
-                                    <p>Turma do 6º ano explorando lógica de programação e montagem mecânica. Os estudantes desenvolveram protótipos capazes de desviar de obstáculos usando sensores ultrassônicos, integrando física e computação de forma colaborativa.</p>
-                                </div>
-
-                                <div className="border-start border-3 border-danger bg-light ps-3 py-2 me-4">
-                                    <p className="">
-                                        “A motivação dos estudantes durante a oficina transformou a dinâmica da sala de aula. Ver o projeto funcionando na prática despertou um interesse genuíno por ciência.”
-                                    </p>
-                                    <p>— Profª. Mariana Silveira, Coordenação Pedagógica (Depoimento ilustrativo)</p>
-                                </div>
-
-                                <div className="d-flex justify-content-end m-4">
-                                    <Botao texto="Conheça essa experiência" classe="d-flex align-items-center gap-2 fw-bold text-danger bg-light" icon={icon} />
+                        <div className="row mt-3">
+                            <div className="col-6 mb-3">
+                                <div className="w-100 d-flex align-items-start flex-wrap p-2">
+                                    <div>
+                                        <FiTool className="rounded-circle text-white p-2 me-3" style={{ backgroundColor: "var(--red)" }} size={35} />
+                                    </div>
+                                    <div className="w-50">
+                                        <Titulo titulo="Receba nossa equipe" nivel={5} />
+                                        <p>Uma experiência presencial com a equipe Roboteco diretamente na escola.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <div className="col-6">
+                        {icon}
                     </div>
 
                 </div>
-
-                <hr />
 
                 <div className="d-flex flex-column justify-content-center align-items-center bg-light border rounded-2 mt-5 p-5">
                     <div className="">
