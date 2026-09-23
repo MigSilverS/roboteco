@@ -45,7 +45,7 @@ export default function Footer() {
 
                     <div className="d-flex justify-content-center p-2">
                         <ul className="d-flex flex-row align-items-center gap-4 mb-0 list-unstyled">
-                            <a href="#" className="text-black text-decoration-none">Suporte</a>
+                            <a href="/pages/suporte" className="text-black text-decoration-none">Suporte</a>
                             <a href="#" className="text-black text-decoration-none">Privacidade</a>
                             <a href="#" className="text-black text-decoration-none">Termos</a>
                             <a href="#" className="text-black text-decoration-none">Comunidade</a>
