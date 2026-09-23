@@ -1,45 +1,32 @@
 import Link from "next/link";
+import Image from "next/image";
 import NavBar from "@/app/components/NavBar/NavBar";
 import Footer from "@/app/components/Footer/Footer";
-import Titulo from "@/app/components/Titulo/Titulo";
-import Botao from "@/app/components/Botao/Botao";
 import styles from "./login.module.css";
+import img from "@/app/images/login.jpg";
 
-export default function Login() {
+export default function Login(){
     return (
-        <div className={styles.pagina}>
-            <NavBar />
-
-            <main className={styles.conteudo}>
-                <div className={styles.formulario}>
-                    <Titulo titulo="Entrar" nivel={2} />
-                    <p className={styles.subtitulo}>Use o e-mail e a senha da sua conta.</p>
-
-                    <form>
-                        <div className="mb-3">
-                            <label htmlFor="email" className="form-label">E-mail</label>
-                            <input type="email" className={`form-control ${styles.input}`} id="email" />
-                        </div>
-
-                        <div className="mb-4">
-                            <label htmlFor="senha" className="form-label">Senha</label>
-                            <input type="password" className={`form-control ${styles.input}`} id="senha" />
-                        </div>
-
-                        <Botao href="../pages/conteudos" texto="Entrar" classe={`btn-danger w-100 ${styles.botao}`} />
-                    </form>
-
-                    <p className={styles.linkConta}>
-                        É aluno e ainda não tem conta? <Link href="/pages/cadastro">Criar conta</Link>
-                    </p>
-
-                    <p className={styles.linkEscola}>
-                        <Link href="/pages/escola/para-escolas">Representa uma escola? Veja como participar.</Link>
-                    </p>
-                </div>
-            </main>
-
-            <Footer/>
-        </div>
-    );
+    <div className={styles.pagina}>
+        <NavBar/>
+        <main className={styles.area}>
+            <section className={styles.card}>
+                <div className={styles.esquerda}>
+                    <span>Roboteco</span><h1>Bem vindo(a) de volta!</h1>
+                    <p>Continue sua jornada, explore novos conteúdos e coloque seus conhecimentos em prática.</p>
+                    <Image src={img} alt="Robótica"/></div><div className={styles.direita}>
+                        <h2>Acessar plataforma</h2><p>Insira seus dados para continuar sua jornada.</p>
+                        <form className={styles.form}>
+                            <label>Email</label><input/>
+                            <label>Senha <small>Esqueceu a senha?</small></label>
+                            <input type="password"/><div><input type="checkbox"/> Lembrar meu acesso nesse dispositivo</div>
+                            <button>Iniciar sessão</button></form>
+                            <p className={styles.link}>Primeira vez aqui? 
+                                <Link href="/pages/cadastro">Crie sua conta</Link></p>
+                                </div>
+                                </section>
+                                </main>
+                                <Footer/>
+                                </div>
+    )
 }
