@@ -1,10 +1,15 @@
 import Footer from "@/app/components/Footer/Footer";
 import NavBar from "@/app/components/NavBar/NavBar";
 import Titulo from "@/app/components/Titulo/Titulo";
+import CardPilares from "@/app/pages/sobre-nos/CardPilares/CardPilares";
+import styles from "./sobrenos.module.css";
+
 import { GiMechanicalArm } from "react-icons/gi";
 import { FaHeadSideVirus } from "react-icons/fa6";
-import styles from "./sobrenos.module.css";
-import CardPilares from "@/app/pages/sobre-nos/CardPilares/CardPilares";
+import { PiBookOpenText } from "react-icons/pi";
+import { FaRegHeart } from "react-icons/fa6";
+import { LuGamepad2 } from "react-icons/lu";
+import { FaPersonDigging } from "react-icons/fa6";
 
 export default function SobreNos() {
 
@@ -31,63 +36,121 @@ export default function SobreNos() {
 
     }
 
+    const cardCont = [
+        {
+            id: 1,
+            icon: <PiBookOpenText className="rounded-circle p-2 text-white" style={{ backgroundColor: "var(--fundo-icon)", color: "#CFE5FF" }} size={40} />,
+            titulo: "Acessibilidade",
+            texto: "Ampliamos o acesso à tecnologia, levando novas oportunidades de aprendizagem para crianças e escolas públicas.",
+            rodape: "Inclusão",
+            classe: "text-white",
+            estilo: { backgroundColor: 'var(--blue)' }
+        },
+        {
+            id: 2,
+            icon: <FaRegHeart className="rounded-circle p-2" style={{ backgroundColor: "var(--fundo-icon)", color: "#FFDAD4" }} size={40} />,
+            titulo: "Qualidade",
+            texto: "Conteúdos  bem estruturados e pensados para proporcionar uma experiência de aprendizado clara e significativa.",
+            rodape: "Excelência",
+            classe: "text-black",
+            estilo: { backgroundColor: 'var(--red)' }
+        },
+        {
+            id: 3,
+            icon: <FaPersonDigging className="rounded-circle p-2" style={{ backgroundColor: "var(--fundo-icon)", color: "#9AF7A7" }} size={40} />,
+            titulo: "Experimentação",
+            texto: "Atividades educativas que incentivam a experimentação, a criação e a aplicação dos conhecimentos na prática.",
+            rodape: "Aprender  na prática",
+            classe: "text-white",
+            estilo: { backgroundColor: 'var(--green)' }
+        },
+        {
+            id: 4,
+            icon: <LuGamepad2 className="rounded-circle p-2" style={{ backgroundColor: "var(--fundo-icon)", color: "#001629" }} size={40} />,
+            titulo: "Aprendizado lúdico",
+            texto: "Desafios, atividades interativas e recompensas tornam o aprendizado mais dinâmico.",
+            rodape: "Gamificação",
+            classe: "text-black",
+            estilo: { backgroundColor: 'var(--yellow)' }
+        },
+    ]
+
     return (
         <>
 
             <NavBar />
 
-            <div className="container-fluid border-3 border-bottom">
-                <div className="row align-items-center" style={{ backgroundColor: 'var(--div1-color)', paddingTop: '6rem', paddingBottom: '6rem', paddingLeft: '3.75rem', paddingRight: '3.75rem' }}>
-                    <div className="col-12 col-md-6 g-5 m-0 p-0">
-                        <Titulo titulo="Conheça quem faz o Roboteco acontecer" nivel={1} estilo={{ fontSize: '3.5rem' }} />
-                        <p>Conheça o time que faz o ROBOTECO acontecer. Reunimos diferentes conhecimentos e experiências para desenvolver uma plataforma que aproxima crianças e jovens da robótica, da programação e da eletrônica. Atuamos na criação dos conteúdos, na organização das atividades e na conexão com as escolas, buscando tornar o aprendizado mais acessível, prático e interessante.</p>
-                    </div>
-                    <div className="col-12 col-md-6">
-                        <div className="row row-cols-2 justify-content-md-end justify-content-center gap-3">
-                            <div className="col-10 col-md-5 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
-                                <div className="mb-3">
-                                    {icons.robo}
+            <div className="container-fluid p-0">
+
+                <div className={`${styles.container}`} style={{ backgroundColor: 'var(--div1-color)', paddingTop: '6rem', paddingBottom: '6rem' }}>
+                    <div className="row align-items-center">
+                        <div className="col-12 col-md-6">
+                            <Titulo titulo="Conheça quem faz o Roboteco acontecer" nivel={1} estilo={{ fontSize: '3.5rem' }} />
+                            <p>Conheça o time que faz o ROBOTECO acontecer. Reunimos diferentes conhecimentos e experiências para desenvolver uma plataforma que aproxima crianças e jovens da robótica, da programação e da eletrônica. Atuamos na criação dos conteúdos, na organização das atividades e na conexão com as escolas, buscando tornar o aprendizado mais acessível, prático e interessante.</p>
+                        </div>
+                        <div className="col-12 col-md-6">
+                            <div className="row row-cols-2 justify-content-md-end justify-content-center gap-3">
+                                <div className="col-10 col-md-5 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
+                                    <div className="mb-3">
+                                        {icons.robo}
+                                    </div>
+                                    <Titulo titulo="+10" nivel={2} />
+                                    <p>Robôs montados em nosso site</p>
                                 </div>
-                                <Titulo titulo="+10" nivel={2} />
-                                <p>Robôs montados em nosso site</p>
-                            </div>
-                            <div className="col-10 col-md-5 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
-                                <div className="mb-3">{icons.chapeu}</div>
-                                <Titulo titulo="+3" nivel={2} />
-                                <p>Escolas parceiras</p>
-                            </div>
-                            <div className="col-10 col-md-5 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
-                                <div className="mb-3">
-                                    {icons.head}
+                                <div className="col-10 col-md-5 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
+                                    <div className="mb-3">{icons.chapeu}</div>
+                                    <Titulo titulo="+3" nivel={2} />
+                                    <p>Escolas parceiras</p>
                                 </div>
-                                <Titulo titulo="+3" nivel={2} />
-                                <p>Escolas parceiras</p>
-                            </div>
-                            <div className="col-10 col-md-5 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
-                                <div className="mb-3">{icons.smile}</div>
-                                <Titulo titulo="+3" nivel={2} />
-                                <p>Escolas parceiras</p>
+                                <div className="col-10 col-md-5 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
+                                    <div className="mb-3">
+                                        {icons.head}
+                                    </div>
+                                    <Titulo titulo="+3" nivel={2} />
+                                    <p>Escolas parceiras</p>
+                                </div>
+                                <div className="col-10 col-md-5 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
+                                    <div className="mb-3">{icons.smile}</div>
+                                    <Titulo titulo="+3" nivel={2} />
+                                    <p>Escolas parceiras</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div className={`${styles.container} py-5`}>
-
-                <Titulo titulo="Pilares que guiam cada aula" />
-
-                <div className="row justify-content-between">
-                    <CardPilares titulo="Acessibilidade" texto="sladasdasdasdasdasdadada" rodape="inclusão" classe="text-white" estilo={{backgroundColor: 'var(--blue)', borderRadius: '15px'}} />
-                    <CardPilares titulo="Acessibilidade" texto="sladasdasdasdasdasdadada" rodape="inclusão" classe="text-white" estilo={{backgroundColor: 'var(--red)', borderRadius: '15px'}} />
-                    <CardPilares titulo="Acessibilidade" texto="sladasdasdasdasdasdadada" rodape="inclusão" classe="text-white" estilo={{backgroundColor: 'var(--green)', borderRadius: '15px'}} />
-                    <CardPilares titulo="Acessibilidade" texto="sladasdasdasdasdasdadada" rodape="inclusão" classe="text-white" estilo={{backgroundColor: 'var(--yellow)', borderRadius: '15px'}} />
+                <div className={`${styles.container} `} style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
+                    <span className="fw-semibold" style={{ color: "var(--red)" }}>NOSSO DNA FORMATIVO</span>
+                    <Titulo titulo="Pilares que guiam cada aula" nivel={2} />
+                    <div className="row mt-4">
+                        {
+                            cardCont.map((item) => (
+                                <CardPilares key={item.id} icon={item.icon} titulo={item.titulo} texto={item.texto} rodape={item.rodape} classe={item.classe} estilo={item.estilo} />
+                            ))
+                        }
+                    </div>
                 </div>
 
 
-            </div>
+                <div className={styles.container} style={{ backgroundColor: 'var(--div1-color)', paddingTop: '6rem', paddingBottom: '6rem' }}>
+                    <div>
+                        <Titulo titulo="Equipe Roboteco" nivel={2} />
+                        <Titulo
+                            titulo="Conheça os criadores do projeto"
+                            nivel={3}
+                            estilo={{ color: "var(--red)" }}
+                        />
+                    </div>
 
+                    <div className="row">
+                        {cardCont.map((item) => (
+                            <CardPilares key={item.id} icon={item.icon} titulo={item.titulo} texto={item.texto} rodape={item.rodape} classe={item.classe} estilo={item.estilo}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             <Footer />
 
