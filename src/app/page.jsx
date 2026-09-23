@@ -6,6 +6,7 @@ import Footer from "@/app/components/Footer/Footer";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
 import Card from "@/app/components/Card/Card";
+import img from '@/app/images/image.png';
 
 const icons = {
   book: (
@@ -50,7 +51,7 @@ export default function Home() {
               </div>
               <div className="main mt-3 mb-3">
                 <Texto texto="Aprenda robótica, programação e eletrônica através de conteúdos interativos, vídeos, materiais educativos e atividades práticas.
-               Acompanhe sua evolução, conquiste pontos e desenvolva habilidades como lógica, criatividade e resolução de problemas." estilo={{ fontSize: '1.1rem', color: 'var(--color-primary)' }} />
+               Acompanhe sua evolução, conquiste pontos e desenvolva habilidades como lógica, criatividade e resolução de problemas." classe={"text-justify"} estilo={{ fontSize: '1.1rem', color: 'var(--color-primary)' }} />
               </div>
             </div>
             <div className="session">
@@ -60,14 +61,14 @@ export default function Home() {
               </div>
               <div className="main mt-3 mb-3">
                 <Texto texto="Professores e responsáveis podem solicitar aulas experimentais ou atividades de robótica para a instituição. 
-              A equipe ROBOTECO analisa a solicitação, organiza a programação e conecta os alunos à experiência prática." estilo={{ fontSize: '1.1rem', color: 'var(--color-primary)' }} />
+              A equipe ROBOTECO analisa a solicitação, organiza a programação e conecta os alunos à experiência prática." classe={"text-justify"} estilo={{ fontSize: '1.1rem', color: 'var(--color-primary)' }} />
               </div>
             </div>
           </div>
         </div>
-        <div className="col-md-12">
+        <div className="col-md-12 row my-5">
           <hr />
-          <div className="d-flex justify-content-between">
+          {/* <div className="d-flex justify-content-between">
             <Titulo titulo="Comece pelos conteúdos" nivel={2} />
             <a href="/pages/conteudos" className="text-decoration-none d-flex align-items-center" style={{ color: "black" }}>Ver Conteúdo</a>
           </div>
@@ -81,6 +82,88 @@ export default function Home() {
             </div>
             <div className="col-12 col-sm-12 col-md-4">
               <Card titulo="Conhecendo os circuitos" href="/pages/conteudos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
+            </div>
+          </div> */}
+          <div className="col-md-7 mt-3">
+            <img src={img.src} className="w-100 rounded" alt="" />
+          </div>
+          <div className="col-md-5">
+            <Titulo titulo="5 motivos para aprender programação na infância" nivel={1} />
+
+
+            <div className="list-group mt-3 gap-3">
+
+
+              <li className="list-group-item d-flex gap-3 py-2 px-3 align-items-center" style={{ borderRadius: "20px", backgroundColor: 'var(--gray)' }}>
+                <div className="">
+                  <Texto texto="1" classe={"rounded-circle px-3 py-2 fw-bold"} estilo={{ fontSize: '1.1rem', fontFamily: 'nunite sans', backgroundColor: 'var(--color-primary)', color: 'var(--red)' }} />
+                </div>
+                <div className="d-flex row gap-2 mt-3">
+                  <div className="col-12 col-sm-12 col-md-12">
+                    <Titulo titulo="Raciocínio lógico" nivel={5} />
+                    <Texto texto="Aprenda a pensar de forma estruturada para resolver desafios." classe={"text-justify"} estilo={{ fontSize: '1.1rem' }} />
+                  </div>
+                </div>
+              </li>
+
+
+
+              <li className="list-group-item d-flex gap-3 py-2 px-3 align-items-center" style={{ borderRadius: "20px", backgroundColor: 'var(--gray)' }}>
+                <div className="">
+                  <Texto texto="2" classe={"rounded-circle px-3 py-2 fw-bold"} estilo={{ fontSize: '1.1rem', fontFamily: 'nunite sans', backgroundColor: 'var(--color-primary)', color: 'var(--red)' }} />
+                </div>
+                <div className="d-flex row gap-2 mt-3">
+                  <div className="col-12 col-sm-12 col-md-12">
+                    <Titulo titulo="Criatividade" nivel={5} />
+                    <Texto texto="Transforme suas ideias em projetos." classe={"text-justify"} estilo={{ fontSize: '1.1rem' }} />
+                  </div>
+                </div>
+              </li>
+
+
+
+              <li className="list-group-item d-flex gap-3 py-2 px-3 align-items-center" style={{ borderRadius: "20px", backgroundColor: 'var(--gray)' }}>
+                <div className="">
+                  <Texto texto="3" classe={"rounded-circle px-3 py-2 fw-bold"} estilo={{ fontSize: '1.1rem', fontFamily: 'nunite sans', backgroundColor: 'var(--color-primary)', color: 'var(--red)' }} />
+                </div>
+                <div className="d-flex row gap-2 mt-3">
+                  <div className="col-12 col-sm-12 col-md-12">
+                    <Titulo titulo="Resolução de problemas" nivel={5} />
+                    <Texto texto="Enfrente desafios, teste possibilidades e aprenda com seus erros." classe={"text-justify"} estilo={{ fontSize: '1.1rem' }} />
+                  </div>
+                </div>
+              </li>
+
+
+
+              <li className="list-group-item d-flex gap-3 py-2 px-3 align-items-center" style={{ borderRadius: "20px", backgroundColor: 'var(--gray)' }}>
+                <div className="">
+                  <Texto texto="4" classe={"rounded-circle px-3 py-2 fw-bold"} estilo={{ fontSize: '1.1rem', fontFamily: 'nunite sans', backgroundColor: 'var(--color-primary)', color: 'var(--red)' }} />
+                </div>
+                <div className="d-flex row gap-2 mt-3">
+                  <div className="col-12 col-sm-12 col-md-12">
+                    <Titulo titulo="Trabalho em equipe" nivel={5} />
+                    <Texto texto="Colabore com outros alunos e compartilhe ideias." classe={"text-justify"} estilo={{ fontSize: '1.1rem' }} />
+                  </div>
+                </div>
+              </li>
+
+
+
+              <li className="list-group-item d-flex gap-3 py-2 px-3 align-items-center" style={{ borderRadius: "20px", backgroundColor: 'var(--gray)' }}>
+                <div className="">
+                  <Texto texto="5" classe={"rounded-circle px-3 py-2 fw-bold"} estilo={{ fontSize: '1.1rem', fontFamily: 'nunite sans', backgroundColor: 'var(--color-primary)', color: 'var(--red)' }} />
+                </div>
+                <div className="d-flex row gap-2 mt-3">
+                  <div className="col-12 col-sm-12 col-md-12">
+                    <Titulo titulo="Conhecimento tecnológico" nivel={5} />
+                    <Texto texto="Conheça robótica, programação e eletrônica de forma prática e divertida." classe={"text-justify"} estilo={{ fontSize: '1.1rem' }} />
+                  </div>
+                </div>
+              </li>
+
+
+
             </div>
           </div>
         </div>
