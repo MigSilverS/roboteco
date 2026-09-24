@@ -17,6 +17,14 @@ export default function ParaEscolas() {
         </svg>
     )
 
+    const etapas = [
+        { id: 1, cor: "#CFE5FF", texto: "A escola preenche o formulário", cortexto: "#001629" },
+        { id: 2, cor: "#FFDAD4", texto: "Nossa equipe analisa a solicitação", cortexto: "#BB0402" },
+        { id: 3, cor: "#9AF7A7", texto: "A escola recebe o retorno", cortexto: "#001A06" },
+        { id: 4, cor: "#FDE68A", texto: "A aula é organizada e realizada", cortexto: "#001629" },
+    ];
+
+
     return (
 
         <>
@@ -50,7 +58,7 @@ export default function ParaEscolas() {
                     </div>
 
                     <div className="col-md-4 col-12">
-                        <div className="bg-white rounded-5 p-3">
+                        <div className="bg-white rounded-5 p-4">
 
                             <div>
                                 <span className="d-flex align-items-center gap-2"><FaCircle style={{ color: "var(--green)" }} /> Processo de solicitação</span>
@@ -58,27 +66,16 @@ export default function ParaEscolas() {
 
                             <hr />
 
-                            <div className="d-flex align-items-center gap-4 mb-3">
-                                <div className="rounded-circle d-flex justify-content-center align-items-center" style={{ width: "35px", height: "35px", backgroundColor: "#CFE5FF" }}>
-                                    <span className="rounded-circle">1</span>
-                                </div>
-                                <p className="">Escola preenche o formulário</p>
-                            </div>
-
-                            <div className="d-flex align-items-center gap-4 mb-3">
-                                <div className="rounded-circle d-flex justify-content-center align-items-center" style={{ width: "35px", height: "35px", backgroundColor: "#CFE5FF" }}>
-                                    <span className="rounded-circle">1</span>
-                                </div>
-                                <p className="">Escola preenche o formulário</p>
-                            </div>
-
-                            <div className="d-flex align-items-center gap-4 mb-3">
-                                <div className="rounded-circle d-flex justify-content-center align-items-center" style={{ width: "35px", height: "35px", backgroundColor: "#CFE5FF" }}>
-                                    <span className="rounded-circle">1</span>
-                                </div>
-                                <p className="">Escola preenche o formulário</p>
-                            </div>
-
+                            {
+                                etapas.map((item) => (
+                                    <div className="d-flex align-items-center gap-4 mt-3">
+                                        <div className="rounded-circle d-flex justify-content-center align-items-center" style={{ width: "35px", height: "35px", backgroundColor: item.cor}}>
+                                            <span className="rounded-circle fw-bold" style={{color: item.cortexto}}>{item.id}</span>
+                                        </div>
+                                        <p className="">{item.texto}</p>
+                                    </div>
+                                ))
+                            }
 
                         </div>
                     </div>
