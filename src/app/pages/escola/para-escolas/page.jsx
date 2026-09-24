@@ -5,6 +5,7 @@ import Titulo from "@/app/components/Titulo/Titulo";
 import styles from "./paraescolas.module.css";
 
 import { FiTool } from "react-icons/fi";
+import { FaCircle } from "react-icons/fa";
 
 import img from '@/app/images/case-escola.png';
 
@@ -25,7 +26,7 @@ export default function ParaEscolas() {
 
                 <div className="row justify-content-between align-items-center p-5" style={{ backgroundColor: "#001629", borderRadius: '25px' }}>
 
-                    <div className="col-6 text-white">
+                    <div className="col-md-6 col-12 text-white">
 
                         <Titulo titulo="Solicite uma aula experimental" nivel={1} estilo={{ fontSize: '3.5rem' }} />
 
@@ -35,40 +36,7 @@ export default function ParaEscolas() {
 
                         <div className="row mt-3">
                             <div className="col-6 mb-3">
-                                <div className="p-2 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
-                                    <div>
-                                        <FiTool className="rounded-circle text-white p-2 mb-3" style={{ backgroundColor: "var(--red)" }} size={35} />
-                                    </div>
-                                    <div className="">
-                                        <Titulo titulo="Receba nossa equipe" nivel={5} />
-                                        <p>Uma experiência presencial com a equipe Roboteco diretamente na escola.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-6 mb-3">
-                                <div className="p-2 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
-                                    <div>
-                                        <FiTool className="rounded-circle text-white p-2 mb-3" style={{ backgroundColor: "var(--red)" }} size={35} />
-                                    </div>
-                                    <div className="">
-                                        <Titulo titulo="Receba nossa equipe" nivel={5} />
-                                        <p>Uma experiência presencial com a equipe Roboteco diretamente na escola.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-6 mb-3">
-                                <div className="p-2 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
-                                    <div>
-                                        <FiTool className="rounded-circle text-white p-2 mb-3" style={{ backgroundColor: "var(--red)" }} size={35} />
-                                    </div>
-                                    <div className="">
-                                        <Titulo titulo="Receba nossa equipe" nivel={5} />
-                                        <p>Uma experiência presencial com a equipe Roboteco diretamente na escola.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-6 mb-3">
-                                <div className="p-2 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
+                                <div className="p-3 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
                                     <div>
                                         <FiTool className="rounded-circle text-white p-2 mb-3" style={{ backgroundColor: "var(--red)" }} size={35} />
                                     </div>
@@ -81,16 +49,39 @@ export default function ParaEscolas() {
                         </div>
                     </div>
 
-                    <div className="col-4">
+                    <div className="col-md-4 col-12">
                         <div className="bg-white rounded-5 p-3">
-                            <span>Processo de solicitação</span>
+
+                            <div>
+                                <span className="d-flex align-items-center gap-2"><FaCircle style={{ color: "var(--green)" }} /> Processo de solicitação</span>
+                            </div>
 
                             <hr />
 
-                            <p>1 A escola preenche o formulário</p>
+                            <div className="d-flex align-items-center gap-4 mb-3">
+                                <div className="rounded-circle d-flex justify-content-center align-items-center" style={{ width: "35px", height: "35px", backgroundColor: "#CFE5FF" }}>
+                                    <span className="rounded-circle">1</span>
+                                </div>
+                                <p className="">Escola preenche o formulário</p>
+                            </div>
+
+                            <div className="d-flex align-items-center gap-4 mb-3">
+                                <div className="rounded-circle d-flex justify-content-center align-items-center" style={{ width: "35px", height: "35px", backgroundColor: "#CFE5FF" }}>
+                                    <span className="rounded-circle">1</span>
+                                </div>
+                                <p className="">Escola preenche o formulário</p>
+                            </div>
+
+                            <div className="d-flex align-items-center gap-4 mb-3">
+                                <div className="rounded-circle d-flex justify-content-center align-items-center" style={{ width: "35px", height: "35px", backgroundColor: "#CFE5FF" }}>
+                                    <span className="rounded-circle">1</span>
+                                </div>
+                                <p className="">Escola preenche o formulário</p>
+                            </div>
+
+
                         </div>
                     </div>
-
                 </div>
 
                 <div className="d-flex flex-column justify-content-center align-items-center bg-light border rounded-2 mt-5 p-5">
