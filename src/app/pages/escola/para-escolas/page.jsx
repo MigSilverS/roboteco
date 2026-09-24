@@ -15,6 +15,12 @@ export default function ParaEscolas() {
         </svg>
     )
 
+    const cards = [
+        {
+            
+        }
+    ]
+
     const etapas = [
         { id: 1, cor: "#CFE5FF", texto: "A escola preenche o formulário", cortexto: "#001629" },
         { id: 2, cor: "#FFDAD4", texto: "Nossa equipe analisa a solicitação", cortexto: "#BB0402" },
