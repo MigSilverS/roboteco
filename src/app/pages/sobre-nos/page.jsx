@@ -13,29 +13,34 @@ import { LuGamepad2 } from "react-icons/lu";
 import { FaPersonDigging } from "react-icons/fa6";
 
 import logo from '@/app/images/wolfy-logo.png';
-import img from '@/app/images/equipe/integrante1.jpg';
+import ana from '@/app/images/equipe/Ana.jpeg';
+import livia from '@/app/images/equipe/Livia.png';
+import diego from '@/app/images/equipe/Diego.png';
+import miguel from '@/app/images/equipe/Miguel.png';
+import thaina from '@/app/images/equipe/Thaina.png';
+
 
 export default function SobreNos() {
 
     const icons = {
         chapeu: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="rounded-circle p-2 text-danger" width={40} height={40} style={{ backgroundColor: "#FFDAD4" }}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="rounded-circle p-2" width={40} height={40} style={{ backgroundColor: "#FFDAD4", color: "#BB0402" }}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
             </svg>
         ),
 
         smile: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="rounded-circle p-2" width={40} height={40} style={{ backgroundColor: "#E3E8F9" }}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="rounded-circle p-2" width={40} height={40} style={{ backgroundColor: "#FDE68A", color: "#F59E0B" }}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
             </svg>
         ),
 
         robo: (
-            <GiMechanicalArm className="rounded-circle bg-primary-subtle p-2" size={40} />
+            <GiMechanicalArm className="rounded-circle p-2" size={40} style={{ backgroundColor: "#CFE5FF", color: "#001629" }} />
         ),
 
         head: (
-            <FaHeadSideVirus className="rounded-circle bg-success-subtle p-2" size={40} />
+            <FaHeadSideVirus className="rounded-circle p-2" size={40} style={{ backgroundColor: "#12B50047", color: "#003110" }} />
         )
 
     }
@@ -82,7 +87,7 @@ export default function SobreNos() {
     const cardEquipe = [
         {
             id: 1,
-            img: img,
+            img: ana,
             nome: "Anna Laura Modesto",
             funcao: "UI/UX e Documentação, Organização e Prototipagem",
             descricao:
@@ -98,7 +103,7 @@ export default function SobreNos() {
         },
         {
             id: 3,
-            img: "",
+            img: diego,
             nome: "Diego Nogueira",
             funcao: "Desenvolvedor Front-end",
             descricao:
@@ -106,7 +111,7 @@ export default function SobreNos() {
         },
         {
             id: 4,
-            img: "",
+            img: livia,
             nome: "Livia Toledo",
             funcao: "Design Gráfico, de Conteúdo e Prototipagem",
             descricao:
@@ -114,7 +119,7 @@ export default function SobreNos() {
         },
         {
             id: 5,
-            img: "",
+            img: miguel,
             nome: "Miguel Prata",
             funcao: "Desenvolvedor Back-end",
             descricao:
@@ -122,7 +127,7 @@ export default function SobreNos() {
         },
         {
             id: 6,
-            img: "",
+            img: thaina,
             nome: "Thainá Gonçalves",
             funcao: "Design de Conteúdo, Prototipagem, Documentação e UX",
             descricao:
@@ -150,15 +155,15 @@ export default function SobreNos() {
                                         <div className="mb-3">
                                             {icons.robo}
                                         </div>
-                                        <Titulo titulo="+10" nivel={2} />
-                                        <p>Robôs montados em nosso site</p>
+                                        <Titulo titulo="3" nivel={2} />
+                                        <p>Cidades onde começa nossa jornada</p>
                                     </div>
                                 </div>
                                 <div className="col-5">
                                     <div className="h-100 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
                                         <div className="mb-3">{icons.chapeu}</div>
-                                        <Titulo titulo="+3" nivel={2} />
-                                        <p>Escolas parceiras</p>
+                                        <Titulo titulo="6 a 14 anos" nivel={2} estilo={{color: "var(--red)"}} />
+                                        <p>Faixa etária atendida</p>
                                     </div>
                                 </div>
                                 <div className="col-5">
@@ -166,15 +171,15 @@ export default function SobreNos() {
                                         <div className="mb-3">
                                             {icons.head}
                                         </div>
-                                        <Titulo titulo="+3" nivel={2} />
-                                        <p>Escolas parceiras</p>
+                                        <Titulo titulo="3" nivel={2} />
+                                        <p>Áreas de aprendizado</p>
                                     </div>
                                 </div>
                                 <div className="col-5">
                                     <div className="h-100 bg-white shadow-sm p-4" style={{ borderRadius: '25px' }}>
                                         <div className="mb-3">{icons.smile}</div>
-                                        <Titulo titulo="+3" nivel={2} />
-                                        <p>Escolas parceiras</p>
+                                        <Titulo titulo="3" nivel={2} />
+                                        <p>Formatos de conteúdo</p>
                                     </div>
                                 </div>
                             </div>
