@@ -124,11 +124,12 @@ export default function Login() {
 
                                                     <div className="col-12 d-flex justify-content-center pt-3 pt-md-4">
                                                         <Botao
+                                                            href="/pages/conteudos"
                                                             type="submit"
                                                             className="btn btn-success rounded-pill px-4 fw-semibold shadow-sm"
                                                             texto="Iniciar sessão"
                                                         />
-                                                            
+
                                                     </div>
 
                                                     <div className="col-12 text-center pt-3">
