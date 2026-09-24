@@ -7,8 +7,6 @@ import styles from "./paraescolas.module.css";
 import { FiTool } from "react-icons/fi";
 import { FaCircle } from "react-icons/fa";
 
-import img from '@/app/images/case-escola.png';
-
 export default function ParaEscolas() {
 
     const icon = (
