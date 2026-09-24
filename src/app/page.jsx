@@ -178,7 +178,7 @@ export default function Home() {
               Atendimento inicial em Guaratinguetá, Lorena, Aparecida e Potim. A equipe analisa a viabilidade de cada solicitação.
             </p>
           </div>
-          <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
+          <Botao icon={icons.calendar} href="pages/escola/para-escolas" texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
         </div>
       </div>
       <Footer />
