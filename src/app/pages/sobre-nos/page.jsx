@@ -16,7 +16,7 @@ import logo from '@/app/images/wolfy-logo.png';
 import ana from '@/app/images/equipe/Ana.jpeg';
 import livia from '@/app/images/equipe/Livia.png';
 import diego from '@/app/images/equipe/Diego.png';
-import miguel from '@/app/images/equipe/Miguel.jpeg';
+import miguel from '@/app/images/equipe/Miguel.png';
 import thaina from '@/app/images/equipe/Thaina.png';
 
 
