@@ -1,3 +1,7 @@
+:root{
+    --fundo-icon: #ffffff36;
+}
+
 .container {
   width: 100%;
   padding-right: 3.75rem;

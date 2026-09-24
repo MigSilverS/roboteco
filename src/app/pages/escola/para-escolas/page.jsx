@@ -23,9 +23,9 @@ export default function ParaEscolas() {
 
             <div className={`${styles.container} mt-5 mb-5`}>
 
-                <div className="row align-items-center p-5 text-white" style={{backgroundColor: "#001629"}}>
+                <div className="row justify-content-between align-items-center p-5" style={{ backgroundColor: "#001629", borderRadius: '25px' }}>
 
-                    <div className="col-6">
+                    <div className="col-6 text-white">
 
                         <Titulo titulo="Solicite uma aula experimental" nivel={1} estilo={{ fontSize: '3.5rem' }} />
 
@@ -35,11 +35,44 @@ export default function ParaEscolas() {
 
                         <div className="row mt-3">
                             <div className="col-6 mb-3">
-                                <div className="w-100 d-flex align-items-start flex-wrap p-2">
+                                <div className="p-2 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
                                     <div>
-                                        <FiTool className="rounded-circle text-white p-2 me-3" style={{ backgroundColor: "var(--red)" }} size={35} />
+                                        <FiTool className="rounded-circle text-white p-2 mb-3" style={{ backgroundColor: "var(--red)" }} size={35} />
                                     </div>
-                                    <div className="w-50">
+                                    <div className="">
+                                        <Titulo titulo="Receba nossa equipe" nivel={5} />
+                                        <p>Uma experiência presencial com a equipe Roboteco diretamente na escola.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-6 mb-3">
+                                <div className="p-2 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
+                                    <div>
+                                        <FiTool className="rounded-circle text-white p-2 mb-3" style={{ backgroundColor: "var(--red)" }} size={35} />
+                                    </div>
+                                    <div className="">
+                                        <Titulo titulo="Receba nossa equipe" nivel={5} />
+                                        <p>Uma experiência presencial com a equipe Roboteco diretamente na escola.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-6 mb-3">
+                                <div className="p-2 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
+                                    <div>
+                                        <FiTool className="rounded-circle text-white p-2 mb-3" style={{ backgroundColor: "var(--red)" }} size={35} />
+                                    </div>
+                                    <div className="">
+                                        <Titulo titulo="Receba nossa equipe" nivel={5} />
+                                        <p>Uma experiência presencial com a equipe Roboteco diretamente na escola.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-6 mb-3">
+                                <div className="p-2 rounded-5" style={{ backgroundColor: "var(--fundo-icon)" }}>
+                                    <div>
+                                        <FiTool className="rounded-circle text-white p-2 mb-3" style={{ backgroundColor: "var(--red)" }} size={35} />
+                                    </div>
+                                    <div className="">
                                         <Titulo titulo="Receba nossa equipe" nivel={5} />
                                         <p>Uma experiência presencial com a equipe Roboteco diretamente na escola.</p>
                                     </div>
@@ -48,8 +81,14 @@ export default function ParaEscolas() {
                         </div>
                     </div>
 
-                    <div className="col-6">
-                        {icon}
+                    <div className="col-4">
+                        <div className="bg-white rounded-5 p-3">
+                            <span>Processo de solicitação</span>
+
+                            <hr />
+
+                            <p>1 A escola preenche o formulário</p>
+                        </div>
                     </div>
 
                 </div>
