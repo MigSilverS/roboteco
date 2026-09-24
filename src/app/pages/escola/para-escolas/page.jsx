@@ -9,21 +9,14 @@ import { FaCircle } from "react-icons/fa";
 
 export default function ParaEscolas() {
 
-<<<<<<< HEAD
     const icon = (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width={15} height={15}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
         </svg>
     )
 
-    const cards = [
-        {
-            
-        }
-    ]
 
-=======
->>>>>>> 9c74422618e43f4bceae5ae5a0bdfb807377c227
+
     const etapas = [
         "Escola preenche o formulário",
         "Nossa equipe analisa a solicitação",
