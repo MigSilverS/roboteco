@@ -1,6 +1,6 @@
 import styles from "./CardConteudo.module.css";
-import Botao from "../Botao/Botao";
-import Texto from "../Texto/Texto";
+import Botao from "../../Botoes/Botao/Botao";
+import Texto from "../../Texto/Texto";
 
 const icons = {
     tempo: (

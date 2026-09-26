@@ -5,7 +5,7 @@ import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "@/app/components/Footer/Footer";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
-import Card from "@/app/components/Card/Card";
+import Card from "@/app/components/Cards/Card/Card";
 import img from '@/app/images/image.png';
 
 const icons = {

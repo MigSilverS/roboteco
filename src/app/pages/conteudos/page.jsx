@@ -6,7 +6,7 @@ import Texto from "@/app/components/Texto/Texto";
 import BarraPesquisa from "@/app/components/BarraPesquisa/BarraPesquisa";
 import Botao from "@/app/components/Botoes/Botao/Botao";
 import Dropdown from "@/app/components/Dropdown/Dropdown";
-import CardConteudo from "@/app/components/CardConteudo/CardConteudo";
+import CardConteudo from "@/app/components/Cards/CardConteudo/CardConteudo";
 import { RiRobot2Line } from "react-icons/ri";
 
 const icons = {

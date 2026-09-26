@@ -1,5 +1,5 @@
 import styles from "./Card.module.css";
-import Botao from "../Botao/Botao";
+import Botao from "../../Botoes/Botao/Botao";
 
 export default function Card({miniTitulo, titulo, subtitulo, texto, href }) {
     return (
