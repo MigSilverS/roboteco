@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import Botao from "@/app/components/Botao/Botao";
+import Botao from "@/app/components/Botoes/Botao/Botao";
 import NavBar from "@/app/components/NavBar/NavBar";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "@/app/components/Footer/Footer";

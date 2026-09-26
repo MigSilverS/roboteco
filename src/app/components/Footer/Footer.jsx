@@ -1,4 +1,4 @@
-import Botao from "../Botao/Botao";
+import Botao from "../Botoes/Botao/Botao";
 import styles from "./Footer.module.css";
 
 export default function Footer() {

@@ -1,4 +1,4 @@
-import Botao from "@/app/components/Botao/Botao";
+import Botao from "@/app/components/Botoes/Botao/Botao";
 import Footer from "@/app/components/Footer/Footer";
 import NavBar from "@/app/components/NavBar/NavBar";
 import Titulo from "@/app/components/Titulo/Titulo";

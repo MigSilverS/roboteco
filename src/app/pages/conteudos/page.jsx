@@ -4,7 +4,7 @@ import styles from "./conteudos.module.css";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
 import BarraPesquisa from "@/app/components/BarraPesquisa/BarraPesquisa";
-import Botao from "@/app/components/Botao/Botao";
+import Botao from "@/app/components/Botoes/Botao/Botao";
 import Dropdown from "@/app/components/Dropdown/Dropdown";
 import CardConteudo from "@/app/components/CardConteudo/CardConteudo";
 import { RiRobot2Line } from "react-icons/ri";

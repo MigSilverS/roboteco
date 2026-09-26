@@ -5,7 +5,7 @@ import Footer from "@/app/components/Footer/Footer";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
 import img from "@/app/images/login.jpg";
-import Botao from "@/app/components/Botao/Botao";
+import Botao from "@/app/components/Botoes/Botao/Botao";
 
 export default function Login() {
     return (

@@ -2,7 +2,7 @@ import NavBar from "@/app/components/NavBar/NavBar"
 import styles from "./suporte.module.css"
 import Titulo from "@/app/components/Titulo/Titulo"
 import Texto from "@/app/components/Texto/Texto"
-import Botao from "@/app/components/Botao/Botao"
+import Botao from "@/app/components/Botoes/Botao/Botao"
 
 export default function Suporte() {
     return (
