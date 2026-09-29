@@ -40,7 +40,7 @@ export default function Home() {
               <Titulo titulo="Destrave o lado tecnológico e criativo!" nivel={1} estilo={{ fontSize: '4.4rem' }} />
               <Texto texto="Explore robótica, programação e eletrônica. 
               Aprenda online e conheça as atividades presenciais para escolas da região." classe="lead" estilo={{ fontSize: '1.4rem' }} />
-              <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
+              <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger mt-3" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
             </div>
           </div>
           <div className="col-md-4 p-5 mt-5" style={{ backgroundColor: 'var(--blue)', borderRadius: '10px' }}>
