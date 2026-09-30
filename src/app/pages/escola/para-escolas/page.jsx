@@ -149,7 +149,7 @@ export default function ParaEscolas() {
                                 <div className="col-12">
                                     <label className="form-label fw-semibold mb-2" htmlFor="municipio">Município</label>
                                     <select id="municipio" className="form-select border-0 shadow-none" style={{ backgroundColor: "#f7f7f7", height: "48px", borderRadius: "12px" }}>
-                                        <option value="" selected>Selecione</option>
+                                        <option value="" defaultValue={true}>Selecione</option>
                                         <option value="">Guaratinguetá</option>
                                         <option value="">Aparecida</option>
                                         <option value="">Lorena</option>
