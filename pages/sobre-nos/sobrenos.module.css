@@ -1,0 +1,11 @@
+:root{
+    --fundo-icon: #ffffff36;
+}
+
+.container {
+  width: 100%;
+  padding-right: 3.75rem;
+  padding-left: 3.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}

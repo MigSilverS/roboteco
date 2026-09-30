@@ -1,0 +1,10 @@
+.dropdownToggle {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+.dropdownToggle:hover {
+    background-color: var(--gray);
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}

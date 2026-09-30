@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --color-primary: #f5f5f5 !important;
+    --yellow:#F59E0B !important;
+    --blue:#02243a !important;
+    --red:#b30000 !important;
+    --green:#003110 !important;
+    --gray:#d8d7d7 !important;
+    --yellow-weak:#fde68a88 !important;
+}
+
+.btn-danger {
+    background-color: var(--red) !important;
+    border: 1px solid var(--red) !important;
+    color: var(--color-primary) !important;
+}
+
+.btn-danger:hover {
+    background-color: #9b0a0a !important;
+    border: 1px solid #9b0a0a !important;
+    color: var(--color-primary) !important;
+}
+
+.btn-blue {
+    background-color: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
+    color: var(--color-primary) !important;
+}
+
+.btn-blue:hover {
+    background-color: #001a2a !important;
+    border: 1px solid #001a2a !important;
+    color: var(--color-primary) !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+p, a, link {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+

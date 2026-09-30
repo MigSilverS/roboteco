@@ -1,0 +1,13 @@
+:root {
+  --footer-primary: white;
+  --btn-footer: #e8eeff;
+}
+
+.container {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.363);
+}
