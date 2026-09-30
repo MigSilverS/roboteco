@@ -1,107 +1,135 @@
 # ROBOTECO 🤖
 
-Plataforma educacional voltada ao ensino de robótica, programação e eletrônica, conectando o aprendizado online a atividades presenciais em escolas públicas.
-
-Projeto interdisciplinar e de extensão desenvolvido por estudantes de Análise e Desenvolvimento de Sistemas da Fatec Guaratinguetá.
+Plataforma educacional voltada ao ensino de robótica, programação e eletrônica, conectando aprendizado online a atividades presenciais em escolas públicas.
 
 > 🚧 Projeto em desenvolvimento.
 
-## 🎯 Objetivo
+## Descrição
 
-Ampliar o acesso à educação tecnológica por meio de conteúdos educativos e atividades práticas, incentivando o raciocínio lógico, a criatividade e a resolução de problemas.
+O ROBOTECO é um projeto interdisciplinar e de extensão desenvolvido por estudantes de Análise e Desenvolvimento de Sistemas da Fatec Guaratinguetá.  
+Este repositório contém o frontend em **Next.js (App Router)**, com páginas públicas, páginas de acesso do aluno e telas institucionais.
 
-A plataforma também busca facilitar a comunicação entre escolas e a equipe responsável pela organização das aulas presenciais.
+## Objetivo
 
-## 📚 Funcionalidades previstas
+Ampliar o acesso à educação tecnológica por meio de conteúdos educativos e atividades práticas, incentivando raciocínio lógico, criatividade e resolução de problemas.
 
-### Área pública
+Também busca facilitar o contato entre escolas e a equipe responsável pelas aulas presenciais.
 
-- Apresentação do projeto e da equipe.
-- Consulta de conteúdos públicos e demonstrativos.
-- Informações sobre a participação das escolas.
-- Acesso ao cadastro e ao login.
+## Funcionalidades confirmadas no código
 
-### Área do aluno
+As funcionalidades abaixo são as que já existem no estado atual do repositório (principalmente como interface):
 
-- Cadastro e autenticação.
-- Acesso a conteúdos de robótica, programação e eletrônica.
-- Organização dos materiais por categoria e módulo.
-- Visualização de textos, vídeos e PDFs.
-- Realização e envio de atividades.
-- Acompanhamento dos estados: pendente, em andamento e concluída.
-- Pontuação e medalhas relacionadas à conclusão das atividades.
+- Página inicial com apresentação do projeto e CTA para aulas experimentais (`/`).
+- Navegação pública com páginas:
+  - `/pages/escola/para-escolas`
+  - `/pages/sobre-nos`
+  - `/pages/suporte`
+  - `/pages/conteudos`
+  - `/pages/login`
+  - `/pages/cadastro`
+- Página “Para Escolas” com formulário de solicitação de aula experimental (sem integração de backend neste repositório).
+- Página de conteúdos com:
+  - barra de pesquisa visual,
+  - botões de filtro por tema,
+  - cards de conteúdo demonstrativos.
+- Página “Painel do Aluno” com indicadores visuais de progresso/gamificação (`/pages/aluno/painel-do-aluno`).
+- Página “Sobre nós” com pilares do projeto, equipe e parceiro técnico.
+- Uso de componentes reutilizáveis (botão, título, texto, cards, navbar, footer etc.).
 
-### Área das escolas
+## Stack e tecnologias
 
-- Solicitação de aulas experimentais.
-- Acompanhamento do status das solicitações.
-- Envio de esclarecimentos solicitados pela equipe.
-- Atualização dos dados da instituição.
-- Solicitação de aulas regulares após a validação do cadastro.
-- Consulta das informações das aulas.
+- **Next.js 16** (App Router)
+- **React 19**
+- **JavaScript (JSX)**
+- **Bootstrap 5**
+- **Reactstrap**
+- **React Icons**
+- **CSS Modules** + `globals.css`
 
-### Área administrativa
+## Pré-requisitos
 
-- Análise das solicitações de aulas.
-- Validação dos cadastros das escolas.
-- Publicação, edição e remoção de conteúdos.
-- Organização das categorias e dos módulos.
-- Consulta de alunos e acompanhamento do progresso.
-- Planejamento das aulas presenciais.
-- Registro de presença e dos materiais utilizados.
-- Consulta de relatórios.
+- **Node.js** (recomendado versão LTS)
+- **npm**
 
-## 🛠️ Tecnologias do frontend
-
-- **React.js:** construção da interface com componentes reutilizáveis.
-- **JavaScript:** implementação da lógica e das interações.
-- **HTML e CSS:** estrutura e estilização das páginas.
-- **Bootstrap:** organização do layout e responsividade.
-- **Git:** controle de versão e colaboração.
-
-## 🚀 Como executar
-
-Com o projeto baixado e o Node.js instalado, abra o terminal na pasta que contém o arquivo `package.json`.
-
-Instale as dependências:
+## Instalação
 
 ```bash
 npm install
 ```
 
-Inicie o ambiente de desenvolvimento:
+## Configuração
+
+Não há arquivo `.env` versionado nem variáveis obrigatórias documentadas no código atual.
+
+Configurações existentes:
+
+- `next.config.mjs` com `reactCompiler: true`
+- `jsconfig.json` com alias `@/* -> ./src/*`
+
+## Execução e uso
+
+### Desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-Acesse no navegador o endereço informado no terminal.
+Depois, acesse no navegador o endereço exibido no terminal (normalmente `http://localhost:3000`).
 
-## 🎨 Identidade visual
+### Build de produção
 
-A interface utiliza branco, vermelho e azul, com foco em clareza, legibilidade e navegação simples.
+```bash
+npm run build
+```
 
-| Cor | Aplicação |
-| --- | --- |
-| Branco | Fundos e áreas de conteúdo |
-| Vermelho | Botões principais e destaques |
-| Azul-escuro | Títulos, textos e navegação |
-| Azul-claro | Blocos de apoio e destaques suaves |
+### Iniciar em modo produção
 
-As cores devem ser centralizadas nas variáveis CSS globais para manter a consistência entre os componentes.
+```bash
+npm run start
+```
 
-## 📍 Abrangência inicial
+## Estrutura de diretórios (resumo)
 
-As solicitações de aulas presenciais contemplam escolas dos municípios de:
+```text
+.
+├── README.md
+├── package.json
+├── next.config.mjs
+├── jsconfig.json
+└── src/
+    └── app/
+        ├── components/         # componentes reutilizáveis de UI
+        ├── pages/              # páginas/rotas da aplicação
+        ├── images/             # imagens estáticas
+        ├── globals.css
+        ├── layout.js
+        └── page.jsx            # rota "/"
+```
 
-- Guaratinguetá;
-- Lorena;
-- Aparecida;
-- Potim.
+## Exemplos rápidos
 
-O envio de uma solicitação não confirma o agendamento. A realização da aula depende da análise de viabilidade pela equipe responsável.
+- Abrir a página de conteúdos: `http://localhost:3000/pages/conteudos`
+- Abrir a página de solicitação para escolas: `http://localhost:3000/pages/escola/para-escolas`
+- Abrir o painel do aluno (interface): `http://localhost:3000/pages/aluno/painel-do-aluno`
 
-## 👥 Equipe
+## Testes
+
+No estado atual do repositório, **não há suíte de testes automatizados configurada** (não existem scripts de teste no `package.json`).
+
+## Deploy
+
+Não há pipeline/guia de deploy definido neste repositório.  
+Como é um projeto Next.js, o deploy pode ser feito em provedores compatíveis (ex.: Vercel), mas isso não está configurado aqui.
+
+## Contribuições
+
+Contribuições são bem-vindas via pull request, priorizando:
+
+- mudanças pequenas e focadas;
+- consistência com componentes e estilos existentes;
+- documentação atualizada quando necessário.
+
+## Equipe
 
 - Anna Laura Modesto Silva
 - Danilo das Neves Alegre
@@ -110,8 +138,9 @@ O envio de uma solicitação não confirma o agendamento. A realização da aula
 - Miguel Prata Silva
 - Thainá de Faria Gonçalves
 
-**Orientador:** Bruno Donizete da Silva.
-
+**Orientador:** Bruno Donizete da Silva.  
 **Parceiro técnico:** Wolf Army Robotics.
 
-As funcionalidades devem permanecer alinhadas ao Documento de Visão do ROBOTECO.
+## Licença
+
+Este repositório não possui arquivo de licença (`LICENSE`) identificado até o momento.
