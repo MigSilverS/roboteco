@@ -4,7 +4,7 @@ export default function Titulo({ titulo, nivel, estilo }) {
 
     return (
         <>
-            <Tag className="fw-bold" style={estilo}>
+            <Tag className="fw-bold m-0 p-0" style={estilo}>
                 {titulo}
             </Tag>
         </>
