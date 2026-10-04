@@ -4,4 +4,205 @@
   padding-left: 3.75rem;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 4rem;
+}
+
+.progressPanel,
+.questsSection {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  padding: 1.5rem 1.75rem;
+}
+
+.progressPanel {
+  margin-top: 1.5rem;
+}
+
+.progressHeader,
+.questsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.progressLabel,
+.questsTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.progressIcon,
+.questsIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--blue);
+}
+
+.progressValue {
+  color: #0b1d2d;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 0.8rem;
+  background: #edf2f7;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.progressBarFill {
+  width: 70%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0f172a 0%, #1d4ed8 100%);
+}
+
+.actionRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.secondaryButton,
+.primaryButton {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.65rem !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.secondaryButton:hover,
+.primaryButton:hover {
+  transform: translateY(-1px);
+  text-decoration: none !important;
+}
+
+.questsSection {
+  margin-top: 2.25rem;
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.linkAll {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.linkAll:hover {
+  text-decoration: underline;
+}
+
+.questsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.questCard {
+  background: linear-gradient(180deg, #f0f8f8 0%, #edf5f6 100%);
+  border: 1px solid rgba(173, 184, 203, 0.35);
+  border-radius: 1.7rem;
+  padding: 1.5rem 1.25rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 230px;
+}
+
+.questIconWrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.questTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.questDescription {
+  margin: 0.75rem 0 1rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #465569;
+  min-height: 3.2rem;
+}
+
+.questStatus {
+  margin-top: auto;
+  color: #0f766e;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .questsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actionRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .secondaryButton,
+  .primaryButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+  }
+
+  .progressHeader,
+  .questsHeader,
+  .progressMeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .progressValue {
+    font-size: 0.95rem;
+  }
 }

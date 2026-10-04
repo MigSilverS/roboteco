@@ -6,10 +6,12 @@ import Titulo from "@/app/components/Titulo/Titulo";
 import Nivel from "@/app/components/Nivel/Nivel";
 import Xp from "@/app/components/Xp/Xp";
 import CardInfo from "@/app/components/Cards/CardInfo/CardInfo";
+import Botao from "@/app/components/Botoes/Botao/Botao";
 import { CiMedal } from "react-icons/ci";
 import { IoBookOutline } from "react-icons/io5";
 import { GiMechanicalArm } from "react-icons/gi";
 import { MdOutlineFactCheck } from "react-icons/md";
+import { FiPlay, FiCheckCircle, FiCode, FiCpu, FiZap, FiArrowRight } from "react-icons/fi";
 
 const icons = {
     fire: (
@@ -30,12 +32,39 @@ const icons = {
         <IoBookOutline size={40} />
     ),
     arm: (
-        <GiMechanicalArm size={40}/>
+        <GiMechanicalArm size={40} />
     ),
     bookcheck: (
-        <MdOutlineFactCheck size={40}/>
+        <MdOutlineFactCheck size={40} />
     )
-}
+};
+
+const conquistasRecentes = [
+    {
+        titulo: "Primeiro Circuito",
+        descricao: "Conectou o primeiro LED sem qualquer nenhum resistor!",
+        status: "Conquistado há 2 dias",
+        icone: <FiZap size={28} />,
+        cor: "#def7f2",
+        iconColor: "#21a179",
+    },
+    {
+        titulo: "Domador de Algoritmos",
+        descricao: "Criou uma estrutura de repetição condicional perfeita.",
+        status: "Conquistado há 5 dias",
+        icone: <FiCode size={28} />,
+        cor: "#dfeaff",
+        iconColor: "#1d4ed8",
+    },
+    {
+        titulo: "Construtor Autônomo",
+        descricao: "Montou o chassi motorizado completo sem ajuda!",
+        status: "Conquistado há 1 semana",
+        icone: <FiCpu size={28} />,
+        cor: "#ffe5e8",
+        iconColor: "#e11d48",
+    }
+];
 
 export default function PainelDoAluno() {
     return (
@@ -48,7 +77,7 @@ export default function PainelDoAluno() {
                             <div className="">
                                 <div className="d-flex rounded justify-content-center align-items-center" style={{ backgroundColor: "var(--red)", width: "20%", height: "35px" }}>
                                     {icons.fire}
-                                    <Texto icon texto="12 Dias seguidos!" classe="text-white" />
+                                    <Texto texto="12 Dias seguidos!" classe="text-white" />
                                 </div>
                             </div>
                             <div className="">
@@ -65,11 +94,12 @@ export default function PainelDoAluno() {
                         <div className="col-6 col-sm-6 col-md-6 d-flex flex-column gap-3 align-items-end justify-content-center">
                             <div className="d-flex p-4 gap-3 align-items-center" style={{ width: "40%", borderRadius: 30, backgroundColor: "#9c9b9b65" }}>
                                 {icons.trophy}
-                                <Texto icon texto="5 Conquistas" classe="text-white" estilo={{ fontSize: "1.5rem" }} />
+                                <Texto texto="5 Conquistas" classe="text-white" estilo={{ fontSize: "1.5rem" }} />
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div className="row cards">
                     <div className="col-12 col-sm-12 col-md-4">
                         <CardInfo icone={icons.book} titulo={"Atividades Pendentes"} qntd={0} cor={"#fde68a88"} />
@@ -79,6 +109,86 @@ export default function PainelDoAluno() {
                     </div>
                     <div className="col-12 col-sm-12 col-md-4">
                         <CardInfo icone={icons.bookcheck} titulo={"Atividades Concluídas"} qntd={4} cor={"#aafaa2 "} />
+                    </div>
+                </div>
+
+                <div className={styles.progressPanel}>
+                    <div className={styles.progressHeader}>
+                        <div className={styles.progressLabel}>
+                            <span className={styles.progressIcon}>
+                                <FiCheckCircle size={18} />
+                            </span>
+                            <span>Progresso da Missão</span>
+                        </div>
+                        <span className={styles.progressValue}>70% Concluído</span>
+                    </div>
+
+                    <div className={styles.progressMeta}>
+                        <span>Etapas: 7 de 10 completas</span>
+                        <span>+120 XP ao finalizar</span>
+                    </div>
+
+                    <div className={styles.progressBar} aria-label="Progresso da missão">
+                        <div className={styles.progressBarFill} />
+                    </div>
+
+                    <div className={styles.actionRow}>
+                        <Botao
+                            href="#"
+                            className={styles.secondaryButton}
+                            estilo={{
+                                minWidth: "270px",
+                                padding: "0.9rem 1.6rem",
+                                backgroundColor: "#e5e7eb",
+                                color: "#0f172a",
+                                border: "1px solid #d4d4d8",
+                                fontWeight: 700,
+                                justifyContent: "center"
+                            }}
+                        >
+                            <FiArrowRight size={18} />
+                            Rever Diagrama Elétrico
+                        </Botao>
+
+                        <Botao
+                            href="#"
+                            className={styles.primaryButton}
+                            estilo={{
+                                minWidth: "270px",
+                                padding: "0.9rem 1.6rem",
+                                backgroundColor: "#06263f",
+                                color: "#f8fafc",
+                                border: "1px solid #06263f",
+                                fontWeight: 700,
+                                justifyContent: "center"
+                            }}
+                        >
+                            <FiPlay size={18} />
+                            Retomar Aula &amp; Enviar Código
+                        </Botao>
+                    </div>
+                </div>
+
+                <div className={styles.questsSection}>
+                    <div className={styles.questsHeader}>
+                        <div className={styles.questsTitleWrap}>
+                            <span className={styles.questsIcon}><FiCheckCircle size={18} /></span>
+                            <Titulo titulo="Conquistas Recentes" nivel={3} estilo={{ fontSize: "2rem", color: "var(--blue)", margin: 0 }} />
+                        </div>
+                        <a href="#" className={styles.linkAll}>Ver Todas (12)</a>
+                    </div>
+
+                    <div className={styles.questsGrid}>
+                        {conquistasRecentes.map((conquista) => (
+                            <div key={conquista.titulo} className={styles.questCard}>
+                                <div className={styles.questIconWrap} style={{ backgroundColor: conquista.cor }}>
+                                    <span style={{ color: conquista.iconColor }}>{conquista.icone}</span>
+                                </div>
+                                <h4 className={styles.questTitle}>{conquista.titulo}</h4>
+                                <p className={styles.questDescription}>{conquista.descricao}</p>
+                                <span className={styles.questStatus}>{conquista.status}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
