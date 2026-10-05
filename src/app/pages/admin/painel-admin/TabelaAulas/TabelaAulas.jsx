@@ -36,7 +36,7 @@ export default function TabelaAulas({ dados }) {
                                 </td>
                                 <td className="p-3">{item.trilha}</td>
                                 <td className="p-3">{item.nivel}</td>
-                                <td className="p-3"><span className="rounded-5 fw-semibold px-2 py-1" style={{ backgroundColor: statusCor(item.status)}}>{item.status}</span></td>
+                                <td className="p-3"><span className="rounded-5 fw-semibold px-3 py-1" style={{ backgroundColor: statusCor(item.status)}}>{item.status}</span></td>
                                 <td className="p-3">
                                     <FaPencilAlt className="me-3" size={20} />
                                     <IoEyeOutline className="me-3" size={20} />
