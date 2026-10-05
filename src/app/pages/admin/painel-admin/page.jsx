@@ -2,6 +2,8 @@ import Footer from "@/app/components/Footer/Footer";
 import NavBar from "@/app/components/NavBar/NavBar";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Botao from "@/app/components/Botoes/Botao/Botao";
+import TabelaAulas from "./TabelaAulas/TabelaAulas";
+import Calendario from "./Calendario/Calendario";
 
 import styles from "./paineladmin.module.css";
 
@@ -13,9 +15,6 @@ import { PiBookOpenText } from "react-icons/pi";
 import { BiSolidSchool } from "react-icons/bi";
 import { CiSearch } from "react-icons/ci";
 import { IoFilter } from "react-icons/io5";
-import { FaPencilAlt } from "react-icons/fa";
-import { IoEyeOutline } from "react-icons/io5";
-import { TiDownload } from "react-icons/ti";
 
 export default function PainelAdmin() {
 
@@ -64,6 +63,34 @@ export default function PainelAdmin() {
         }
     ]
 
+
+    const tabelaAulas = [
+        {
+            id: 1,
+            aula: "Missão 04: Robô Explorador de Marte",
+            trilha: "Mecatrônica Avançada",
+            nivel: "6º - 8º Ano",
+            status: "Publicado",
+            atualizado_em: "05/10/2026"
+        },
+        {
+            id: 2,
+            aula: "Missão 05: Circuitos",
+            trilha: "Arduino Básico",
+            nivel: "6º - 8º Ano",
+            status: "Publicado",
+            atualizado_em: "03/10/2026"
+        },
+        {
+            id: 3,
+            aula: "Missão 05: Circuitos",
+            trilha: "Arduino Básico",
+            nivel: "6º - 8º Ano",
+            status: "Rascunho",
+            atualizado_em: "03/10/2026"
+        }
+    ]
+
     return (
         <>
             <NavBar />
@@ -71,9 +98,9 @@ export default function PainelAdmin() {
             <div className="container-fluid p-0">
 
                 <div className={`${styles.container}`} style={{ backgroundColor: "#e3e8f9" }}>
-                    <div className="row align-items-center py-3">
+                    <div className="row align-items-center py-4">
                         <div className="col-md-6 col-12 d-flex align-items-center gap-3">
-                            <div className="border border-black">
+                            <div className="">
                                 {icons.user}
                                 {icons.online}
                             </div>
@@ -114,7 +141,7 @@ export default function PainelAdmin() {
 
                 <div className={`${styles.container} mt-4`} >
 
-                    <div className="p-5 rounded-5 shadow">
+                    <div className="p-4 rounded-5 shadow">
 
                         <div className="d-flex justify-content-between align-items-center">
                             <Titulo titulo="Histórico de aulas publicadas" nivel={3} />
@@ -129,46 +156,34 @@ export default function PainelAdmin() {
 
                         <hr />
 
-                        <table className="table table-borderless">
-                            <thead className="rounded-5" >
-                                <tr>
-                                    <th scope="col" className="rounded-start-5 ps-3" style={{ backgroundColor: "#F1F3FF" }}>AULA</th>
-                                    <th scope="col" style={{ backgroundColor: "#F1F3FF" }}>TRILHA</th>
-                                    <th scope="col" style={{ backgroundColor: "#F1F3FF" }}>NÍVEL</th>
-                                    <th scope="col" style={{ backgroundColor: "#F1F3FF" }}>STATUS</th>
-                                    <th scope="col" className="rounded-end-5" style={{ backgroundColor: "#F1F3FF" }}>AÇÕES</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td className="ps-3 fw-semibold fs-6">Missão 04: Robô Explorador de Marte</td>
-                                    <td>Mecatrônica Avançada</td>
-                                    <td>6º - 8º Ano</td>
-                                    <td>Publicado</td>
-                                    <td className="">
-                                        <FaPencilAlt className="me-3" size={20} />
-                                        <IoEyeOutline className="me-3" size={20} />
-                                        <TiDownload className="me-3" size={20} />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="ps-3 fw-semibold fs-6">Missão 04: Robô Explorador de Marte</td>
-                                    <td>Mecatrônica Avançada</td>
-                                    <td>6º - 8º Ano</td>
-                                    <td>Publicado</td>
-                                    <td className="">
-                                        <FaPencilAlt className="me-3" size={20} />
-                                        <IoEyeOutline className="me-3" size={20} />
-                                        <TiDownload className="me-3" size={20} />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <TabelaAulas dados={tabelaAulas} />
 
                     </div>
                 </div>
 
+
+                <div className={`${styles.container} mt-4`} >
+                    <Calendario />
+                </div>
+
+                <div className={`${styles.container} mt-4`} >
+                    <div className="d-flex align-items-center gap-3">
+                        <FaCircle className="p-2 rounded-circle" style={{ backgroundColor: "#e02a1b" }} />
+                        <Titulo titulo="Central de dúvidas" nivel={3} />
+                    </div>
+
+                    <div className="row mt-4 mx-3">
+                        <div className="col-12 p-3 rounded-5" style={{backgroundColor: "#e3e8f9"}}>
+                            <div>
+                                <span>PH</span>
+                                <span>Pedro Henrique</span>
+                                <p>Há 15 minutos</p>
+                            </div>
+                            <div className="bg-white p-2 rounded-4"><p>Equipe Roboteco</p></div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <Footer />
