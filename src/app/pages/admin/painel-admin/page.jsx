@@ -4,6 +4,8 @@ import Titulo from "@/app/components/Titulo/Titulo";
 import Botao from "@/app/components/Botoes/Botao/Botao";
 import TabelaAulas from "./TabelaAulas/TabelaAulas";
 import Calendario from "./Calendario/Calendario";
+import SideBar from "./SideBar/SideBar";
+import Duvidas from "./Duvidas/Duvidas";
 
 import styles from "./paineladmin.module.css";
 
@@ -15,20 +17,18 @@ import { PiBookOpenText } from "react-icons/pi";
 import { BiSolidSchool } from "react-icons/bi";
 import { CiSearch } from "react-icons/ci";
 import { IoFilter } from "react-icons/io5";
+import { FaPlus } from "react-icons/fa";
 
 export default function PainelAdmin() {
 
 
     const icons = {
-
         user: (
             <FaUserFriends className="p-3 rounded-circle text-white" size={58} style={{ backgroundColor: "var(--blue)" }} />
         ),
-
-        online: (
-            <FaCircle className="p-2 rounded-circle" style={{ backgroundColor: "var(--green)" }} />
-        ),
-
+        plus: (
+            <FaPlus className="p-2 rounded-circle text-white" size={38} style={{ backgroundColor: "var(--blue)" }} />
+        )
     }
 
 
@@ -94,15 +94,20 @@ export default function PainelAdmin() {
     return (
         <>
             <NavBar />
+            
+            {/* <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                Link with href
+            </a>
 
-            <div className="container-fluid p-0">
+            <SideBar /> */}
+
+            <div className="container-fluid p-0" style={{ backgroundColor: "var(--color-primary)" }}>
 
                 <div className={`${styles.container}`} style={{ backgroundColor: "#e3e8f9" }}>
                     <div className="row align-items-center py-4">
                         <div className="col-md-6 col-12 d-flex align-items-center gap-3">
                             <div className="">
                                 {icons.user}
-                                {icons.online}
                             </div>
                             <div>
                                 <p className="text-white fw-semibold px-2 rounded-5" style={{ backgroundColor: "var(--red)" }}>ÁREA RESTRITA - EQUIPE</p>
@@ -110,10 +115,10 @@ export default function PainelAdmin() {
                                 <Titulo titulo="Roboteco" nivel={2} />
                             </div>
                         </div>
-                        <div className="col-md-6 col-12 d-flex justify-content-end gap-3">
+                        {/* <div className="col-md-6 col-12 d-flex justify-content-end gap-3">
                             <Botao texto="Inserir nova aula" classe="text-white fw-semibold" estilo={{ backgroundColor: "var(--yellow)" }} />
                             <Botao texto="Gerenciar Escolas" classe="text-white fw-semibold" estilo={{ backgroundColor: "var(--blue)" }} />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -123,7 +128,7 @@ export default function PainelAdmin() {
                         {
                             cardMos.map((item) => (
                                 <div className="col-md-3 col-12" key={item.id}>
-                                    <div className="h-100 bg-white shadow p-4" style={{ ...item.cores, borderRadius: '25px' }}>
+                                    <div className="h-100 bg-white p-4" style={{ ...item.cores, borderRadius: '25px' }}>
                                         <div>
                                             <p className="fw-semibold">{item.descricao}</p>
                                         </div>
@@ -141,7 +146,7 @@ export default function PainelAdmin() {
 
                 <div className={`${styles.container} mt-4`} >
 
-                    <div className="p-4 rounded-5 shadow">
+                    <div className="p-4 rounded-5 bg-white position-relative">
 
                         <div className="d-flex justify-content-between align-items-center">
                             <Titulo titulo="Histórico de aulas publicadas" nivel={3} />
@@ -158,41 +163,33 @@ export default function PainelAdmin() {
 
                         <TabelaAulas dados={tabelaAulas} />
 
+
+                        <div className="position-absolute end-0 bottom-0 p-4">
+                            {icons.plus}
+                        </div>
                     </div>
                 </div>
 
 
                 <div className={`${styles.container} mt-4`} >
-                    <Calendario />
+                    <div className="bg-white p-5 rounded-5">
+                        <Calendario />
+                    </div>
                 </div>
 
-                <div className={`${styles.container} mt-4 mb-4`} >
-                    <div className="shadow rounded-5 p-4">
+                <div className={`${styles.container} py-4`} >
+                    <div className="bg-white rounded-5 p-5">
                         <div className="d-flex align-items-center gap-3">
                             <FaCircle className="p-2 rounded-circle" style={{ backgroundColor: "#e02a1b" }} />
                             <Titulo titulo="Central de dúvidas" nivel={3} />
                         </div>
 
-                        <div className="row mt-4">
-                            <div className="col-12 p-3 rounded-5" style={{ backgroundColor: "#e3e8f9" }}>
-                                <div className="d-flex align-items-center gap-3">
-                                    <span className="p-2 rounded-circle text-white fw-bold fs-5" style={{ backgroundColor: "var(--blue)" }} >PH</span>
-                                    <div>
-                                        <span className="fw-semibold">Pedro Henrique</span>
-                                        <p className="" style={{ color: "var(--red)", fontSize: "0.9em" }}>Há 15 minutos</p>
-                                    </div>
-                                </div>
-                                <div className="mt-3">
-                                    <div className="bg-white px-3 py-2 rounded-4"><p>"Equipe Roboteco"</p></div>
-                                </div>
-                                <div className="d-flex gap-3 mt-3">
-                                    <input type="text" name="" id="" placeholder="Digite uma resposta..." className="w-100 px-3 py-2 rounded-5 border border-primary-subtle" style={{backgroundColor: "#e8eeff"}} />
-                                    <button className="text-white fw-semibold rounded-5 px-3" style={{backgroundColor: "var(--green)"}}>Responder</button>
-                                </div>
-                            </div>
-                        </div>
+                        <Duvidas />
+
                     </div>
                 </div>
+
+
             </div>
 
             <Footer />

@@ -18,11 +18,11 @@ export default function TabelaAulas({ dados }) {
             <table className="table table-borderless">
                 <thead className="rounded-5">
                     <tr>
-                        <th scope="col" className="rounded-start-5 ps-3" style={{ backgroundColor: "#F1F3FF" }}>AULA</th>
-                        <th scope="col" className="ps-3" style={{ backgroundColor: "#F1F3FF" }}>TRILHA</th>
-                        <th scope="col" className="ps-3" style={{ backgroundColor: "#F1F3FF" }}>NÍVEL</th>
-                        <th scope="col" className="ps-3" style={{ backgroundColor: "#F1F3FF" }}>STATUS</th>
-                        <th scope="col" className="rounded-end-5 ps-3" style={{ backgroundColor: "#F1F3FF" }}>AÇÕES</th>
+                        <th scope="col" className="rounded-start-5 ps-4" style={{ backgroundColor: "#F1F3FF" }}>AULA</th>
+                        <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>TRILHA</th>
+                        <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>NÍVEL</th>
+                        <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>STATUS</th>
+                        <th scope="col" className="rounded-end-5 ps-4" style={{ backgroundColor: "#F1F3FF" }}>AÇÕES</th>
                     </tr>
                 </thead>
 
@@ -30,17 +30,17 @@ export default function TabelaAulas({ dados }) {
                     {
                         dados.map((item) => (
                             <tr key={item.id}>
-                                <td className="p-3 fw-semibold fs-6 d-flex flex-column">
+                                <td className="p-4 fw-semibold fs-6 d-flex flex-column">
                                     {item.aula}
                                     <span className="text-body-secondary" style={{ fontSize: "0.8em" }}>Atualizado em: {item.atualizado_em}</span>
                                 </td>
-                                <td className="p-3">{item.trilha}</td>
-                                <td className="p-3">{item.nivel}</td>
-                                <td className="p-3"><span className="rounded-5 fw-semibold px-3 py-1" style={{ backgroundColor: statusCor(item.status)}}>{item.status}</span></td>
-                                <td className="p-3">
-                                    <FaPencilAlt className="me-3" size={20} />
-                                    <IoEyeOutline className="me-3" size={20} />
-                                    <TiDownload className="me-3" size={20} />
+                                <td className="p-4">{item.trilha}</td>
+                                <td className="p-4">{item.nivel}</td>
+                                <td className="p-4"><span className="rounded-5 fw-semibold px-4 py-1" style={{ backgroundColor: statusCor(item.status)}}>{item.status}</span></td>
+                                <td className="p-4">
+                                    <FaPencilAlt className="me-4" size={20} />
+                                    <IoEyeOutline className="me-4" size={20} />
+                                    <TiDownload className="me-4" size={20} />
                                 </td>
                             </tr>
 

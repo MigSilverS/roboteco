@@ -8,9 +8,9 @@ import { ptBR as dateFnsPtBR } from "date-fns/locale/pt-BR";
 const initialEvents = [
     {
         id: 1,
-        title: "Team Meeting",
-        start: "2024-01-15T10:00:00",
-        end: "2024-01-15T11:00:00",
+        title: "Apresentação do Projeto",
+        start: "2026-10-13T19:00:00",
+        end: "2026-10-13T22:30:00",
     },
     {
         id: 2,
