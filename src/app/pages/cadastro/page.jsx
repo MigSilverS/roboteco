@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import NavBar from "@/app/components/NavBar/NavBar";
 import Footer from "@/app/components/Footer/Footer";
@@ -8,6 +10,9 @@ import Botao from "@/app/components/Botoes/Botao/Botao";
 import img from "@/app/images/image.png";
 
 export default function Cadastro() {
+    const [tipoCadastro, setTipoCadastro] = useState("aluno");
+    const isAluno = tipoCadastro === "aluno";
+
     return (
         <div className="d-flex flex-column min-vh-100">
             <NavBar />
@@ -61,14 +66,37 @@ export default function Cadastro() {
                                         <div className="w-100" style={{ maxWidth: "560px" }}>
                                             <div className="text-center mb-4 mb-md-5">
                                                 <Titulo
-                                                    titulo="Cadastro de estudante"
+                                                    titulo={isAluno ? "Cadastro de estudante" : "Cadastro de escola/professor"}
                                                     nivel={2}
                                                     estilo={{ color: "var(--blue)" }}
                                                 />
                                                 <Texto
-                                                    texto="Preencha os dados abaixo para criar seu acesso."
+                                                    texto={isAluno ? "Preencha os dados abaixo para criar seu acesso." : "Cadastre a instituição ou seu perfil de professor."}
                                                     classe="text-muted mb-0"
                                                 />
+                                            </div>
+
+                                            <div className="mb-4">
+                                                <div className="d-flex gap-2 p-2 rounded-4 border bg-white shadow-sm">
+                                                    <button
+                                                        type="button"
+                                                        className={`btn flex-fill rounded-pill fw-semibold ${
+                                                            isAluno ? "btn-primary text-white" : "btn-outline-primary"
+                                                        }`}
+                                                        onClick={() => setTipoCadastro("aluno")}
+                                                    >
+                                                        Aluno
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        className={`btn flex-fill rounded-pill fw-semibold ${
+                                                            !isAluno ? "btn-primary text-white" : "btn-outline-primary"
+                                                        }`}
+                                                        onClick={() => setTipoCadastro("escola")}
+                                                    >
+                                                        Escola / Professor
+                                                    </button>
+                                                </div>
                                             </div>
 
                                             <div
@@ -76,29 +104,71 @@ export default function Cadastro() {
                                                 style={{ backgroundColor: "var(--yellow-weak)", borderColor: "rgba(2, 36, 58, 0.08)" }}
                                             >
                                                 <form className="row g-3">
-                                                    <div className="col-12">
-                                                        <label htmlFor="cadastro-nome" className="form-label fw-semibold text-dark">
-                                                            Nome completo
-                                                        </label>
-                                                        <input
-                                                            id="cadastro-nome"
-                                                            type="text"
-                                                            className="form-control"
-                                                            placeholder="Seu nome completo"
-                                                        />
-                                                    </div>
+                                                    {isAluno ? (
+                                                        <>
+                                                            <div className="col-12">
+                                                                <label htmlFor="cadastro-nome" className="form-label fw-semibold text-dark">
+                                                                    Nome completo
+                                                                </label>
+                                                                <input
+                                                                    id="cadastro-nome"
+                                                                    type="text"
+                                                                    className="form-control"
+                                                                    placeholder="Seu nome completo"
+                                                                />
+                                                            </div>
 
-                                                    <div className="col-12">
-                                                        <label htmlFor="cadastro-email" className="form-label fw-semibold text-dark">
-                                                            E-mail principal
-                                                        </label>
-                                                        <input
-                                                            id="cadastro-email"
-                                                            type="email"
-                                                            className="form-control"
-                                                            placeholder="voce@exemplo.com"
-                                                        />
-                                                    </div>
+                                                            <div className="col-12">
+                                                                <label htmlFor="cadastro-email" className="form-label fw-semibold text-dark">
+                                                                    E-mail principal
+                                                                </label>
+                                                                <input
+                                                                    id="cadastro-email"
+                                                                    type="email"
+                                                                    className="form-control"
+                                                                    placeholder="voce@exemplo.com"
+                                                                />
+                                                            </div>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <div className="col-12">
+                                                                <label htmlFor="cadastro-instituicao" className="form-label fw-semibold text-dark">
+                                                                    Nome da escola ou instituição
+                                                                </label>
+                                                                <input
+                                                                    id="cadastro-instituicao"
+                                                                    type="text"
+                                                                    className="form-control"
+                                                                    placeholder="Nome da escola / instituição"
+                                                                />
+                                                            </div>
+
+                                                            <div className="col-12">
+                                                                <label htmlFor="cadastro-responsavel" className="form-label fw-semibold text-dark">
+                                                                    Nome do responsável ou professor
+                                                                </label>
+                                                                <input
+                                                                    id="cadastro-responsavel"
+                                                                    type="text"
+                                                                    className="form-control"
+                                                                    placeholder="Seu nome completo"
+                                                                />
+                                                            </div>
+
+                                                            <div className="col-12">
+                                                                <label htmlFor="cadastro-email" className="form-label fw-semibold text-dark">
+                                                                    E-mail institucional
+                                                                </label>
+                                                                <input
+                                                                    id="cadastro-email"
+                                                                    type="email"
+                                                                    className="form-control"
+                                                                    placeholder="contato@escola.com"
+                                                                />
+                                                            </div>
+                                                        </>
+                                                    )}
 
                                                     <div className="col-12 col-md-6">
                                                         <label htmlFor="cadastro-senha" className="form-label fw-semibold text-dark">
@@ -138,13 +208,12 @@ export default function Cadastro() {
                                                     </div>
 
                                                     <div className="col-12 d-flex justify-content-center pt-3 pt-md-4">
-                                                        <Botao
+                                                        <button
                                                             type="submit"
                                                             className="btn btn-success rounded-pill px-4 fw-semibold shadow-sm"
-                                                            texto="Concluir matrícula"
-                                                        />
-                                                            
-                                                        
+                                                        >
+                                                            {isAluno ? "Concluir matrícula" : "Concluir cadastro"}
+                                                        </button>
                                                     </div>
 
                                                     <div className="col-12 text-center pt-3">
@@ -158,7 +227,6 @@ export default function Cadastro() {
                                                             texto="Fazer login"
                                                             classe="btn-light"
                                                             className="px-4"
-                                                            
                                                         />
                                                     </div>
                                                 </form>
@@ -173,5 +241,5 @@ export default function Cadastro() {
             </main>
             <Footer />
         </div>
-    )
+    );
 }
