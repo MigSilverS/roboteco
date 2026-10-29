@@ -1,5 +1,5 @@
 import Footer from "@/app/components/Footer/Footer";
-import NavBar from "@/app/components/NavBar/NavBar";
+import SidebarPosLogin from "@/app/components/SidebarPosLogin/SidebarPosLogin";
 import styles from "./paineldoaluno.module.css"
 import Texto from "@/app/components/Texto/Texto";
 import Titulo from "@/app/components/Titulo/Titulo";
@@ -66,16 +66,21 @@ const conquistasRecentes = [
     }
 ];
 
+const linksAluno = [
+    { label: "Meu Painel", href: "/aluno/painel-do-aluno" },
+    { label: "Conteúdos", href: "/aluno/conteudos" },
+    { label: "Suporte", href: "/suporte" }
+];
+
 export default function PainelDoAluno() {
     return (
-        <>
-            <NavBar />
+        <SidebarPosLogin perfil="aluno" links={linksAluno}>
             <div className={styles.container}>
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12 mt-5 mb-5 p-5 d-flex shadow-lg" style={{ borderRadius: "90px", background: "linear-gradient(55deg, var(--blue) 40%, #011827, #123d12)" }}>
                         <div className="col-6 col-sm-6 col-md-6 d-flex flex-column gap-3">
-                            <div className="">
-                                <div className="d-flex rounded justify-content-center align-items-center" style={{ backgroundColor: "var(--red)", width: "20%", height: "35px" }}>
+                            <div>
+                                <div className={`d-flex rounded justify-content-center align-items-center ${styles.streakBadge}`}>
                                     {icons.fire}
                                     <Texto texto="12 Dias seguidos!" classe="text-white" />
                                 </div>
@@ -193,6 +198,6 @@ export default function PainelDoAluno() {
                 </div>
             </div>
             <Footer />
-        </>
+        </SidebarPosLogin>
     )
 }

@@ -1,5 +1,5 @@
 import Footer from "@/app/components/Footer/Footer";
-import NavBar from "@/app/components/NavBar/NavBar";
+import SidebarPosLogin from "@/app/components/SidebarPosLogin/SidebarPosLogin";
 import styles from "./conteudos.module.css";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
@@ -33,10 +33,15 @@ const icons = {
 
 }
 
+const linksAluno = [
+    { label: "Meu Painel", href: "/aluno/painel-do-aluno" },
+    { label: "Conteúdos", href: "/aluno/conteudos" },
+    { label: "Suporte", href: "/suporte" }
+];
+
 export default function Conteudos() {
     return (
-        <>
-            <NavBar />
+        <SidebarPosLogin perfil="aluno" links={linksAluno}>
             <div className={`${styles.container} mt-5 row`}>
                 <div className="">
                     <Titulo titulo="Conteúdos para aprender e criar." nivel={1} />
@@ -71,6 +76,6 @@ export default function Conteudos() {
                 </div>
             </div>
             <Footer />
-        </>
+        </SidebarPosLogin>
     )
 }

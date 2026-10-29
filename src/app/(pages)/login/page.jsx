@@ -124,7 +124,7 @@ export default function Login() {
 
                                                     <div className="col-12 d-flex justify-content-center pt-3 pt-md-4">
                                                         <Botao
-                                                            href="/pages/conteudos"
+                                                            href="/aluno/conteudos"
                                                             type="submit"
                                                             className="btn btn-success rounded-pill px-4 fw-semibold shadow-sm"
                                                             texto="Iniciar sessão"
@@ -138,7 +138,7 @@ export default function Login() {
                                                             classe="mb-0"
                                                             estilo={{ color: "var(--blue)" }}
                                                         />
-                                                        <Link href="/pages/cadastro" className="fw-semibold text-decoration-none" style={{ color: "var(--blue)" }}>
+                                                        <Link href="/cadastro" className="fw-semibold text-decoration-none" style={{ color: "var(--blue)" }}>
                                                             Crie sua conta
                                                         </Link>
                                                     </div>

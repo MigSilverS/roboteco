@@ -1,10 +1,9 @@
 import Footer from "@/app/components/Footer/Footer";
-import NavBar from "@/app/components/NavBar/NavBar";
+import SidebarPosLogin from "@/app/components/SidebarPosLogin/SidebarPosLogin";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Botao from "@/app/components/Botoes/Botao/Botao";
 import TabelaAulas from "./TabelaAulas/TabelaAulas";
 import Calendario from "./Calendario/Calendario";
-import SideBar from "./SideBar/SideBar";
 import Duvidas from "./Duvidas/Duvidas";
 
 import styles from "./paineladmin.module.css";
@@ -18,6 +17,12 @@ import { BiSolidSchool } from "react-icons/bi";
 import { CiSearch } from "react-icons/ci";
 import { IoFilter } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa";
+
+const linksAdmin = [
+    { label: "Painel Admin", href: "/admin/painel-admin" },
+    { label: "Conteúdos", href: "/aluno/conteudos" },
+    { label: "Suporte", href: "/suporte" }
+];
 
 export default function PainelAdmin() {
 
@@ -92,8 +97,7 @@ export default function PainelAdmin() {
     ]
 
     return (
-        <>
-            <NavBar />
+        <SidebarPosLogin perfil="admin" links={linksAdmin}>
             
             {/* <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                 Link with href
@@ -193,7 +197,7 @@ export default function PainelAdmin() {
             </div>
 
             <Footer />
-        </>
+        </SidebarPosLogin>
     )
 
 }

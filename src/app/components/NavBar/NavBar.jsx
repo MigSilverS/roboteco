@@ -29,21 +29,21 @@ export default function NavBar() {
                             <Link href="/" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Início</Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/pages/escola/para-escolas" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Para Escolas</Link>
+                            <Link href="/escola/para-escolas" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Para Escolas</Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/pages/sobre-nos" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Sobre nós</Link>
+                            <Link href="/sobre-nos" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Sobre nós</Link>
                         </li>
                         </ul>
                     <div className="d-flex align-items-center gap-3">
                         <Botao
-                            href="/pages/login"
+                            href="/login"
                             texto="Login"
                             classe="btn-light"
                             estilo={{ border: "1px solid #a8a8a8ff" }}
                         />
                         <Botao
-                            href="/pages/cadastro"
+                            href="/cadastro"
                             texto="Criar Conta"
                             classe="btn-danger"
                             estilo={{ border: "1px solid #a8a8a8ff" }}

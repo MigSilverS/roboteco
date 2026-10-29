@@ -223,7 +223,7 @@ export default function Cadastro() {
                                                             estilo={{ color: "var(--blue)" }}
                                                         />
                                                         <Botao
-                                                            href="/pages/login"
+                                                            href="/login"
                                                             texto="Fazer login"
                                                             classe="btn-light"
                                                             className="px-4"
