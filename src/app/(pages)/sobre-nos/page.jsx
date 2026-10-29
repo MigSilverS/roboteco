@@ -1,7 +1,7 @@
 import Footer from "@/app/components/Footer/Footer";
 import NavBar from "@/app/components/NavBar/NavBar";
 import Titulo from "@/app/components/Titulo/Titulo";
-import CardPilares from "@/app/pages/sobre-nos/CardPilares/CardPilares";
+import CardPilares from "@/app/(pages)/sobre-nos/CardPilares/CardPilares";
 import CardEquipe from "./CardEquipe/CardEquipe";
 import styles from "./sobrenos.module.css";
 

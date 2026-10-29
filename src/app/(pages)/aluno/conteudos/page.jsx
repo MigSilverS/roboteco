@@ -1,5 +1,5 @@
 import Footer from "@/app/components/Footer/Footer";
-import NavBar from "@/app/components/NavBar/NavBar";
+import SidebarPosLogin from "@/app/components/SidebarPosLogin/SidebarPosLogin";
 import styles from "./conteudos.module.css";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
@@ -33,10 +33,15 @@ const icons = {
 
 }
 
+const linksAluno = [
+    { label: "Meu Painel", href: "/aluno/painel-do-aluno" },
+    { label: "Conteúdos", href: "/aluno/conteudos" },
+    { label: "Suporte", href: "/suporte" }
+];
+
 export default function Conteudos() {
     return (
-        <>
-            <NavBar />
+        <SidebarPosLogin perfil="aluno" links={linksAluno}>
             <div className={`${styles.container} mt-5 row`}>
                 <div className="">
                     <Titulo titulo="Conteúdos para aprender e criar." nivel={1} />
@@ -60,10 +65,10 @@ export default function Conteudos() {
                 </div>
                 <div className="cards row mt-5">
                     <div className="col-12 col-sm-12 col-md-4">
-                        <CardConteudo titulo="O que é robótica?" miniTitulo="Robótica · Primeiros passos" tempo="10 Min" tipo1="Texto" tipo2="Video" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
+                        <CardConteudo titulo="O que é robótica?" miniTitulo="Robótica · Primeiros passos" tempo="10 Min" tipo1="Texto" tipo2="Video" texto="Entenda sensores, comandos e movimentos." />
                     </div>
                     <div className="col-12 col-sm-12 col-md-4">
-                        <CardConteudo titulo="Sequências e comandos" miniTitulo="Programação · Primeiros passos" tempo="8 Min" tipo1="Texto" tipo2="Video" texto="Organize instruções para resolver um problema, uma etapa por vez." />
+                        <CardConteudo titulo="Sequências e comandos" miniTitulo="Programação · Primeiros passos" tempo="8 Min" tipo1="Texto" tipo2="Video" texto="Organize instruções para resolver um problema." />
                     </div>
                     <div className="col-12 col-sm-12 col-md-4">
                         <CardConteudo titulo="Conhecendo os circuitos" miniTitulo="Eletrônica · Primeiros passos" tempo="12 Min" tipo1="Texto" texto="Identifique os elementos de um circuito simples." />
@@ -71,6 +76,6 @@ export default function Conteudos() {
                 </div>
             </div>
             <Footer />
-        </>
+        </SidebarPosLogin>
     )
 }

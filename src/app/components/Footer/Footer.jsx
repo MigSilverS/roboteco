@@ -33,7 +33,7 @@ export default function Footer() {
 
     return (
         <>
-            <footer className={`${styles.container} py-4`}>
+            <footer className={`${styles.container} py-4 mt-auto`}>
                 <div className="d-flex justify-content-md-around justify-content-center align-items-center flex-wrap">
 
                     <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 p-2">
@@ -45,7 +45,7 @@ export default function Footer() {
 
                     <div className="d-flex justify-content-center p-2">
                         <ul className="d-flex flex-row align-items-center gap-4 mb-0 list-unstyled">
-                            <a href="/pages/suporte" className="text-black text-decoration-none">Suporte</a>
+                            <a href="/suporte" className="text-black text-decoration-none">Suporte</a>
                             <a href="#" className="text-black text-decoration-none">Privacidade</a>
                             <a href="#" className="text-black text-decoration-none">Termos</a>
                             <a href="#" className="text-black text-decoration-none">Comunidade</a>

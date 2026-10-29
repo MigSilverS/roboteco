@@ -70,18 +70,18 @@ export default function Home() {
           <hr />
           {/* <div className="d-flex justify-content-between">
             <Titulo titulo="Comece pelos conteúdos" nivel={2} />
-            <a href="/pages/conteudos" className="text-decoration-none d-flex align-items-center" style={{ color: "black" }}>Ver Conteúdo</a>
+            <a href="/aluno/conteudos" className="text-decoration-none d-flex align-items-center" style={{ color: "black" }}>Ver Conteúdo</a>
           </div>
           <div className="cards row py-5 ">
             <div className="col-12 col-sm-12 col-md-4">
-              <Card titulo="O que é robótica?" href="/pages/conteudos" miniTitulo="Robótica · Primeiros passos" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
+              <Card titulo="O que é robótica?" href="/aluno/conteudos" miniTitulo="Robótica · Primeiros passos" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
             </div>
             <div className="col-12 col-sm-12 col-md-4">
-              <Card titulo="Sequências e comandos" href="/pages/conteudos" miniTitulo="Programação · Primeiros passos" texto="Organize instruções para resolver um problema, uma etapa por vez." />
+              <Card titulo="Sequências e comandos" href="/aluno/conteudos" miniTitulo="Programação · Primeiros passos" texto="Organize instruções para resolver um problema, uma etapa por vez." />
 
             </div>
             <div className="col-12 col-sm-12 col-md-4">
-              <Card titulo="Conhecendo os circuitos" href="/pages/conteudos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
+              <Card titulo="Conhecendo os circuitos" href="/aluno/conteudos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
             </div>
           </div> */}
           <div className="col-md-7 mt-3">

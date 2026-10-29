@@ -4,7 +4,7 @@ import "./globals.css";
 export default function RootLayout({ children, }) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <body className="d-flex flex-column min-vh-100">{children}</body>
     </html>
   );
 }
