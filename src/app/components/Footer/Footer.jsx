@@ -33,7 +33,7 @@ export default function Footer() {
 
     return (
         <>
-            <footer className={`${styles.container} py-4`}>
+            <footer className={`${styles.container} py-4 mt-auto`}>
                 <div className="d-flex justify-content-md-around justify-content-center align-items-center flex-wrap">
 
                     <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 p-2">

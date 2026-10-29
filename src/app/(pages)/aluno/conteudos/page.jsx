@@ -65,10 +65,10 @@ export default function Conteudos() {
                 </div>
                 <div className="cards row mt-5">
                     <div className="col-12 col-sm-12 col-md-4">
-                        <CardConteudo titulo="O que é robótica?" miniTitulo="Robótica · Primeiros passos" tempo="10 Min" tipo1="Texto" tipo2="Video" texto="Entenda como sensores, comandos e movimentos trabalham juntos." />
+                        <CardConteudo titulo="O que é robótica?" miniTitulo="Robótica · Primeiros passos" tempo="10 Min" tipo1="Texto" tipo2="Video" texto="Entenda sensores, comandos e movimentos." />
                     </div>
                     <div className="col-12 col-sm-12 col-md-4">
-                        <CardConteudo titulo="Sequências e comandos" miniTitulo="Programação · Primeiros passos" tempo="8 Min" tipo1="Texto" tipo2="Video" texto="Organize instruções para resolver um problema, uma etapa por vez." />
+                        <CardConteudo titulo="Sequências e comandos" miniTitulo="Programação · Primeiros passos" tempo="8 Min" tipo1="Texto" tipo2="Video" texto="Organize instruções para resolver um problema." />
                     </div>
                     <div className="col-12 col-sm-12 col-md-4">
                         <CardConteudo titulo="Conhecendo os circuitos" miniTitulo="Eletrônica · Primeiros passos" tempo="12 Min" tipo1="Texto" texto="Identifique os elementos de um circuito simples." />

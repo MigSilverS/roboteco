@@ -91,7 +91,7 @@ export default function CardConteudo({ miniTitulo, titulo, subtitulo, texto, tem
 
             <hr />
             <div className="d-flex justify-content-between">
-                <Texto classe={"my-auto text-secondary"} texto={disp || "Exclusivo para alunos"} />
+                <Texto classe={"my-auto text-secondary"} />
                 <div>
                     <Botao texto={disp == "Público" ? "Ver Demonstração" : "Acessar"} href={disp == "Público" ? "/aluno/conteudos" : "/login"} classe="btn-light" estilo={{ border: "1px solid #a8a8a8ff" }} />
                 </div>
