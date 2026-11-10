@@ -124,7 +124,7 @@ export default function Login() {
 
                                                     <div className="col-12 d-flex justify-content-center pt-3 pt-md-4">
                                                         <Botao
-                                                            href="/aluno/conteudos"
+                                                            href="/aluno/painel-do-aluno"
                                                             type="submit"
                                                             className="btn btn-success rounded-pill px-4 fw-semibold shadow-sm"
                                                             texto="Iniciar sessão"

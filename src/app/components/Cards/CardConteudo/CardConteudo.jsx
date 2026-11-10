@@ -50,7 +50,7 @@ function renderTipo(tipo, key) {
     );
 }
 
-export default function CardConteudo({ miniTitulo, titulo, subtitulo, texto, tempo, tipo1, tipo2, disp }) {
+export default function CardConteudo({ miniTitulo, titulo, subtitulo, texto, tempo, tipo1, tipo2, disp, href }) {
     return (
         <div
             className={`${styles.container} mt-1 mb-5`}
@@ -93,7 +93,7 @@ export default function CardConteudo({ miniTitulo, titulo, subtitulo, texto, tem
             <div className="d-flex justify-content-between">
                 <Texto classe={"my-auto text-secondary"} />
                 <div>
-                    <Botao texto={disp == "Público" ? "Ver Demonstração" : "Acessar"} href={disp == "Público" ? "/aluno/conteudos" : "/login"} classe="btn-light" estilo={{ border: "1px solid #a8a8a8ff" }} />
+                    <Botao texto={disp == "Público" ? "Ver Demonstração" : "Acessar"} href={href ?? (disp == "Público" ? "/aluno/conteudos" : "/login")} classe="btn-light" estilo={{ border: "1px solid #a8a8a8ff" }} />
                 </div>
             </div>
         </div>

@@ -20,8 +20,6 @@ import { FaPlus } from "react-icons/fa";
 
 const linksAdmin = [
     { label: "Painel Admin", href: "/admin/painel-admin" },
-    { label: "Conteúdos", href: "/aluno/conteudos" },
-    { label: "Suporte", href: "/suporte" }
 ];
 
 export default function PainelAdmin() {

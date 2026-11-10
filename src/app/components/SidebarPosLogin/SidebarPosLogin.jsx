@@ -7,14 +7,13 @@ import styles from "./SidebarPosLogin.module.css";
 
 const linksPadrao = {
   aluno: [
-    { label: "Painel do Aluno", href: "/aluno/painel-do-aluno" },
+    { label: "Meu Painel", href: "/aluno/painel-do-aluno" },
     { label: "Conteudos", href: "/aluno/conteudos" },
-    { label: "Suporte", href: "/suporte" }
+    { label: "Suporte", href: "/aluno/suporte" }
   ],
   admin: [
     { label: "Painel Admin", href: "/admin/painel-admin" },
     { label: "Conteudos", href: "/aluno/conteudos" },
-    { label: "Suporte", href: "/suporte" }
   ]
 };
 

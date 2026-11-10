@@ -8,6 +8,7 @@ import Botao from "@/app/components/Botoes/Botao/Botao";
 import Dropdown from "@/app/components/Dropdown/Dropdown";
 import CardConteudo from "@/app/components/Cards/CardConteudo/CardConteudo";
 import { RiRobot2Line } from "react-icons/ri";
+import { conteudos } from "@/app/dados/conteudos";
 
 const icons = {
     all: (
@@ -33,15 +34,10 @@ const icons = {
 
 }
 
-const linksAluno = [
-    { label: "Meu Painel", href: "/aluno/painel-do-aluno" },
-    { label: "Conteúdos", href: "/aluno/conteudos" },
-    { label: "Suporte", href: "/suporte" }
-];
 
 export default function Conteudos() {
     return (
-        <SidebarPosLogin perfil="aluno" links={linksAluno}>
+        <SidebarPosLogin perfil="aluno">
             <div className={`${styles.container} mt-5 row`}>
                 <div className="">
                     <Titulo titulo="Conteúdos para aprender e criar." nivel={1} />
@@ -64,15 +60,18 @@ export default function Conteudos() {
                     </div>
                 </div>
                 <div className="cards row mt-5">
-                    <div className="col-12 col-sm-12 col-md-4">
-                        <CardConteudo titulo="O que é robótica?" miniTitulo="Robótica · Primeiros passos" tempo="10 Min" tipo1="Texto" tipo2="Video" texto="Entenda sensores, comandos e movimentos." />
-                    </div>
-                    <div className="col-12 col-sm-12 col-md-4">
-                        <CardConteudo titulo="Sequências e comandos" miniTitulo="Programação · Primeiros passos" tempo="8 Min" tipo1="Texto" tipo2="Video" texto="Organize instruções para resolver um problema." />
-                    </div>
-                    <div className="col-12 col-sm-12 col-md-4">
-                        <CardConteudo titulo="Conhecendo os circuitos" miniTitulo="Eletrônica · Primeiros passos" tempo="12 Min" tipo1="Texto" texto="Identifique os elementos de um circuito simples." />
-                    </div>
+                    {Object.entries(conteudos).map(([id, conteudo]) => (
+                        <div className="col-12 col-md-6 col-xl-4" key={id}>
+                            <CardConteudo
+                                titulo={conteudo.titulo}
+                                miniTitulo={`${conteudo.categoria} · ${conteudo.nivel}`}
+                                tempo={conteudo.tempo}
+                                tipo1="Texto"
+                                texto={conteudo.descricao}
+                                href={`/aluno/conteudos/${id}`}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
             <Footer />

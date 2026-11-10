@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 3rem);
+}
+
+.painel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: clamp(1rem, 3vw, 3rem);
+  background-color: var(--yellow-weak);
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+}
+
+.introducao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.formulario {
+  min-width: 0;
+  padding: clamp(1rem, 2.5vw, 2.5rem);
+  background-color: var(--yellow);
+}
+
+.input {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .painel {
+    gap: 1.5rem;
+  }
+}

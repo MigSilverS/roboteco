@@ -66,15 +66,11 @@ const conquistasRecentes = [
     }
 ];
 
-const linksAluno = [
-    { label: "Meu Painel", href: "/aluno/painel-do-aluno" },
-    { label: "Conteúdos", href: "/aluno/conteudos" },
-    { label: "Suporte", href: "/suporte" }
-];
+
 
 export default function PainelDoAluno() {
     return (
-        <SidebarPosLogin perfil="aluno" links={linksAluno}>
+        <SidebarPosLogin perfil="aluno" >
             <div className={styles.container}>
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12 mt-5 mb-5 p-5 d-flex shadow-lg" style={{ borderRadius: "90px", background: "linear-gradient(55deg, var(--blue) 40%, #011827, #123d12)" }}>
