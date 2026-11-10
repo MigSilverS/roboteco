@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react";
 import Footer from "@/app/components/Footer/Footer";
 import SidebarPosLogin from "@/app/components/SidebarPosLogin/SidebarPosLogin";
 import Titulo from "@/app/components/Titulo/Titulo";
@@ -17,6 +20,7 @@ import { BiSolidSchool } from "react-icons/bi";
 import { CiSearch } from "react-icons/ci";
 import { IoFilter } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa";
+import AdicionarAula from "./AdicionarAula/AdicionarAula";
 
 const linksAdmin = [
     { label: "Painel Admin", href: "/admin/painel-admin" },
@@ -94,108 +98,89 @@ export default function PainelAdmin() {
         }
     ]
 
+    const [abreModal, setModalAberto] = useState(false)
+
     return (
-        <SidebarPosLogin perfil="admin" links={linksAdmin}>
-            
-            {/* <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                Link with href
-            </a>
+        <>
 
-            <SideBar /> */}
+            <SidebarPosLogin perfil="admin" links={linksAdmin}>
 
-            <div className="container-fluid p-0" style={{ backgroundColor: "var(--color-primary)" }}>
+                <div className="container-fluid p-0" style={{ backgroundColor: "var(--color-primary)" }}>
 
-                <div className={`${styles.container}`} style={{ backgroundColor: "#e3e8f9" }}>
-                    <div className="row align-items-center py-4">
-                        <div className="col-md-6 col-12 d-flex align-items-center gap-3">
-                            <div className="">
-                                {icons.user}
-                            </div>
-                            <div>
-                                <p className="text-white fw-semibold px-2 rounded-5" style={{ backgroundColor: "var(--red)" }}>ÁREA RESTRITA - EQUIPE</p>
-                                <Titulo titulo="Admin." nivel={2} />
-                                <Titulo titulo="Roboteco" nivel={2} />
-                            </div>
-                        </div>
-                        {/* <div className="col-md-6 col-12 d-flex justify-content-end gap-3">
-                            <Botao texto="Inserir nova aula" classe="text-white fw-semibold" estilo={{ backgroundColor: "var(--yellow)" }} />
-                            <Botao texto="Gerenciar Escolas" classe="text-white fw-semibold" estilo={{ backgroundColor: "var(--blue)" }} />
-                        </div> */}
-                    </div>
-                </div>
-
-
-                <div className={`${styles.container} mt-4`} >
-                    <div className="row justify-content-md-end justify-content-center g-3">
-                        {
-                            cardMos.map((item) => (
-                                <div className="col-md-3 col-12" key={item.id}>
-                                    <div className="h-100 bg-white p-4" style={{ ...item.cores, borderRadius: '25px' }}>
-                                        <div>
-                                            <p className="fw-semibold">{item.descricao}</p>
-                                        </div>
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <Titulo titulo={item.metrica} nivel={1} />
-                                            {item.icon}
+                    <div className={`${styles.container} mt-4`} >
+                        <div className="row justify-content-md-end justify-content-center g-3">
+                            {
+                                cardMos.map((item) => (
+                                    <div className="col-md-3 col-12" key={item.id}>
+                                        <div className="h-100 bg-white p-4" style={{ ...item.cores, borderRadius: '25px' }}>
+                                            <div>
+                                                <p className="fw-semibold">{item.descricao}</p>
+                                            </div>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <Titulo titulo={item.metrica} nivel={1} />
+                                                {item.icon}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
                     </div>
-                </div>
 
 
-                <div className={`${styles.container} mt-4`} >
+                    <div className={`${styles.container} mt-4`} >
 
-                    <div className="p-4 rounded-5 bg-white position-relative">
+                        <div className="p-4 rounded-5 bg-white position-relative">
 
-                        <div className="d-flex justify-content-between align-items-center">
-                            <Titulo titulo="Histórico de aulas publicadas" nivel={3} />
-                            <div className="d-flex gap-3">
-                                <div className="d-flex align-items-center rounded-5" style={{ backgroundColor: "#F1F3FF" }}>
-                                    <CiSearch className="search-icon mx-2" size={20} />
-                                    <input type="text" className="border-0 p-2 rounded-end-5" placeholder="Buscar por título ou kit..." style={{ backgroundColor: "#F1F3FF" }} />
+                            <div className="d-flex justify-content-between align-items-center">
+                                <Titulo titulo="Histórico de aulas publicadas" nivel={3} />
+                                <div className="d-flex gap-3">
+                                    <div className="d-flex align-items-center rounded-5" style={{ backgroundColor: "#F1F3FF" }}>
+                                        <CiSearch className="search-icon mx-2" size={20} />
+                                        <input type="text" className="border-0 p-2 rounded-end-5" placeholder="Buscar por título ou kit..." style={{ backgroundColor: "#F1F3FF" }} />
+                                    </div>
+                                    <button className="px-4 py-2 border-0 rounded-5 fw-semibold d-flex align-items-center gap-2" style={{ backgroundColor: "#F1F3FF" }}><IoFilter /> Filtrar</button>
                                 </div>
-                                <button className="px-4 py-2 border-0 rounded-5 fw-semibold d-flex align-items-center gap-2" style={{ backgroundColor: "#F1F3FF" }}><IoFilter /> Filtrar</button>
+                            </div>
+
+                            <hr />
+
+                            <TabelaAulas dados={tabelaAulas} />
+
+
+                            <div className="position-absolute end-0 bottom-0 p-4">
+                                <button className="border-0 bg-transparent" onClick={() => setModalAberto(true)}>
+                                    {icons.plus}
+                                </button>
                             </div>
                         </div>
+                    </div>
 
-                        <hr />
+                    <AdicionarAula aberto={abreModal} fechar={() => setModalAberto(false)}/>
 
-                        <TabelaAulas dados={tabelaAulas} />
-
-
-                        <div className="position-absolute end-0 bottom-0 p-4">
-                            {icons.plus}
+                    <div className={`${styles.container} mt-4`} >
+                        <div className="bg-white p-5 rounded-5">
+                            <Calendario />
                         </div>
                     </div>
-                </div>
 
+                    <div className={`${styles.container} py-4`} >
+                        <div className="bg-white rounded-5 p-5">
+                            <div className="d-flex align-items-center gap-3">
+                                <FaCircle className="p-2 rounded-circle" style={{ backgroundColor: "#e02a1b" }} />
+                                <Titulo titulo="Central de dúvidas" nivel={3} />
+                            </div>
 
-                <div className={`${styles.container} mt-4`} >
-                    <div className="bg-white p-5 rounded-5">
-                        <Calendario />
-                    </div>
-                </div>
+                            <Duvidas />
 
-                <div className={`${styles.container} py-4`} >
-                    <div className="bg-white rounded-5 p-5">
-                        <div className="d-flex align-items-center gap-3">
-                            <FaCircle className="p-2 rounded-circle" style={{ backgroundColor: "#e02a1b" }} />
-                            <Titulo titulo="Central de dúvidas" nivel={3} />
                         </div>
-
-                        <Duvidas />
-
                     </div>
+
+
                 </div>
 
-
-            </div>
-
-            <Footer />
-        </SidebarPosLogin>
+            </SidebarPosLogin>
+        </>
     )
 
 }
