@@ -110,7 +110,7 @@ O envio de uma solicitação não confirma o agendamento. A realização da aula
 - Miguel Prata Silva
 - Thainá de Faria Gonçalves
 
-**Orientador:** Bruno Donizete da Silva.
+**Orientador:** Claudemir Santos Pinto
 
 **Parceiro técnico:** Wolf Army Robotics.
 
