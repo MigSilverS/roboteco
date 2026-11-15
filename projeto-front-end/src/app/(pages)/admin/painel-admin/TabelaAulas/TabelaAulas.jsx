@@ -7,7 +7,7 @@ export default function TabelaAulas({ dados }) {
     function statusCor(status) {
         if (status == "Publicado") {
             return "#9AF7A7"
-        }else{
+        } else {
             return "#DDE2F3"
         }
     }
@@ -15,39 +15,41 @@ export default function TabelaAulas({ dados }) {
     return (
 
         <>
-            <table className="table table-borderless">
-                <thead className="rounded-5">
-                    <tr>
-                        <th scope="col" className="rounded-start-5 ps-4" style={{ backgroundColor: "#F1F3FF" }}>AULA</th>
-                        <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>TRILHA</th>
-                        <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>NÍVEL</th>
-                        <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>STATUS</th>
-                        <th scope="col" className="rounded-end-5 ps-4" style={{ backgroundColor: "#F1F3FF" }}>AÇÕES</th>
-                    </tr>
-                </thead>
+            <div className="table-responsive">
+                <table className="table table-borderless">
+                    <thead className="rounded-5">
+                        <tr>
+                            <th scope="col" className="rounded-start-5 ps-4" style={{ backgroundColor: "#F1F3FF" }}>AULA</th>
+                            <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>TRILHA</th>
+                            <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>NÍVEL</th>
+                            <th scope="col" className="ps-4" style={{ backgroundColor: "#F1F3FF" }}>STATUS</th>
+                            <th scope="col" className="rounded-end-5 ps-4" style={{ backgroundColor: "#F1F3FF" }}>AÇÕES</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    {
-                        dados.map((item) => (
-                            <tr key={item.id}>
-                                <td className="p-4 fw-semibold fs-6 d-flex flex-column">
-                                    {item.aula}
-                                    <span className="text-body-secondary" style={{ fontSize: "0.8em" }}>Atualizado em: {item.atualizado_em}</span>
-                                </td>
-                                <td className="p-4">{item.trilha}</td>
-                                <td className="p-4">{item.nivel}</td>
-                                <td className="p-4"><span className="rounded-5 fw-semibold px-4 py-1" style={{ backgroundColor: statusCor(item.status)}}>{item.status}</span></td>
-                                <td className="p-4">
-                                    <FaPencilAlt className="me-4" size={20} />
-                                    <IoEyeOutline className="me-4" size={20} />
-                                    <TiDownload className="me-4" size={20} />
-                                </td>
-                            </tr>
+                    <tbody>
+                        {
+                            dados.map((item) => (
+                                <tr key={item.id}>
+                                    <td className="p-4 fw-semibold fs-6 d-flex flex-column">
+                                        {item.aula}
+                                        <span className="text-body-secondary" style={{ fontSize: "0.8em" }}>Atualizado em: {item.atualizado_em}</span>
+                                    </td>
+                                    <td className="p-4">{item.trilha}</td>
+                                    <td className="p-4">{item.nivel}</td>
+                                    <td className="p-4"><span className="rounded-5 fw-semibold px-4 py-1" style={{ backgroundColor: statusCor(item.status) }}>{item.status}</span></td>
+                                    <td className="p-4">
+                                        <FaPencilAlt className="me-4" size={20} />
+                                        <IoEyeOutline className="me-4" size={20} />
+                                        <TiDownload className="me-4" size={20} />
+                                    </td>
+                                </tr>
 
-                        ))
-                    }
-                </tbody>
-            </table>
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </div>
         </>
 
     )

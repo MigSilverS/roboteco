@@ -8,6 +8,7 @@ import Botao from "@/app/components/Botoes/Botao/Botao";
 import TabelaAulas from "./TabelaAulas/TabelaAulas";
 import Calendario from "./Calendario/Calendario";
 import Duvidas from "./Duvidas/Duvidas";
+import AdicionarAula from "./AdicionarAula/AdicionarAula";
 
 import styles from "./paineladmin.module.css";
 
@@ -20,7 +21,6 @@ import { BiSolidSchool } from "react-icons/bi";
 import { CiSearch } from "react-icons/ci";
 import { IoFilter } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa";
-import AdicionarAula from "./AdicionarAula/AdicionarAula";
 
 const linksAdmin = [
     { label: "Painel Admin", href: "/admin/painel-admin" },
@@ -147,16 +147,12 @@ export default function PainelAdmin() {
 
                             <TabelaAulas dados={tabelaAulas} />
 
-
                             <div className="position-absolute end-0 bottom-0 p-4">
-                                <button className="border-0 bg-transparent" onClick={() => setModalAberto(true)}>
-                                    {icons.plus}
-                                </button>
+                                <AdicionarAula>{icons.plus}</AdicionarAula>
                             </div>
                         </div>
                     </div>
 
-                    <AdicionarAula aberto={abreModal} fechar={() => setModalAberto(false)}/>
 
                     <div className={`${styles.container} mt-4`} >
                         <div className="bg-white p-5 rounded-5">
