@@ -1,0 +1,47 @@
+.fundo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 280px;
+  z-index: 999;
+  animation: aparecer 0.2s ease;
+}
+
+.modal {
+  background: #fff;
+  width: min(700px, calc(100% - 32px));
+  border-radius: 50px;
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: subir 0.25s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes subir {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .fundo {
+    margin-left: 0px;
+  }
+}

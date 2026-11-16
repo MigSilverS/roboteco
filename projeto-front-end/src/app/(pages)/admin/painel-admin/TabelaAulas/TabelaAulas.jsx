@@ -38,10 +38,10 @@ export default function TabelaAulas({ dados }) {
                                     <td className="p-4">{item.trilha}</td>
                                     <td className="p-4">{item.nivel}</td>
                                     <td className="p-4"><span className="rounded-5 fw-semibold px-4 py-1" style={{ backgroundColor: statusCor(item.status) }}>{item.status}</span></td>
-                                    <td className="p-4">
-                                        <FaPencilAlt className="me-4" size={20} />
-                                        <IoEyeOutline className="me-4" size={20} />
-                                        <TiDownload className="me-4" size={20} />
+                                    <td className="p-4 d-flex gap-3">
+                                        <FaPencilAlt className="" size={20} />
+                                        <IoEyeOutline className="" size={20} />
+                                        <TiDownload className="" size={20} />
                                     </td>
                                 </tr>
 

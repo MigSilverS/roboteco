@@ -42,7 +42,7 @@ export default function PainelAdmin() {
     const cardMos = [
         {
             id: 1,
-            descricao: "ALUNOS ATIVOS CONECTADOS",
+            descricao: "ALUNOS ATIVOS",
             metrica: 50,
             icon: <FaUsers className="p-2 rounded-circle" size={48} style={{ backgroundColor: "#cfe5ff" }} />,
             cores: { color: "#001629" },
@@ -111,10 +111,10 @@ export default function PainelAdmin() {
                         <div className="row justify-content-md-end justify-content-center g-3">
                             {
                                 cardMos.map((item) => (
-                                    <div className="col-md-3 col-12" key={item.id}>
+                                    <div className="col-xl-3 col-lg-6 col-12" key={item.id}>
                                         <div className="h-100 bg-white p-4" style={{ ...item.cores, borderRadius: '25px' }}>
                                             <div>
-                                                <p className="fw-semibold">{item.descricao}</p>
+                                                <p className="fw-semibold" style={{fontSize: "0.8em"}}>{item.descricao}</p>
                                             </div>
                                             <div className="d-flex justify-content-between align-items-center">
                                                 <Titulo titulo={item.metrica} nivel={1} />
@@ -132,9 +132,9 @@ export default function PainelAdmin() {
 
                         <div className="p-4 rounded-5 bg-white position-relative">
 
-                            <div className="d-flex justify-content-between align-items-center">
+                            <div className="d-flex justify-content-lg-between justify-content-sm-center align-items-center flex-wrap gap-2">
                                 <Titulo titulo="Histórico de aulas publicadas" nivel={3} />
-                                <div className="d-flex gap-3">
+                                <div className="d-flex flex-wrap gap-3">
                                     <div className="d-flex align-items-center rounded-5" style={{ backgroundColor: "#F1F3FF" }}>
                                         <CiSearch className="search-icon mx-2" size={20} />
                                         <input type="text" className="border-0 p-2 rounded-end-5" placeholder="Buscar por título ou kit..." style={{ backgroundColor: "#F1F3FF" }} />
@@ -148,7 +148,13 @@ export default function PainelAdmin() {
                             <TabelaAulas dados={tabelaAulas} />
 
                             <div className="position-absolute end-0 bottom-0 p-4">
-                                <AdicionarAula>{icons.plus}</AdicionarAula>
+                                <button
+                                    className="border-0 bg-transparent"
+                                    onClick={() => setModalAberto(true)}
+                                >
+                                    {icons.plus}
+                                </button>
+                                <AdicionarAula abrirModal={abreModal} fecharModal={() => setModalAberto(false)} />
                             </div>
                         </div>
                     </div>
