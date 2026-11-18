@@ -6,23 +6,9 @@ import { ptBR as schedulerPtBR } from "@mui/x-scheduler/locales";
 import { ptBR as dateFnsPtBR } from "date-fns/locale/pt-BR";
 import axios from "axios";
 
-const initialEvents = [
-    {
-        id: 1,
-        title: "Apresentação do Projeto",
-        start: "2026-10-13T19:00:00",
-        end: "2026-10-13T22:00:00",
-        backgroundColor: "#3b5bdb",
-        borderColor: "#3b5bdb",
-        textColor: "#fff",
-        allDay: true
-    },
-];
-
-
 export default function Calendario() {
 
-    const [events, setEvents] = useState();
+    const [events, setEvents] = useState([]);
     const [erro, setErro] = useState("");
 
     useEffect(() => {
@@ -36,8 +22,8 @@ export default function Calendario() {
                 const initialEvents = resposta.data.map((evento) => ({
                     id: evento.eveId,
                     title: evento.eveTitulo,
-                    start: evento.eveDtInicio.replace(" ", "T"),
-                    end: evento.eveDtTermino.replace(" ", "T"),
+                    start: evento.eveDtInicio,
+                    end: evento.eveDtTermino,
                     color: evento.eveCorBackground,
                     borderColor: evento.eveCorBorda,
                     textColor: evento.eveCorTexto,
