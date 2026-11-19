@@ -1,8 +1,35 @@
+import { useEffect, useState } from "react";
 import { FaPencilAlt } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { TiDownload } from "react-icons/ti";
+import axios from "axios";
 
-export default function TabelaAulas({ dados }) {
+export default function TabelaAulas() {
+
+    const [conteudos, setConteudos] = useState([])
+    const [erro, setErro] = useState("");
+
+    useEffect(() => {
+
+        async function buscarConteudos() {
+            try {
+                const resposta = await axios.get(
+                    "http://localhost:8000/api/conteudos"
+                );
+
+                setConteudos(resposta.data);
+                setErro("");
+            } catch (erro) {
+                console.error("Erro ao buscar eventos:", erro);
+                setErro("Erro os eventos.");
+            } finally {
+
+            }
+        }
+
+        buscarConteudos();
+
+    }, []);
 
     function statusCor(status) {
         if (status == "Publicado") {
@@ -29,15 +56,15 @@ export default function TabelaAulas({ dados }) {
 
                     <tbody>
                         {
-                            dados.map((item) => (
-                                <tr key={item.id}>
+                            conteudos.map((conteudo) => (
+                                <tr key={conteudo.conId}>
                                     <td className="p-4 fw-semibold fs-6 d-flex flex-column">
-                                        {item.aula}
-                                        <span className="text-body-secondary" style={{ fontSize: "0.8em" }}>Atualizado em: {item.atualizado_em}</span>
+                                        Missão {conteudo.conId}: {conteudo.conTitulo}
+                                        <span className="text-body-secondary" style={{ fontSize: "0.8em" }}>Atualizado em: {new Date(conteudo.updated_at).toLocaleDateString("pt-BR")}</span>
                                     </td>
-                                    <td className="p-4">{item.trilha}</td>
-                                    <td className="p-4">{item.nivel}</td>
-                                    <td className="p-4"><span className="rounded-5 fw-semibold px-4 py-1" style={{ backgroundColor: statusCor(item.status) }}>{item.status}</span></td>
+                                    <td className="p-4">{conteudo.categoria.catDescricao}</td>
+                                    <td className="p-4">{conteudo.conNivel}</td>
+                                    <td className="p-4"><span className="rounded-5 fw-semibold px-4 py-1" style={{ backgroundColor: statusCor(conteudo.conStatus) }}>{conteudo.conStatus}</span></td>
                                     <td className="p-4 d-flex gap-3">
                                         <FaPencilAlt className="" size={20} />
                                         <IoEyeOutline className="" size={20} />

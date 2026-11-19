@@ -71,34 +71,6 @@ export default function PainelAdmin() {
         }
     ]
 
-
-    const tabelaAulas = [
-        {
-            id: 1,
-            aula: "Missão 04: Robô Explorador de Marte",
-            trilha: "Mecatrônica Avançada",
-            nivel: "6º - 8º Ano",
-            status: "Publicado",
-            atualizado_em: "05/10/2026"
-        },
-        {
-            id: 2,
-            aula: "Missão 05: Circuitos",
-            trilha: "Arduino Básico",
-            nivel: "6º - 8º Ano",
-            status: "Publicado",
-            atualizado_em: "03/10/2026"
-        },
-        {
-            id: 3,
-            aula: "Missão 05: Circuitos",
-            trilha: "Arduino Básico",
-            nivel: "6º - 8º Ano",
-            status: "Rascunho",
-            atualizado_em: "03/10/2026"
-        }
-    ]
-
     const [abreModal, setModalAberto] = useState(false)
 
     return (
@@ -146,7 +118,7 @@ export default function PainelAdmin() {
 
                             <hr />
 
-                            <TabelaAulas dados={tabelaAulas} />
+                            <TabelaAulas />
 
                             <div className="position-absolute end-0 bottom-0 p-4">
                                 <button

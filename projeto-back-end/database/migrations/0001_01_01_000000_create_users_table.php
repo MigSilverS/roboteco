@@ -11,12 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+
+        Schema::create('tblTipoUsuario', function (Blueprint $table) {
+            $table->id('tipId');
+            $table->string("tipDescricao", 50);
+            $table->timestamps();
+        });
+
+        Schema::create('tblUsuarios', function (Blueprint $table) {
+            $table->id('usuId');
+            $table->string('usuNome');
+            $table->string('usuEmail')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('usuSenha');
+            $table->foreignId('tipId')->constrained('tblTipoUsuario', 'tipId')->restrictOnDelete();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -29,7 +37,7 @@ return new class extends Migration
 
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->foreignId('user_id')->nullable()->index();
+            $table->foreignId('usuId')->nullable()->index();
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
             $table->longText('payload');
@@ -42,7 +50,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tblUsuarios');
+        Schema::dropIfExists('tblTipoUsuario');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }

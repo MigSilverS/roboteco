@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
            Schema::create('TblChamados', function (Blueprint $table) {
-            $table->id();
+            $table->id('chaId');
             $table->text('chaMensagem');
             $table->dateTime('chaData_Abertura')->useCurrent();
             $table->dateTime('chaData_Fechamento')->nullable();
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('chamados');
+        Schema::dropIfExists('TblChamados');
     }
 };

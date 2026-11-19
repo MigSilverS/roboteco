@@ -19,8 +19,7 @@ export default function Duvidas() {
                 setChamados(resposta.data);
                 setErro("");
             } catch (erro) {
-                console.error("Erro ao buscar eventos:", erro);
-                setErro("Erro os eventos.");
+                setErro("Erro ao buscar os chamados");
             } finally {
 
             }
