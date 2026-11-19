@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import NavBar from "@/app/components/NavBar/NavBar";
@@ -5,9 +9,28 @@ import Footer from "@/app/components/Footer/Footer";
 import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
 import img from "@/app/images/login.jpg";
-import Botao from "@/app/components/Botoes/Botao/Botao";
+import { autenticarUsuario, obterRotaPorTipoUsuario } from "@/app/dados/cadastro";
 
 export default function Login() {
+    const router = useRouter();
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const [mensagem, setMensagem] = useState({ tipo: "", texto: "" });
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const resultado = autenticarUsuario(email, senha);
+
+        if (!resultado.ok) {
+            setMensagem({ tipo: "erro", texto: resultado.mensagem });
+            return;
+        }
+
+        setMensagem({ tipo: "sucesso", texto: resultado.mensagem });
+        router.push(obterRotaPorTipoUsuario(resultado.usuario.tipId));
+    }
+
     return (
         <div className="d-flex flex-column min-vh-100">
             <NavBar />
@@ -79,7 +102,7 @@ export default function Login() {
                                                 className="rounded-4 p-4 p-md-5 border"
                                                 style={{ backgroundColor: "var(--yellow-weak)", borderColor: "rgba(2, 36, 58, 0.08)" }}
                                             >
-                                                <form className="row g-3">
+                                                <form className="row g-3" onSubmit={handleSubmit}>
                                                     <div className="col-12">
                                                         <label htmlFor="login-email" className="form-label fw-semibold text-dark">
                                                             Email
@@ -88,7 +111,9 @@ export default function Login() {
                                                             id="login-email"
                                                             type="email"
                                                             className="form-control"
-                                                            placeholder="Value"
+                                                            placeholder="voce@exemplo.com"
+                                                            value={email}
+                                                            onChange={(event) => setEmail(event.target.value)}
                                                         />
                                                     </div>
 
@@ -105,7 +130,9 @@ export default function Login() {
                                                             id="login-password"
                                                             type="password"
                                                             className="form-control"
-                                                            placeholder="Value"
+                                                            placeholder="Sua senha"
+                                                            value={senha}
+                                                            onChange={(event) => setSenha(event.target.value)}
                                                         />
                                                     </div>
 
@@ -122,14 +149,24 @@ export default function Login() {
                                                         </div>
                                                     </div>
 
+                                                    {mensagem.texto ? (
+                                                        <div className="col-12">
+                                                            <div
+                                                                className={`alert ${mensagem.tipo === "sucesso" ? "alert-success" : "alert-danger"} mb-0`}
+                                                                role="alert"
+                                                            >
+                                                                {mensagem.texto}
+                                                            </div>
+                                                        </div>
+                                                    ) : null}
+
                                                     <div className="col-12 d-flex justify-content-center pt-3 pt-md-4">
-                                                        <Botao
-                                                            href="/aluno/painel-do-aluno"
+                                                        <button
                                                             type="submit"
                                                             className="btn btn-success rounded-pill px-4 fw-semibold shadow-sm"
-                                                            texto="Iniciar sessão"
-                                                        />
-
+                                                        >
+                                                            Iniciar sessão
+                                                        </button>
                                                     </div>
 
                                                     <div className="col-12 text-center pt-3">

@@ -1,42 +1,42 @@
 // A chave de cada conteúdo é o identificador usado na URL.
 export const conteudos = {
-    "o-que-e-robotica": {
-        titulo: "O que é robótica?",
+    "de-onde-vem-os-robos": {
+        titulo: "De onde vêm os robôs?",
         categoria: "Robótica",
         nivel: "Primeiros passos",
         tempo: "10 Min",
-        descricao: "Entenda sensores, comandos e movimentos.",
+        descricao: "A origem da palavra, o que realmente é um robô e por que a robótica importa.",
         objetivos: [
-            "Reconhecer o que um robô pode fazer.",
-            "Diferenciar sensores, comandos e atuadores.",
-            "Identificar a robótica no dia a dia."
+            "Descobrir de onde vem a palavra \"robô\".",
+            "Reconhecer o que é (e o que não é) um robô.",
+            "Entender por que a robótica ajuda a aprender de forma prática."
         ],
         secoes: [
             {
-                titulo: "Robôs estão mais perto do que você imagina",
+                titulo: "A palavra \"robô\" tem história",
+                texto: "Em 1921, o escritor checo Karel Čapek criou uma peça de teatro chamada R.U.R., e a palavra \"robô\" veio de lá. Ela deriva de robota, que em checo significa \"trabalho forçado\". A ideia foi do irmão dele, Josef Čapek."
+            },
+            {
+                titulo: "Mas o que é um robô, afinal?",
                 texto: "Um robô é uma máquina programada para realizar tarefas. Ele pode ajudar a montar um carro, explorar lugares distantes ou limpar o chão de uma casa. Nem todo robô tem braços, pernas ou aparência de gente!"
             },
             {
-                titulo: "Perceber, decidir e agir",
-                texto: "Os sensores recebem informações do ambiente, como luz ou distância. O programa usa essas informações para escolher uma ação. Os atuadores, como motores, colocam essa ação em prática. É assim que um robô pode perceber um obstáculo e mudar de direção."
-            },
-            {
                 titulo: "Cada parte tem uma função",
-                texto: "Imagine um carrinho que desvia de objetos: o sensor mede a distância, o programa verifica se há algo perto e os motores giram as rodas. Essas partes trabalham juntas para cumprir a tarefa que foi programada."
+                texto: "Robótica é a área que une mecânica, eletrônica e computação para criar sistemas controlados por circuitos e inteligência computacional. O primeiro robô industrial, o Unimate, criado por George Devol, entrou numa fábrica da Ford em 1961. Hoje há robôs em fábricas, cirurgias e até na sua casa, como o robô aspirador."
             }
         ],
         atividade: {
-            titulo: "Invente seu primeiro robô",
-            descricao: "Pegue papel e lápis e imagine um robô que ajude em uma tarefa do seu dia.",
+            titulo: "Sua vez de criar",
+            descricao: "Solte sua criatividade: Crie seu robô do zero. Utilize o que preferir, no papel ou digitalmente (Canva, Paint, Photoshop, IbisPaint X, o que você preferir!).",
             passos: [
-                "Desenhe o robô e dê um nome para ele.",
+                "Pense em uma tarefa que ele vai realizar diariamente para te ajudar, por exemplo, ligar e desligar a luz, ir comprar pão, limpar o cocô do cachorro, ajudar nas compras... O céu é o limite! ",
                 "Escreva qual tarefa ele vai realizar.",
                 "Escolha o que ele precisa perceber e qual movimento vai fazer."
             ],
             pergunta: "Se o seu robô encontrar um obstáculo, o que ele deve fazer?",
             resposta: "Uma possibilidade é parar, verificar um caminho livre e mudar de direção. O sensor percebe o obstáculo, o programa escolhe a ação e os motores realizam o movimento."
         },
-        lembrete: "Um robô segue instruções. Quanto mais claras elas forem, melhor ele poderá realizar sua tarefa."
+        lembrete: "Um robô sente, decide e age, por conta própria e com um objetivo."
     },
     "sequencias-e-comandos": {
         titulo: "Sequências e comandos",

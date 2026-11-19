@@ -8,10 +8,59 @@ import Titulo from "@/app/components/Titulo/Titulo";
 import Texto from "@/app/components/Texto/Texto";
 import Botao from "@/app/components/Botoes/Botao/Botao";
 import img from "@/app/images/image.png";
+import { cadastrarUsuario } from "@/app/dados/cadastro";
 
 export default function Cadastro() {
     const [tipoCadastro, setTipoCadastro] = useState("aluno");
+    const [nome, setNome] = useState("");
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const [confirmacaoSenha, setConfirmacaoSenha] = useState("");
+    const [aceitouTermos, setAceitouTermos] = useState(false);
+    const [mensagem, setMensagem] = useState({ tipo: "", texto: "" });
     const isAluno = tipoCadastro === "aluno";
+
+    function limparFormulario() {
+        setNome("");
+        setEmail("");
+        setSenha("");
+        setConfirmacaoSenha("");
+        setAceitouTermos(false);
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        if (!nome.trim() || !email.trim() || !senha.trim()) {
+            setMensagem({ tipo: "erro", texto: "Preencha nome, e-mail e senha." });
+            return;
+        }
+
+        if (senha !== confirmacaoSenha) {
+            setMensagem({ tipo: "erro", texto: "A confirmação de senha não confere." });
+            return;
+        }
+
+        if (!aceitouTermos) {
+            setMensagem({ tipo: "erro", texto: "Você precisa aceitar os Termos de Uso." });
+            return;
+        }
+
+        const resultado = cadastrarUsuario({
+            usuNome: nome,
+            usuEmail: email,
+            usuSenha: senha,
+            tipId: isAluno ? 1 : 2
+        });
+
+        if (!resultado.ok) {
+            setMensagem({ tipo: "erro", texto: resultado.mensagem });
+            return;
+        }
+
+        setMensagem({ tipo: "sucesso", texto: `${resultado.mensagem} Faça login para continuar.` });
+        limparFormulario();
+    }
 
     return (
         <div className="d-flex flex-column min-vh-100">
@@ -103,7 +152,7 @@ export default function Cadastro() {
                                                 className="rounded-4 p-4 p-md-5 border"
                                                 style={{ backgroundColor: "var(--yellow-weak)", borderColor: "rgba(2, 36, 58, 0.08)" }}
                                             >
-                                                <form className="row g-3">
+                                                <form className="row g-3" onSubmit={handleSubmit}>
                                                     {isAluno ? (
                                                         <>
                                                             <div className="col-12">
@@ -115,6 +164,8 @@ export default function Cadastro() {
                                                                     type="text"
                                                                     className="form-control"
                                                                     placeholder="Seu nome completo"
+                                                                    value={nome}
+                                                                    onChange={(event) => setNome(event.target.value)}
                                                                 />
                                                             </div>
 
@@ -127,6 +178,8 @@ export default function Cadastro() {
                                                                     type="email"
                                                                     className="form-control"
                                                                     placeholder="voce@exemplo.com"
+                                                                    value={email}
+                                                                    onChange={(event) => setEmail(event.target.value)}
                                                                 />
                                                             </div>
                                                         </>
@@ -153,6 +206,8 @@ export default function Cadastro() {
                                                                     type="text"
                                                                     className="form-control"
                                                                     placeholder="Seu nome completo"
+                                                                    value={nome}
+                                                                    onChange={(event) => setNome(event.target.value)}
                                                                 />
                                                             </div>
 
@@ -165,6 +220,8 @@ export default function Cadastro() {
                                                                     type="email"
                                                                     className="form-control"
                                                                     placeholder="contato@escola.com"
+                                                                    value={email}
+                                                                    onChange={(event) => setEmail(event.target.value)}
                                                                 />
                                                             </div>
                                                         </>
@@ -179,6 +236,8 @@ export default function Cadastro() {
                                                             type="password"
                                                             className="form-control"
                                                             placeholder="Criar senha"
+                                                            value={senha}
+                                                            onChange={(event) => setSenha(event.target.value)}
                                                         />
                                                     </div>
 
@@ -191,6 +250,8 @@ export default function Cadastro() {
                                                             type="password"
                                                             className="form-control"
                                                             placeholder="Repetir senha"
+                                                            value={confirmacaoSenha}
+                                                            onChange={(event) => setConfirmacaoSenha(event.target.value)}
                                                         />
                                                     </div>
 
@@ -200,12 +261,25 @@ export default function Cadastro() {
                                                                 className="form-check-input"
                                                                 type="checkbox"
                                                                 id="aceite-termos"
+                                                                checked={aceitouTermos}
+                                                                onChange={(event) => setAceitouTermos(event.target.checked)}
                                                             />
                                                             <label className="form-check-label" htmlFor="aceite-termos">
                                                                 Li e concordo com os Termos de Uso
                                                             </label>
                                                         </div>
                                                     </div>
+
+                                                    {mensagem.texto ? (
+                                                        <div className="col-12">
+                                                            <div
+                                                                className={`alert ${mensagem.tipo === "sucesso" ? "alert-success" : "alert-danger"} mb-0`}
+                                                                role="alert"
+                                                            >
+                                                                {mensagem.texto}
+                                                            </div>
+                                                        </div>
+                                                    ) : null}
 
                                                     <div className="col-12 d-flex justify-content-center pt-3 pt-md-4">
                                                         <button

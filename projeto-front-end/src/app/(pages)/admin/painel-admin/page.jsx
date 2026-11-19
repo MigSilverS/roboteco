@@ -24,6 +24,7 @@ import { FaPlus } from "react-icons/fa";
 
 const linksAdmin = [
     { label: "Painel Admin", href: "/admin/painel-admin" },
+    { label: "Perfil", href: "/perfil" }
 ];
 
 export default function PainelAdmin() {

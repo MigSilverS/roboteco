@@ -9,11 +9,13 @@ const linksPadrao = {
   aluno: [
     { label: "Meu Painel", href: "/aluno/painel-do-aluno" },
     { label: "Conteudos", href: "/aluno/conteudos" },
-    { label: "Suporte", href: "/aluno/suporte" }
+    { label: "Suporte", href: "/aluno/suporte" },
+    { label: "Perfil", href: "/perfil" }
   ],
   admin: [
     { label: "Painel Admin", href: "/admin/painel-admin" },
     { label: "Conteudos", href: "/aluno/conteudos" },
+    { label: "Perfil", href: "/perfil" }
   ]
 };
 
