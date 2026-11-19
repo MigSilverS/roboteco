@@ -67,7 +67,6 @@ const conquistasRecentes = [
 ];
 
 
-
 export default function PainelDoAluno() {
     return (
         <SidebarPosLogin perfil="aluno" >
@@ -82,7 +81,7 @@ export default function PainelDoAluno() {
                                 </div>
                             </div>
                             <div className="">
-                                <Titulo titulo="Olá, Pequeno Engenheiro!" nivel={1} estilo={{ fontSize: "3.5rem", color: "var(--color-primary)" }} />
+                                <Titulo titulo={`Olá, Pequeno Engenheiro!`} nivel={1} estilo={{ fontSize: "3.5rem", color: "var(--color-primary)" }} />
                             </div>
                             <div className="d-flex align-items-center gap-2">
                                 {icons.medal}

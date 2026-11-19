@@ -33,7 +33,7 @@ export const conteudos = {
                 "Escreva qual tarefa ele vai realizar.",
                 "Escolha o que ele precisa perceber e qual movimento vai fazer."
             ],
-            pergunta: "Se o seu robô encontrar um obstáculo, o que ele deve fazer?",
+            pergunta: "",
             resposta: "Uma possibilidade é parar, verificar um caminho livre e mudar de direção. O sensor percebe o obstáculo, o programa escolhe a ação e os motores realizam o movimento."
         },
         lembrete: "Um robô sente, decide e age, por conta própria e com um objetivo."

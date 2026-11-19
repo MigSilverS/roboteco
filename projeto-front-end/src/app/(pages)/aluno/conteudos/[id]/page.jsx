@@ -1,22 +1,23 @@
+"use client";
+
+import { use, useState } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { FiArrowLeft, FiArrowRight, FiBookOpen, FiCheckCircle, FiClock } from "react-icons/fi";
+import { FiArrowLeft, FiBookOpen, FiCheckCircle, FiClock, FiPaperclip, FiFileText } from "react-icons/fi";
 import SidebarPosLogin from "@/app/components/SidebarPosLogin/SidebarPosLogin";
 import Footer from "@/app/components/Footer/Footer";
 import Botao from "@/app/components/Botoes/Botao/Botao";
 import { conteudos } from "@/app/dados/conteudos";
 import styles from "./conteudo.module.css";
 
-export default async function Conteudo({ params }) {
-    const { id } = await params;
+export default function Conteudo({ params }) {
+    const { id } = use(params);
+    const [arquivos, setArquivos] = useState([]);
     const conteudo = Object.hasOwn(conteudos, id) ? conteudos[id] : null;
 
     if (!conteudo) {
         notFound();
     }
-
-    const ids = Object.keys(conteudos);
-    const proximoId = ids[ids.indexOf(id) + 1];
 
     return (
         <SidebarPosLogin perfil="aluno">
@@ -53,10 +54,29 @@ export default async function Conteudo({ params }) {
                                 {conteudo.atividade.passos.map((passo) => <li key={passo}>{passo}</li>)}
                             </ol>
                             <p className="fw-bold">{conteudo.atividade.pergunta}</p>
-                            <details className={styles.resposta}>
-                                <summary>Conferir uma possível resposta</summary>
-                                <p>{conteudo.atividade.resposta}</p>
-                            </details>
+                            <div className={styles.anexo}>
+                                <label htmlFor="anexo-atividade" className={styles.anexoTitulo}>
+                                    <FiPaperclip aria-hidden="true" /> Anexar atividade
+                                </label>
+                                <p>Selecione os arquivos da sua atividade (PDF, imagens ou documentos).</p>
+                                <input
+                                    id="anexo-atividade"
+                                    type="file"
+                                    accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+                                    multiple
+                                    className={styles.anexoInput}
+                                    onChange={(event) => setArquivos(Array.from(event.target.files || []))}
+                                />
+                                {arquivos.length > 0 && (
+                                    <ul className={styles.listaAnexos} aria-live="polite">
+                                        {arquivos.map((arquivo, indice) => (
+                                            <li key={`${arquivo.name}-${indice}`}>
+                                                <FiFileText aria-hidden="true" /> {arquivo.name}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
                         </section>
                     </article>
 
@@ -86,11 +106,7 @@ export default async function Conteudo({ params }) {
 
                 <div className={styles.acoes}>
                     <Botao href="/aluno/conteudos" classe="btn-light" icon={<FiArrowLeft aria-hidden="true" />} texto="Todos os conteúdos" />
-                    {proximoId && (
-                        <Botao href={`/aluno/conteudos/${proximoId}`} classe="btn-blue">
-                            Próximo: {conteudos[proximoId].titulo} <FiArrowRight aria-hidden="true" />
-                        </Botao>
-                    )}
+                    <Botao href="/aluno/conteudos" classe="btn-blue" icon={<FiCheckCircle aria-hidden="true" />} texto="Finalizar Aula" />
                 </div>
             </div>
             <Footer />
