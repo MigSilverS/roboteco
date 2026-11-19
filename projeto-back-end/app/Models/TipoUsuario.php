@@ -13,4 +13,9 @@ class TipoUsuario extends Model
         'tipDescricao'
     ];
 
+     public function usuario()
+    {
+        return $this->hasMany(Usuario::class, 'tipId', 'tipId');
+    }
+
 }

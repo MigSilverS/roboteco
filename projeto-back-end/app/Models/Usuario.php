@@ -10,10 +10,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-#[Fillable(['name', 'email', 'password'])]
-#[Hidden(['password', 'remember_token'])]
-class User extends Authenticatable
+#[Fillable(['usuNome', 'usuEmail', 'usuSenha', 'tipId'])]
+#[Hidden(['usuSenha', 'remember_token'])]
+class Usuario extends Authenticatable
 {
+
+    protected $table = 'tblUsuarios';
+    protected $primaryKey = 'usuId';
+
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
@@ -26,7 +30,17 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'usuSenha' => 'hashed',
         ];
+    }
+
+    public function tipoUsuario()
+    {
+        return $this->belongsTo(TipoUsuario::class, 'tipId', 'tipId');
+    }
+
+    public function chamado()
+    {
+        return $this->hasMany(Chamado::class, 'usuId', 'usuId');
     }
 }

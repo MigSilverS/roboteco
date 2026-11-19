@@ -12,4 +12,9 @@ class StatusChamado extends Model
     protected $fillable = [
         'staDescricao'
     ];
+
+    public function chamado()
+    {
+        return $this->hasMany(Chamado::class, 'staId', 'staId');
+    }
 }

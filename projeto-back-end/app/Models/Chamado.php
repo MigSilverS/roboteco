@@ -30,6 +30,6 @@ class Chamado extends Model
 
     public function usuario()
     {
-        return $this->belongsTo(User::class, 'usuId', 'usuId');
+        return $this->belongsTo(Usuario::class, 'usuId', 'usuId');
     }
 }
