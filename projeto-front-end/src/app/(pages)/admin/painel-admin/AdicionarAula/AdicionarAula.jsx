@@ -78,6 +78,16 @@ export default function AdicionarAula({ abrirModal, fecharModal }) {
                                     </select>
                                 </div>
                             </div>
+                            <div className="col-12 mt-3">
+                                <div className="d-flex flex-column">
+                                    <label htmlFor="titulo" className="fw-semibold">
+                                        DESCRIÇÃO DO DESAFIO / AULA
+                                    </label>
+                                    <textarea name="descricao" id="descricao" className="border-0 py-3 px-2 rounded-4 form-control" style={{ backgroundColor: "#F1F3FF", resize: "none" }} placeholder="Ex: Realize a atividade de Robótica">
+                                        
+                                    </textarea>
+                                </div>
+                            </div>
                             <div className="col-md-6 col-12 mt-3">
                                 <div className="d-flex flex-column">
                                     <label
