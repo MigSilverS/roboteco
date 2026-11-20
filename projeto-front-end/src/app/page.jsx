@@ -33,17 +33,17 @@ export default function Home() {
     <>
       <NavBar />
       <div className={`${styles.container}`}>
-        <div className="col-12 row mb-5">
-          <div className="col-md-8 d-flex align-items-center">
-            <div className="">
+        <div className="col-12 row mb-5 gy-4">
+          <div className="col-12 col-md-8 d-flex align-items-center">
+            <div>
               <Titulo titulo="Robótica na escola pública" nivel={2} estilo={{ color: 'var(--red)' }} />
-              <Titulo titulo="Destrave o lado tecnológico e criativo!" nivel={1} estilo={{ fontSize: '4.4rem' }} />
+              <Titulo titulo="Destrave o lado tecnológico e criativo!" nivel={1} estilo={{ fontSize: 'clamp(2.4rem, 6vw, 4.4rem)' }} />
               <Texto texto="Explore robótica, programação e eletrônica. 
-              Aprenda online e conheça as atividades presenciais para escolas da região." classe="lead" estilo={{ fontSize: '1.4rem' }} />
-              <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger mt-3" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
+              Aprenda online e conheça as atividades presenciais para escolas da região." classe="lead" estilo={{ fontSize: 'clamp(1rem, 2vw, 1.4rem)' }} />
+              <Botao icon={icons.calendar} texto="Agende uma aula experimental" classe="btn-danger mt-3" estilo={{ border: "1px solid #a8a8a8ff", minHeight: "50px", maxWidth: "100%" }} />
             </div>
           </div>
-          <div className="col-md-4 p-5 mt-5" style={{ backgroundColor: 'var(--blue)', borderRadius: '10px' }}>
+          <div className="col-12 col-md-4 p-4 p-md-5 mt-0 mt-md-5" style={{ backgroundColor: 'var(--blue)', borderRadius: '10px' }}>
             <div className="session">
               <div className="header d-flex gap-2">
                 {icons.book}
@@ -84,10 +84,10 @@ export default function Home() {
               <Card titulo="Conhecendo os circuitos" href="/aluno/conteudos" miniTitulo="Eletrônica · Primeiros passos" texto="Identifique os elementos de um circuito simples." />
             </div>
           </div> */}
-          <div className="col-md-7 mt-3">
-            <img src={img.src} className="w-100 rounded" alt="" />
+          <div className="col-12 col-md-7 mt-3">
+            <img src={img.src} className="w-100 rounded" alt="Atividade educativa de programação" />
           </div>
-          <div className="col-md-5">
+          <div className="col-12 col-md-5 mt-4 mt-md-0">
             <Titulo titulo="5 motivos para aprender programação na infância" nivel={1} />
 
 
@@ -169,16 +169,16 @@ export default function Home() {
         </div>
       </div>
       <div className="col-md-12">
-        <div className="px-5 align-items-center d-flex flex-wrap justify-content-between" style={{ background: "linear-gradient(55deg, var(--blue) 40%, #011827, #5c1010)", height: "20rem" }}>
-          <div className="">
-            <h3 className="fw-bold mb-2" style={{ color: "var(--color-primary)", fontSize: '3rem' }}>
+        <div className={`${styles.ctaBanner} px-3 px-md-5 align-items-center d-flex flex-wrap justify-content-between gap-4`} style={{ background: "linear-gradient(55deg, var(--blue) 40%, #011827, #5c1010)" }}>
+          <div>
+            <h3 className="fw-bold mb-2" style={{ color: "var(--color-primary)", fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
               Conheça a Roboteco de perto!
             </h3>
             <p className="fw-normal mb-4" style={{ color: "var(--color-primary)" }}>
               Atendimento inicial em Guaratinguetá, Lorena, Aparecida e Potim. A equipe analisa a viabilidade de cada solicitação.
             </p>
           </div>
-          <Botao icon={icons.calendar} href="pages/escola/para-escolas" texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", height: "50px" }} />
+          <Botao icon={icons.calendar} href="/escola/para-escolas" texto="Agende uma aula experimental" classe="btn-danger" estilo={{ border: "1px solid #a8a8a8ff", minHeight: "50px", maxWidth: "100%" }} />
         </div>
       </div>
       <Footer />

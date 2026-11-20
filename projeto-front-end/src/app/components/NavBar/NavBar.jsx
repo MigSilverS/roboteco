@@ -18,42 +18,49 @@ export default function NavBar() {
                 <div className="container-fluid">
                     <a
                         className="navbar-brand d-flex align-items-center gap-2"
-                        href="#"
+                        href="/"
                     >
                         <h2>
                             Robot<span style={{ color: "var(--red)" }}>eco.</span>
                         </h2>
                     </a>
-                    <ul className="navbar-nav mx-auto justify-content-center">
-                        <li className="nav-item">
-                            <Link href="/" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Início</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="/escola/para-escolas" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Para Escolas</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="/sobre-nos" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Sobre nós</Link>
-                        </li>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarRoboteco"
+                        aria-controls="navbarRoboteco"
+                        aria-expanded="false"
+                        aria-label="Alternar navegação"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarRoboteco">
+                        <ul className="navbar-nav mx-lg-auto justify-content-center">
+                            <li className="nav-item">
+                                <Link href="/" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Início</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link href="/escola/para-escolas" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Para Escolas</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link href="/sobre-nos" className="nav-link" style={{ fontFamily: 'Quicksand' }}>Sobre nós</Link>
+                            </li>
                         </ul>
-                    <div className="d-flex align-items-center gap-3">
-                        <Botao
-                            href="/login"
-                            texto="Login"
-                            classe="btn-light"
-                            estilo={{ border: "1px solid #a8a8a8ff" }}
-                        />
-                        <Botao
-                            href="/cadastro"
-                            texto="Criar Conta"
-                            classe="btn-danger"
-                            estilo={{ border: "1px solid #a8a8a8ff" }}
-                        />
-                        {/* <Botao
-                            icon={IconUser}
-                            classe="rounded-circle p-1"
-                            estilo={{ backgroundColor: "var(--blue) ", color: "var(--color-primary)" }}
-                            aria-label="Perfil"
-                        /> */}
+                        <div className="d-flex align-items-center gap-2 gap-md-3">
+                            <Botao
+                                href="/login"
+                                texto="Login"
+                                classe="btn-light"
+                                estilo={{ border: "1px solid #a8a8a8ff" }}
+                            />
+                            <Botao
+                                href="/cadastro"
+                                texto="Criar Conta"
+                                classe="btn-danger"
+                                estilo={{ border: "1px solid #a8a8a8ff" }}
+                            />
+                        </div>
                     </div>
                 </div>
             </nav>

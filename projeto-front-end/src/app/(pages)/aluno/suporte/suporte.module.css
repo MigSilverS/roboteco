@@ -46,3 +46,17 @@
     gap: 1.5rem;
   }
 }
+
+@media (max-width: 767.98px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .painel {
+    padding: 1.25rem !important;
+  }
+
+  .formulario {
+    padding: 1.25rem;
+  }
+}

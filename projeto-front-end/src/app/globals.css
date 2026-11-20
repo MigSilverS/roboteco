@@ -45,3 +45,139 @@ p, a, link {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+.navbar {
+  padding: 0.75rem 0;
+}
+
+.navbar .container-fluid {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.navbar-brand h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+}
+
+.navbar-collapse {
+  gap: 1rem;
+}
+
+.container,
+.container-fluid {
+  min-width: 0;
+}
+
+.card,
+.rounded-5,
+.rounded-4 {
+  max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .navbar-collapse .navbar-nav {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .navbar-collapse .nav-link {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .navbar-collapse > .d-flex {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .navbar-collapse > .d-flex a,
+  .navbar-collapse > .d-flex button {
+    flex: 1 1 130px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  footer ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer .border-start {
+    border-left: 0 !important;
+  }
+
+  table {
+    min-width: 680px;
+  }
+
+  .table-responsive {
+    width: 100%;
+  }
+
+  .card-title,
+  .card-text {
+    overflow-wrap: anywhere;
+  }
+
+  input,
+  textarea,
+  select,
+  button,
+  .btn {
+    font-size: 1rem;
+  }
+
+  .navbar .container-fluid {
+    padding-inline: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 9vw, 2.5rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.45rem, 7vw, 2rem) !important;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 6vw, 1.6rem) !important;
+  }
+
+  .p-5 {
+    padding: 1.25rem !important;
+  }
+
+  .px-5 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .table-responsive {
+    border-radius: 0.75rem;
+  }
+}
+

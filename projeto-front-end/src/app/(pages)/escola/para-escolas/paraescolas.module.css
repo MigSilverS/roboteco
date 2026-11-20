@@ -9,3 +9,10 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (max-width: 767.98px) {
+  .container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

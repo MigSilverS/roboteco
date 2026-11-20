@@ -5,3 +5,22 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+.ctaBanner {
+  min-height: 20rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .ctaBanner {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}

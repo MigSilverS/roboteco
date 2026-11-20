@@ -72,8 +72,8 @@ export default function PainelDoAluno() {
         <SidebarPosLogin perfil="aluno" >
             <div className={styles.container}>
                 <div className="row">
-                    <div className="col-12 col-sm-12 col-md-12 mt-5 mb-5 p-5 d-flex shadow-lg" style={{ borderRadius: "90px", background: "linear-gradient(55deg, var(--blue) 40%, #011827, #123d12)" }}>
-                        <div className="col-6 col-sm-6 col-md-6 d-flex flex-column gap-3">
+                    <div className={`col-12 col-sm-12 col-md-12 mt-5 mb-5 p-5 d-flex shadow-lg ${styles.heroPanel}`} style={{ borderRadius: "90px", background: "linear-gradient(55deg, var(--blue) 40%, #011827, #123d12)" }}>
+                        <div className={`col-6 col-sm-6 col-md-6 d-flex flex-column gap-3 ${styles.heroContent}`}>
                             <div>
                                 <div className={`d-flex rounded justify-content-center align-items-center ${styles.streakBadge}`}>
                                     {icons.fire}
@@ -81,7 +81,7 @@ export default function PainelDoAluno() {
                                 </div>
                             </div>
                             <div className="">
-                                <Titulo titulo={`Olá, Pequeno Engenheiro!`} nivel={1} estilo={{ fontSize: "3.5rem", color: "var(--color-primary)" }} />
+                                <Titulo titulo={`Olá, Pequeno Engenheiro!`} nivel={1} estilo={{ fontSize: "clamp(2rem, 7vw, 3.5rem)", color: "var(--color-primary)", lineHeight: 1.05 }} />
                             </div>
                             <div className="d-flex align-items-center gap-2">
                                 {icons.medal}
@@ -91,10 +91,10 @@ export default function PainelDoAluno() {
                                 <Xp currentXP={850} maxXP={1000} />
                             </div>
                         </div>
-                        <div className="col-6 col-sm-6 col-md-6 d-flex flex-column gap-3 align-items-end justify-content-center">
-                            <div className="d-flex p-4 gap-3 align-items-center" style={{ width: "40%", borderRadius: 30, backgroundColor: "#9c9b9b65" }}>
+                        <div className={`col-6 col-sm-6 col-md-6 d-flex flex-column gap-3 align-items-end justify-content-center ${styles.heroAside}`}>
+                            <div className={`d-flex p-4 gap-3 align-items-center ${styles.heroTrophy}`} style={{ width: "40%", borderRadius: 30, backgroundColor: "#9c9b9b65" }}>
                                 {icons.trophy}
-                                <Texto texto="5 Conquistas" classe="text-white" estilo={{ fontSize: "1.5rem" }} />
+                                <Texto texto="5 Conquistas" classe="text-white" estilo={{ fontSize: "clamp(1.05rem, 4vw, 1.5rem)", whiteSpace: "nowrap" }} />
                             </div>
                         </div>
                     </div>
